@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="back_down_bg">#3a3a3a</color>
+    <color name="cancel_color">#ababab</color>
+    <color name="code_bg_color">#2e2e2e</color>
+    <color name="color_divider">#4b4b4c</color>
+    <color name="color_trend_1">#50ff5722</color>
+    <color name="color_trend_2">#50ff9800</color>
+    <color name="color_trend_3">#50ffc107</color>
+    <color name="color_trend_4">#508bc34a</color>
+    <color name="color_trend_5">#504caf50</color>
+    <color name="dialog_bg_color">#353535</color>
+    <color name="icon_color">#ababab</color>
+    <color name="input_bg_color">#333639</color>
+    <color name="my_app_bar_bg">#2d2d2d</color>
+    <color name="text_color">#ffffff</color>
+    <color name="text_color_invert">#212121</color>
+    <color name="tip_bg_color">#525252</color>
+    <color name="view_bg2">#212121</color>
+</resources>

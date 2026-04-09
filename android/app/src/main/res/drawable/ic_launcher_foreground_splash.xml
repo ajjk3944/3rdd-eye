@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    
+    <!-- Eye outer circle -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M64,64m-32,0a32,32 0,1 1,64 0a32,32 0,1 1,-64 0"/>
+    
+    <!-- Eye inner dark circle -->
+    <path
+        android:fillColor="#064E3B"
+        android:pathData="M64,64m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+    
+    <!-- Pupil -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M64,64m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"/>
+    
+    <!-- Eye highlight -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M57,57m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <!-- Scan lines left -->
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M20,64 L28,64"/>
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M24,52 L32,57"/>
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M24,76 L32,71"/>
+    
+    <!-- Scan lines right -->
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M108,64 L100,64"/>
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M104,52 L96,57"/>
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.5"
+        android:pathData="M104,76 L96,71"/>
+</vector>

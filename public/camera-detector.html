@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Camera Detector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to bottom, #0a1f1a, #051410);
+            min-height: 100vh;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 40px 0 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #1a3329;
+            border: 1px solid rgba(30, 216, 123, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(30, 216, 123, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .card-subtitle {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        .card-description {
+            color: #d1d5db;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: #1ed87b;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:active {
+            background: #19b869;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        ul {
+            list-style: none;
+            color: #d1d5db;
+            font-size: 14px;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Hidden Camera Detector</h1>
+        <p class="subtitle">Detect hidden cameras using multiple methods</p>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="icon">📷</div>
+                <div>
+                    <div class="card-title">Camera Permission</div>
+                    <div class="card-subtitle">Required for detection</div>
+                </div>
+            </div>
+            <p class="card-description">Grant camera permission to use infrared and object detection features</p>
+            <button class="btn" onclick="requestCamera()">Grant Permission</button>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon">📡</div>
+                    <div>
+                        <div class="card-title">Magnetic Field</div>
+                        <div class="card-subtitle">Detect wired cameras</div>
+                    </div>
+                </div>
+                <p class="card-description">Uses your phone magnetometer to detect electromagnetic radiation from hidden cameras.</p>
+                <a href="/camera-detector/magnetic" class="btn">Open Detector</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon">👁️</div>
+                    <div>
+                        <div class="card-title">Infrared Camera</div>
+                        <div class="card-subtitle">Find IR cameras</div>
+                    </div>
+                </div>
+                <p class="card-description">Detects infrared light invisible to the naked eye through your camera.</p>
+                <a href="/camera-detector/infrared" class="btn">Open Detector</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon">🔍</div>
+                    <div>
+                        <div class="card-title">Object Detector</div>
+                        <div class="card-subtitle">AI-powered detection</div>
+                    </div>
+                </div>
+                <p class="card-description">Uses AI to identify cameras and electronic devices in real-time.</p>
+                <a href="/camera-detector/object" class="btn">Open Detector</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon">💡</div>
+                    <div>
+                        <div class="card-title">Tips & Tricks</div>
+                        <div class="card-subtitle">How to find cameras</div>
+                    </div>
+                </div>
+                <ul>
+                    <li>• Check smoke detectors and alarm clocks</li>
+                    <li>• Look for small holes in walls or objects</li>
+                    <li>• Scan mirrors for two-way glass</li>
+                    <li>• Turn off lights and use infrared mode</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function requestCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                stream.getTracks().forEach(track => track.stop());
+                alert('✓ Camera permission granted!');
+            } catch (error) {
+                alert('✗ Camera permission denied: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

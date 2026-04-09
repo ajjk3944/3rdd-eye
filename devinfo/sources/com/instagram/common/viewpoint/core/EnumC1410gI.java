@@ -1,0 +1,269 @@
+package com.instagram.common.viewpoint.core;
+
+import com.google.ads.mediation.facebook.FacebookMediationAdapter;
+import java.util.Arrays;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+/* JADX WARN: Enum visitor error
+jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'A03' uses external variables
+	at jadx.core.dex.visitors.EnumVisitor.createEnumFieldByConstructor(EnumVisitor.java:451)
+	at jadx.core.dex.visitors.EnumVisitor.processEnumFieldByField(EnumVisitor.java:372)
+	at jadx.core.dex.visitors.EnumVisitor.processEnumFieldByWrappedInsn(EnumVisitor.java:337)
+	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromFilledArray(EnumVisitor.java:322)
+	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromInsn(EnumVisitor.java:262)
+	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromInvoke(EnumVisitor.java:293)
+	at jadx.core.dex.visitors.EnumVisitor.extractEnumFieldsFromInsn(EnumVisitor.java:266)
+	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:151)
+	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:100)
+ */
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* renamed from: com.facebook.ads.redexgen.X.gI, reason: case insensitive filesystem */
+/* loaded from: assets/audience_network/classes2.dex */
+public abstract class EnumC1410gI {
+    public static byte[] A00;
+    public static String[] A01 = {"tECI8EX1cuXhUwYvYft6TDcXrBYDxzmb", "U9lWMC", "VeFVBuimOKBZ6IhnkHNGVdQ2rus8nhqD", "5Ss9iINs1N203h8UwVdzTm0B7XXAo0aC", "SEbmC0K2IQ7flaHMYhUIDNtJoPD", "aE6Std6il1HEkTA4be5XQZw6wdO2x4l2", "Oc9eC60MpRTSk1JwhF2h3JFaDWGSLdec", "vmvIsg"};
+    public static final /* synthetic */ EnumC1410gI[] A02;
+    public static final EnumC1410gI A03;
+    public static final EnumC1410gI A04;
+    public static final EnumC1410gI A05;
+    public static final EnumC1410gI A06;
+    public static final EnumC1410gI A07;
+    public static final EnumC1410gI A08;
+
+    public static String A02(int i4, int i10, int i11) {
+        byte[] bArrCopyOfRange = Arrays.copyOfRange(A00, i4, i4 + i10);
+        for (int i12 = 0; i12 < bArrCopyOfRange.length; i12++) {
+            bArrCopyOfRange[i12] = (byte) ((bArrCopyOfRange[i12] ^ i11) ^ 79);
+        }
+        return new String(bArrCopyOfRange);
+    }
+
+    public static void A03() {
+        A00 = new byte[]{20, 39, 39, 52, 44, 71, 106, 106, 105, 96, 100, 107, 102, 77, 87, 64, 78, 71, 105, 78, 84, 95, 114, 122, 117, 115, 100, 46, 9, 15, 20, 19, 26, 94, 101, 96, 101, 100, 124, 101, 43, 127, 114, 123, 110, 43, 100, 109, 43, 97, 120, 100, 101, 43, 100, 105, 97, 110, 104, 127, 43, 96, 110, 114};
+    }
+
+    public abstract boolean A05(JSONArray jSONArray, int i4);
+
+    public abstract boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i4);
+
+    public abstract boolean A07(JSONObject jSONObject, String str);
+
+    public abstract boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str);
+
+    static {
+        A03();
+        final String strA02 = A02(0, 5, 26);
+        final int i4 = 0;
+        A03 = new EnumC1410gI(strA02, i4) { // from class: com.facebook.ads.redexgen.X.Ci
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i10) {
+                return jSONArray.optJSONArray(i10) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i10) {
+                return AbstractC1411gJ.A00(jSONArray.optJSONArray(i10), jSONArray2.optJSONArray(i10));
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                return jSONObject.optJSONArray(str) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return AbstractC1411gJ.A00(jSONObject.optJSONArray(str), jSONObject2.optJSONArray(str));
+            }
+        };
+        final String strA022 = A02(5, 7, 74);
+        final int i10 = 1;
+        A04 = new EnumC1410gI(strA022, i10) { // from class: com.facebook.ads.redexgen.X.Ch
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i11) {
+                return jSONArray.optBoolean(i11, true) == jSONArray.optBoolean(i11, false);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i11) {
+                return jSONArray.optBoolean(i11) == jSONArray2.optBoolean(i11);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                return jSONObject.optBoolean(str, true) == jSONObject.optBoolean(str, false);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return jSONObject.optBoolean(str) == jSONObject2.optBoolean(str);
+            }
+        };
+        final String strA023 = A02(12, 6, FacebookMediationAdapter.ERROR_CREATE_NATIVE_AD_FROM_BID_PAYLOAD);
+        final int i11 = 2;
+        A05 = new EnumC1410gI(strA023, i11) { // from class: com.facebook.ads.redexgen.X.Cg
+            public static String[] A00 = {"1ZkmGDQLr4HHzESqnZwtiaJskrCoCdgr", "ZuXKvCVbKiCO09p9pYqDyLAizJSm2C6Q", "nueEAEfgKP3aoalcvcV3IYW8uca", "ZSO21PM30lkMK5VtmFwCGRnC4HfRl6Ua", "ewMxBq6LlUCdKuikxzCZkjc2M9R", "JDKZd", "VKrSZQCGjlRNXLKdswkZgNPUMacPzyqz", "RC4irD47U"};
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i12) {
+                return jSONArray.optInt(i12, 0) == jSONArray.optInt(i12, 1) && jSONArray.optDouble(i12, 0.0d) == jSONArray.optDouble(i12, 1.0d) && ((double) jSONArray.optInt(i12, 0)) != jSONArray.optDouble(i12, 0.0d);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i12) {
+                return jSONArray.optDouble(i12) == jSONArray2.optDouble(i12);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                if (jSONObject.optInt(str, 0) != jSONObject.optInt(str, 1)) {
+                    return false;
+                }
+                double dOptDouble = jSONObject.optDouble(str, 0.0d);
+                if (A00[0].charAt(28) != 'C') {
+                    throw new RuntimeException();
+                }
+                String[] strArr = A00;
+                strArr[2] = "ccqqHA83ZTWiIg3HPQbc0aiXb2J";
+                strArr[4] = "9RASlEbgrOZWYduHYKXmEPevqLf";
+                return dOptDouble == jSONObject.optDouble(str, 1.0d) && ((double) jSONObject.optInt(str, 0)) != jSONObject.optDouble(str, 0.0d);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return jSONObject.optDouble(str) == jSONObject2.optDouble(str);
+            }
+        };
+        final String strA024 = A02(18, 3, FacebookMediationAdapter.ERROR_ADVIEW_CONSTRUCTOR_EXCEPTION);
+        final int i12 = 3;
+        A06 = new EnumC1410gI(strA024, i12) { // from class: com.facebook.ads.redexgen.X.Cf
+            public static String[] A00 = {"n7SKlqK", "ov2fNltgQ2EAr85rcAXjQlotsfjsnjuH", "ovWB89LlYvQ4xO5HZfV2GFW4RL9XN4h2", "w8d2diIE5BdvGUn1gxyTHp0hEgENQTV7", "yQnpH44oXSx8ccz3NjdKCULhtA2Hxjvh", "86uwoduXnLYKbsdqFVwkHHSOZ5iH2tHE", "J0bksEA3Nc1mI6xnOvQtusRgBbL88ZUJ", "XzqVLub6oNjkAstpNhW0t4rN94XX0A8D"};
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i13) {
+                if (jSONArray.optInt(i13, 0) != jSONArray.optInt(i13, 1) || jSONArray.optDouble(i13, 0.0d) != jSONArray.optDouble(i13, 1.0d)) {
+                    return false;
+                }
+                int iOptInt = jSONArray.optInt(i13, 0);
+                if (A00[4].charAt(31) != 'h') {
+                    throw new RuntimeException();
+                }
+                A00[4] = "ESUjQDK13szqjYK8RJAQddjghxYzdQOh";
+                return ((double) iOptInt) == jSONArray.optDouble(i13, 0.0d);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i13) {
+                return jSONArray.optInt(i13) == jSONArray2.optInt(i13);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                if (jSONObject.optInt(str, 0) != jSONObject.optInt(str, 1) || jSONObject.optDouble(str, 0.0d) != jSONObject.optDouble(str, 1.0d)) {
+                    return false;
+                }
+                int iOptInt = jSONObject.optInt(str, 0);
+                String[] strArr = A00;
+                if (strArr[1].charAt(1) != strArr[2].charAt(1)) {
+                    throw new RuntimeException();
+                }
+                A00[0] = "ksANhPg";
+                return ((double) iOptInt) == jSONObject.optDouble(str, 0.0d);
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return jSONObject.optInt(str) == jSONObject2.optInt(str);
+            }
+        };
+        final String strA025 = A02(21, 6, 95);
+        final int i13 = 4;
+        A07 = new EnumC1410gI(strA025, i13) { // from class: com.facebook.ads.redexgen.X.Ce
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i14) {
+                return jSONArray.optJSONObject(i14) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i14) {
+                return AbstractC1411gJ.A02(jSONArray.optJSONObject(i14), jSONArray2.optJSONObject(i14));
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                return jSONObject.optJSONObject(str) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return AbstractC1411gJ.A02(jSONObject.optJSONObject(str), jSONObject2.optJSONObject(str));
+            }
+        };
+        final String strA026 = A02(27, 6, 50);
+        final int i14 = 5;
+        A08 = new EnumC1410gI(strA026, i14) { // from class: com.facebook.ads.redexgen.X.Cd
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A05(JSONArray jSONArray, int i15) {
+                return jSONArray.optString(i15) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A06(JSONArray jSONArray, JSONArray jSONArray2, int i15) {
+                return jSONArray.optString(i15).equals(jSONArray2.optString(i15));
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A07(JSONObject jSONObject, String str) {
+                return jSONObject.optString(str) != null;
+            }
+
+            @Override // com.instagram.common.viewpoint.core.EnumC1410gI
+            public final boolean A08(JSONObject jSONObject, JSONObject jSONObject2, String str) {
+                return jSONObject.optString(str).equals(jSONObject2.optString(str));
+            }
+        };
+        A02 = A04();
+    }
+
+    public EnumC1410gI(String str, int i4) {
+    }
+
+    public static EnumC1410gI A00(JSONArray jSONArray, int i4) {
+        for (EnumC1410gI type : values()) {
+            if (A01[0].charAt(25) != 'B') {
+                throw new RuntimeException();
+            }
+            A01[0] = "tSTzibjLEZmnKLeJSBWWFmo8ABKhWaoK";
+            if (type.A05(jSONArray, i4)) {
+                return type;
+            }
+        }
+        throw new AssertionError(A02(33, 31, 68));
+    }
+
+    public static EnumC1410gI A01(JSONObject jSONObject, String str) {
+        for (EnumC1410gI type : values()) {
+            String[] strArr = A01;
+            if (strArr[3].charAt(28) == strArr[6].charAt(28)) {
+                throw new RuntimeException();
+            }
+            A01[0] = "zRruk8gFetbjQnDa2F20MljfYBQnm1P6";
+            if (type.A07(jSONObject, str)) {
+                return type;
+            }
+        }
+        throw new AssertionError(A02(33, 31, 68));
+    }
+
+    public static /* synthetic */ EnumC1410gI[] A04() {
+        return new EnumC1410gI[]{A03, A04, A05, A06, A07, A08};
+    }
+
+    public static EnumC1410gI valueOf(String str) {
+        return (EnumC1410gI) Enum.valueOf(EnumC1410gI.class, str);
+    }
+
+    public static EnumC1410gI[] values() {
+        return (EnumC1410gI[]) A02.clone();
+    }
+}

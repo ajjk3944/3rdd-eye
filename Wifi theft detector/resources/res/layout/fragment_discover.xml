@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/fragment_discover_0"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:paddingLeft="@dimen/router_manager_space_comm"
+        android:paddingTop="@dimen/router_manager_space_comm"
+        android:paddingRight="@dimen/router_manager_space_comm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/router_manager_space_comm"
+        android:paddingEnd="@dimen/router_manager_space_comm">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/lv_line_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/router_manager_space_comm"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/lv_line_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/router_manager_space_huge"
+            android:layout_below="@+id/lv_line_one">
+            <TextView style="@style/DiscoverItemStyle"/>
+            <TextView style="@style/DiscoverItemStyle"/>
+            <TextView style="@style/DiscoverItemStyle"/>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/router_manager_space_large"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@+id/lv_line_two"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+            <FrameLayout
+                android:id="@+id/fl_ad_container"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

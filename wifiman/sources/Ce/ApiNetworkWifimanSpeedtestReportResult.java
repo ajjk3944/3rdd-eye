@@ -1,0 +1,35 @@
+package ce;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.AbstractC6492s;
+import org.snmp4j.util.SnmpConfigurator;
+
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0080\b\u0018\u00002\u00020\u0001J\u0010\u0010\u0003\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0003\u0010\u0004J\u0010\u0010\u0006\u001a\u00020\u0005HÖ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u001a\u0010\n\u001a\u00020\t2\b\u0010\b\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\n\u0010\u000bR\u001a\u0010\u000e\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\f\u0010\r\u001a\u0004\b\f\u0010\u0004¨\u0006\u000f"}, d2 = {"Lce/g;", "", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", SnmpConfigurator.O_AUTH_PROTOCOL, "Ljava/lang/String;", "resultId", "app-model_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+/* renamed from: ce.g, reason: case insensitive filesystem and from toString */
+/* loaded from: classes4.dex */
+public final /* data */ class ApiNetworkWifimanSpeedtestReportResult {
+
+    /* renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
+    @s5.c("_id")
+    private final String resultId;
+
+    /* renamed from: a, reason: from getter */
+    public final String getResultId() {
+        return this.resultId;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        return (other instanceof ApiNetworkWifimanSpeedtestReportResult) && AbstractC6492s.d(this.resultId, ((ApiNetworkWifimanSpeedtestReportResult) other).resultId);
+    }
+
+    public int hashCode() {
+        return this.resultId.hashCode();
+    }
+
+    public String toString() {
+        return "ApiNetworkWifimanSpeedtestReportResult(resultId=" + this.resultId + ")";
+    }
+}

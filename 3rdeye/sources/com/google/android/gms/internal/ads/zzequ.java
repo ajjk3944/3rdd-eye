@@ -1,0 +1,28 @@
+package com.google.android.gms.internal.ads;
+
+import java.util.concurrent.Callable;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes2.dex */
+public final class zzequ implements zzetu {
+    private final zzgdm zza;
+
+    public zzequ(zzgdm zzgdmVar) {
+        this.zza = zzgdmVar;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzetu
+    public final int zza() {
+        return 20;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzetu
+    public final A4.a zzb() {
+        return this.zza.zzb(new Callable() { // from class: com.google.android.gms.internal.ads.zzeqt
+            @Override // java.util.concurrent.Callable
+            public final Object call() {
+                return new zzeqv(com.google.android.gms.ads.internal.zzv.zzu().zzb(), com.google.android.gms.ads.internal.zzv.zzu().zzm());
+            }
+        });
+    }
+}

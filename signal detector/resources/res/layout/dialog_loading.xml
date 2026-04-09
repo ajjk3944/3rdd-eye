@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/custom_dialog_bg"
+    android:padding="@dimen/dp_24"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true">
+    <ProgressBar
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:indeterminateDrawable="@drawable/load_anim"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/string_loading"/>
+</LinearLayout>

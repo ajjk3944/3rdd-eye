@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/content_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.liuzh.deviceinfo.card.DeviceOverviewCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CommonCardViewStyle"/>
+        <com.liuzh.deviceinfo.card.DeviceOverviewOtherCard
+            android:id="@+id/card_device_overview_other"
+            android:background="@drawable/bg_common_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_padding"
+            android:elevation="@dimen/common_card_elevation"/>
+    </LinearLayout>
+</ScrollView>

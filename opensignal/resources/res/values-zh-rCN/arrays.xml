@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Statusbar icon only</item>
+        <item>Vibrate</item>
+        <item>Sound</item>
+        <item>Everything!</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>今天</item>
+        <item>本月</item>
+    </array>
+    <array name="time_period_new">
+        <item>今天</item>
+        <item>昨天</item>
+        <item>过去一周</item>
+        <item>本月</item>
+        <item>所有时间</item>
+    </array>
+</resources>

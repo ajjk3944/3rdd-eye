@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/topbar"
+        android:background="@color/home_toolbar"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/toolbar_elevation">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:descendantFocusability="afterDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:translationZ="0dp"
+            android:elevation="0dp"
+            android:touchscreenBlocksFocus="false"
+            app:logo="@drawable/app_icon"
+            app:title="@string/pure_app_name"
+            app:titleMarginStart="24dp"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:translationZ="0dp"
+            android:elevation="0dp"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/HomeTabTextAppearance"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="280.0dip" android:width="300.0dip" android:viewportWidth="300.0" android:viewportHeight="280.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffddbedb" android:pathData="M152.74,91.47c-17.99,0 -33.61,9.79 -42.06,24.26l33.1,19.08c5.57,3.2 12.36,3.2 17.93,0l33.03,-19.08C186.41,101.2 170.73,91.47 152.74,91.47L152.74,91.47z" android:fillType="evenOdd" />
+    <path android:fillColor="#fffafbfc" android:pathData="M143.77,134.81l-33.1,-19.08c-4.16,7.17 -6.53,15.43 -6.53,24.26c0,26.82 21.7,48.53 48.53,48.53s48.53,-21.7 48.53,-48.53c0,-8.83 -2.37,-17.16 -6.53,-24.26l-33.03,19.08C156.19,138.02 149.34,138.02 143.77,134.81L143.77,134.81z" android:fillType="evenOdd" />
+    <path android:fillColor="#ff783393" android:pathData="M255.36,199.28l-60.56,-35.02c-8.39,14.53 -24.07,24.26 -42.06,24.26v77.01c2.88,0 5.7,-0.77 8.26,-2.24l94.43,-54.54c0,0 0.06,0 0.06,-0.06C259.14,206.64 259.01,201.33 255.36,199.28z" android:fillType="evenOdd" />
+    <path android:fillColor="#ff4b2d87" android:pathData="M152.74,188.53c-17.99,0 -33.67,-9.73 -42.06,-24.26L43.97,202.8c1.41,2.5 3.52,4.55 6.02,6.02l94.43,54.54c2.56,1.47 5.38,2.24 8.26,2.24v-77.08L152.74,188.53z" android:fillType="evenOdd" />
+    <path android:fillColor="#ff783393" android:pathData="M152.74,91.47V14.46c-2.88,0 -5.7,0.77 -8.26,2.24L50.05,71.24c-2.56,1.47 -4.61,3.59 -6.02,6.02l66.71,38.54C119.13,101.2 134.81,91.47 152.74,91.47z" android:fillType="evenOdd" />
+    <path android:fillColor="#ff4b2d87" android:pathData="M255.49,71.24c0,0 -0.06,0 -0.06,-0.06L161,16.64c-2.56,-1.47 -5.38,-2.24 -8.26,-2.24v77.01c17.99,0 33.67,9.73 42.06,24.26l60.56,-34.95C259.01,78.67 259.14,73.36 255.49,71.24z" android:fillType="evenOdd" />
+    <path android:fillColor="#ffac6dad" android:pathData="M104.21,140c0,-8.83 2.37,-17.16 6.47,-24.26L43.97,77.2c-1.41,2.5 -2.24,5.31 -2.24,8.26v109.02c0,2.94 0.77,5.76 2.24,8.26l66.71,-38.54C106.58,157.16 104.21,148.83 104.21,140z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/$img_arcore_300__0" android:pathData="M194.8,164.26c-8.39,14.53 -24.07,24.26 -42,24.26c-7.17,0 -14.02,-1.6 -20.17,-4.35l82.78,47.82l40.08,-23.11c3.71,-2.11 3.71,-7.49 0,-9.6L194.8,164.26z" android:fillType="evenOdd" />
+</vector>

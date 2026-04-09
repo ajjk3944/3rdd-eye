@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+    <LinearLayout
+        android:id="@+id/gsf_id_container"
+        android:visibility="gone"
+        style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/gsf_id"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gsf_id"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/gad_id_container"
+        android:visibility="gone"
+        style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/gad_id"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gad_id"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/android_device_id"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/android_id"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/hardware_serial"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/hardware_serial"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/build_fingerprint"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/build_fingerprint"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/device_type"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/device_type"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/imei"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/imei"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/sim_serial"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/sim_serial"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/sim_subscriber"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/sim_subscriber"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/network_operator"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/network_operator"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/network_type"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/network_type"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/wifi_mac_address"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/wifi_mac_address"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/bluetooth_mac_address"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/bt_mac_address"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/adb_debug"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/adb_debug"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</LinearLayout>

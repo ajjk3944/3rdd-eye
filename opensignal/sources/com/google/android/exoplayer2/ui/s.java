@@ -1,0 +1,57 @@
+package com.google.android.exoplayer2.ui;
+
+/* loaded from: classes.dex */
+public abstract class s {
+    public static int exo_controls_cc_disabled_description = 2131951838;
+    public static int exo_controls_cc_enabled_description = 2131951839;
+    public static int exo_controls_custom_playback_speed = 2131951840;
+    public static int exo_controls_fastforward_description = 2131951841;
+    public static int exo_controls_fullscreen_enter_description = 2131951842;
+    public static int exo_controls_fullscreen_exit_description = 2131951843;
+    public static int exo_controls_hide = 2131951844;
+    public static int exo_controls_next_description = 2131951845;
+    public static int exo_controls_overflow_hide_description = 2131951846;
+    public static int exo_controls_overflow_show_description = 2131951847;
+    public static int exo_controls_pause_description = 2131951848;
+    public static int exo_controls_play_description = 2131951849;
+    public static int exo_controls_playback_speed = 2131951850;
+    public static int exo_controls_playback_speed_normal = 2131951851;
+    public static int exo_controls_previous_description = 2131951852;
+    public static int exo_controls_repeat_all_description = 2131951853;
+    public static int exo_controls_repeat_off_description = 2131951854;
+    public static int exo_controls_repeat_one_description = 2131951855;
+    public static int exo_controls_rewind_description = 2131951856;
+    public static int exo_controls_seek_bar_description = 2131951857;
+    public static int exo_controls_settings_description = 2131951858;
+    public static int exo_controls_show = 2131951859;
+    public static int exo_controls_shuffle_off_description = 2131951860;
+    public static int exo_controls_shuffle_on_description = 2131951861;
+    public static int exo_controls_stop_description = 2131951862;
+    public static int exo_controls_time_placeholder = 2131951863;
+    public static int exo_controls_vr_description = 2131951864;
+    public static int exo_download_completed = 2131951865;
+    public static int exo_download_description = 2131951866;
+    public static int exo_download_downloading = 2131951867;
+    public static int exo_download_failed = 2131951868;
+    public static int exo_download_notification_channel_name = 2131951869;
+    public static int exo_download_removing = 2131951873;
+    public static int exo_item_list = 2131951874;
+    public static int exo_track_bitrate = 2131951875;
+    public static int exo_track_mono = 2131951876;
+    public static int exo_track_resolution = 2131951877;
+    public static int exo_track_role_alternate = 2131951878;
+    public static int exo_track_role_closed_captions = 2131951879;
+    public static int exo_track_role_commentary = 2131951880;
+    public static int exo_track_role_supplementary = 2131951881;
+    public static int exo_track_selection_auto = 2131951882;
+    public static int exo_track_selection_none = 2131951883;
+    public static int exo_track_selection_title_audio = 2131951884;
+    public static int exo_track_selection_title_text = 2131951885;
+    public static int exo_track_selection_title_video = 2131951886;
+    public static int exo_track_stereo = 2131951887;
+    public static int exo_track_surround = 2131951888;
+    public static int exo_track_surround_5_point_1 = 2131951889;
+    public static int exo_track_surround_7_point_1 = 2131951890;
+    public static int exo_track_unknown = 2131951891;
+    public static int status_bar_notification_info_overflow = 2131952282;
+}

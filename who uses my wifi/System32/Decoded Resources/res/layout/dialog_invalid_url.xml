@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_icon" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="16.0dip" app:srcCompat="@drawable/ic_invalid_url" />
+    <TextView android:textColor="?colorOnSecondaryContainer" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/txt_invalid_url_ip" />
+    <Button android:id="@id/btn_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:text="@string/btn_ok" />
+</androidx.appcompat.widget.LinearLayoutCompat>

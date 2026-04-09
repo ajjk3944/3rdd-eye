@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_large"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/networkInfoImageView"
+        android:layout_width="@dimen/network_date_view"
+        android:layout_height="@dimen/network_date_view"
+        android:scaleType="fitCenter"/>
+    <TextView
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/networkInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:maxLines="2"
+        android:layout_marginStart="@dimen/small_margin"
+        style="@style/Paragraph.p3_medium"/>
+</LinearLayout>

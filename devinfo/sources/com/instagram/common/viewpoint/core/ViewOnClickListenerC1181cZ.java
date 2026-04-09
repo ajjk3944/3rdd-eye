@@ -1,0 +1,27 @@
+package com.instagram.common.viewpoint.core;
+
+import android.view.View;
+
+/* renamed from: com.facebook.ads.redexgen.X.cZ, reason: case insensitive filesystem */
+/* loaded from: assets/audience_network/classes2.dex */
+public class ViewOnClickListenerC1181cZ implements View.OnClickListener {
+    public final /* synthetic */ KB A00;
+
+    public ViewOnClickListenerC1181cZ(KB kb) {
+        this.A00 = kb;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) throws Throwable {
+        if (WU.A02(this)) {
+            return;
+        }
+        try {
+            if (this.A00.A08 != null) {
+                this.A00.A08.A9l();
+            }
+        } catch (Throwable th2) {
+            WU.A00(th2, this);
+        }
+    }
+}

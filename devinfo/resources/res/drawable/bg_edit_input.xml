@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_text_bg"
+        android:left="-4dp"
+        android:top="-4dp"
+        android:right="-4dp">
+        <selector>
+            <item android:state_enabled="false">
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="0.5dp"
+                        android:color="@color/md_grey_300"/>
+                </shape>
+            </item>
+            <item android:state_selected="true">
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/md_red_800"/>
+                </shape>
+            </item>
+            <item android:state_focused="true">
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/md_red_800"/>
+                </shape>
+            </item>
+            <item android:state_pressed="true">
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/md_red_800"/>
+                </shape>
+            </item>
+            <item android:state_checked="true">
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/md_red_800"/>
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <stroke
+                        android:width="0.8dp"
+                        android:color="@color/md_grey_500"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.staircase3.opensignal.ui.views.CustomSliderBackgroundLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/customSliderBackground"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.staircase3.opensignal.ui.views.CustomSeekBar
+        android:layout_gravity="center_vertical"
+        android:id="@+id/customSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,15 @@
+package com.mbridge.msdk.foundation.same.net.model;
+
+import java.io.File;
+import java.io.Serializable;
+
+/* loaded from: classes3.dex */
+public class a implements Serializable {
+
+    /* renamed from: a, reason: collision with root package name */
+    private File f15145a;
+
+    public File d() {
+        return this.f15145a;
+    }
+}

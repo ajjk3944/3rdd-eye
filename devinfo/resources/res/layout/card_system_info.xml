@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:id="@+id/version_name_label"
+            android:text="@string/version_name"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/version_name"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/api_level"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/api_level"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/build_number"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/build_number"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/build_time"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/build_time"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/build_id"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/build_id"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/security_patch_level_container"
+        style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/security_patch_level"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/security_patch_level"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/boot_loader_container"
+        style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/boot_loader"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/boot_loader"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/baseband"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/baseband"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/language"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/language"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/time_zone"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/time_zone"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/root_access"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/root_access"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/system_uptime"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/system_uptime"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/system_as_root"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/system_as_root"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/seamless_updates"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/seamless_updates"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/dynamic_partitions"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/dynamic_partitions"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/project_treble"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/project_treble"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</LinearLayout>

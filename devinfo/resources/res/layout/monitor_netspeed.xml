@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/monitor_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/upload"
+        android:minWidth="64dp"
+        android:text="↑0.00 K/s"
+        android:layout_marginStart="0dp"
+        style="@style/MonitorValue"/>
+    <TextView
+        android:id="@+id/download"
+        android:minWidth="64dp"
+        android:text="↓0.00 K/s"
+        android:layout_marginStart="0dp"
+        style="@style/MonitorValue"/>
+</LinearLayout>

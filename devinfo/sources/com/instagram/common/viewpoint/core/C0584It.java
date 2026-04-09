@@ -1,0 +1,146 @@
+package com.instagram.common.viewpoint.core;
+
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebViewClient;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import java.util.Arrays;
+
+/* renamed from: com.facebook.ads.redexgen.X.It, reason: case insensitive filesystem */
+/* loaded from: assets/audience_network/classes2.dex */
+public class C0584It extends AbstractC1082ay {
+    public static byte[] A01;
+    public static String[] A02 = {"Hi1Kp4OvuN0Mi1seIlZSQ9fXUMjjvE9p", "a9aQz404TSolCr57kPPHO7UwC5OuSOzH", "iZ3", "0R4wIBceXoURlcuySRfEAV2VVdZMdToQ", "Pns5aPZ6VZAIHBBYLIEekDbTjPHG0hEC", "QEtpGmawVai8H8emaUXHDe6205ss7rIx", "CSF", "KC7cPyOdjWwnXiGHMOi8VSLb8GeuOYES"};
+    public final /* synthetic */ C1220dC A00;
+
+    public static String A01(int i4, int i10, int i11) {
+        byte[] bArrCopyOfRange = Arrays.copyOfRange(A01, i4, i4 + i10);
+        for (int i12 = 0; i12 < bArrCopyOfRange.length; i12++) {
+            bArrCopyOfRange[i12] = (byte) ((bArrCopyOfRange[i12] - i11) - 28);
+        }
+        return new String(bArrCopyOfRange);
+    }
+
+    public static void A02() {
+        A01 = new byte[]{-44, -23, -34, -47, -35, -39, -45, -49, -29, -44, -37, -49, -36, -47, -23, -43, -30, -49, -45, -33, -34, -28, -43, -34, -28, -49, -40, -43, -39, -41, -40, -28, -53, -32, -43, -56, -44, -48, -54, -58, -38, -53, -46, -58, -45, -56, -32, -52, -39, -58, -54, -42, -43, -37, -52, -43, -37, -58, -34, -48, -53, -37, -49};
+    }
+
+    /* JADX WARN: Failed to parse debug info
+    java.lang.ArrayIndexOutOfBoundsException
+     */
+    @Override // android.webkit.WebView, android.widget.AbsoluteLayout, android.view.View
+    public final void onMeasure(int i4, int i10) {
+        int dynamicWebViewWidth = getDynamicWebViewWidth();
+        int dynamicWebViewHeight = getDynamicWebViewHeight();
+        if (dynamicWebViewWidth <= 0 || dynamicWebViewHeight <= 0) {
+            super.onMeasure(i4, i10);
+            return;
+        }
+        float f10 = dynamicWebViewWidth / dynamicWebViewHeight;
+        int mode = View.MeasureSpec.getMode(i4);
+        int mode2 = View.MeasureSpec.getMode(i10);
+        boolean z3 = mode != 1073741824;
+        boolean z10 = mode2 != 1073741824;
+        int width = getResources().getDisplayMetrics().widthPixels;
+        int height = getResources().getDisplayMetrics().heightPixels;
+        ViewGroup viewGroup = (ViewGroup) getParent();
+        if (viewGroup != null) {
+            height = Integer.MAX_VALUE;
+            width = viewGroup.getWidth() != 0 ? viewGroup.getWidth() : Integer.MAX_VALUE;
+            if (viewGroup.getHeight() != 0) {
+                height = viewGroup.getHeight();
+            }
+        }
+        int iA00 = A00(dynamicWebViewWidth, width, i4);
+        int iA002 = A00(dynamicWebViewHeight, height, i10);
+        if ((z10 || z3) && Math.abs((iA00 / iA002) - f10) > 1.0E-7d) {
+            boolean z11 = false;
+            if (z10) {
+                iA002 = (int) (iA00 / f10);
+                z11 = true;
+            }
+            if (!z11 && z3) {
+                float f11 = iA002 * f10;
+                if (A02[4].charAt(14) == 'W') {
+                    throw new RuntimeException();
+                }
+                A02[4] = "z0LYwU9eQuMrdS04YY6f4w1GT5TpPfvp";
+                iA00 = (int) f11;
+            }
+        }
+        setMeasuredDimension(iA00, iA002);
+    }
+
+    static {
+        A02();
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C0584It(C1220dC c1220dC, C1436gi c1436gi) {
+        super(c1436gi);
+        this.A00 = c1220dC;
+        getSettings().setAllowFileAccess(true);
+        setBackgroundColor(0);
+    }
+
+    private int A00(int i4, int i10, int i11) {
+        int specMode = View.MeasureSpec.getMode(i11);
+        int result = View.MeasureSpec.getSize(i11);
+        switch (specMode) {
+            case LinearLayoutManager.INVALID_OFFSET /* -2147483648 */:
+                int iMin = Math.min(i4, result);
+                String[] strArr = A02;
+                String str = strArr[0];
+                String str2 = strArr[7];
+                int specMode2 = str.charAt(6);
+                if (specMode2 != str2.charAt(6)) {
+                    throw new RuntimeException();
+                }
+                String[] strArr2 = A02;
+                strArr2[6] = "m6i";
+                strArr2[2] = "Lyc";
+                return Math.min(iMin, i10);
+            case 0:
+                return Math.min(i4, i10);
+            case 1073741824:
+                return result;
+            default:
+                return i4;
+        }
+    }
+
+    @Override // com.instagram.common.viewpoint.core.AbstractC1082ay
+    public final WebChromeClient A0G() {
+        return new C1215d7(this.A00);
+    }
+
+    @Override // com.instagram.common.viewpoint.core.AbstractC1082ay
+    public final WebViewClient A0H() {
+        return new C1216d8(this.A00);
+    }
+
+    private int getDynamicWebViewHeight() {
+        return this.A00.A09.A1H().optInt(A01(0, 32, 84));
+    }
+
+    private int getDynamicWebViewWidth() {
+        return this.A00.A09.A1H().optInt(A01(32, 31, 75));
+    }
+
+    @Override // android.webkit.WebView, android.view.View
+    public final boolean onTouchEvent(MotionEvent motionEvent) {
+        if (this.A00.A02 != null) {
+            this.A00.A02.AGC(this, motionEvent);
+        }
+        boolean zOnTouchEvent = super.onTouchEvent(motionEvent);
+        if (A02[1].charAt(18) != 'P') {
+            throw new RuntimeException();
+        }
+        String[] strArr = A02;
+        strArr[0] = "8G0frzOI4hnuLOXw8ofdNPqhqb4ZK9tq";
+        strArr[7] = "WF4GKlO7gB8U235davoNaDl6h9NjfHA4";
+        return zOnTouchEvent;
+    }
+}

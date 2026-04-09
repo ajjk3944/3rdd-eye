@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/content_padding_half"
+    android:paddingBottom="@dimen/content_padding_half"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/content_padding"
+    android:paddingEnd="@dimen/content_padding_half"
+    android:paddingVertical="@dimen/content_padding_half">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content_padding_half"
+        android:layout_marginRight="@dimen/content_padding_half"
+        android:layout_marginHorizontal="@dimen/content_padding_half"/>
+    <ImageView
+        android:id="@+id/btn_menu"
+        android:background="?attr/actionBarItemBackground"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_overflow_menu"
+        android:scaleType="center"
+        android:contentDescription="@null"
+        app:tint="@color/menu_icon_tint_color"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>ステータスバーアイコンのみ</item>
+        <item>バイブレーション</item>
+        <item>音</item>
+        <item>すべて！</item>
+    </array>
+    <array name="stat_type">
+        <item>ネットワーク利用率</item>
+        <item>データ使用量</item>
+    </array>
+    <array name="time_period">
+        <item>直近1時間</item>
+        <item>今日</item>
+        <item>今月</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>今日</item>
+        <item>今月</item>
+    </array>
+    <array name="time_period_new">
+        <item>今日</item>
+        <item>昨日</item>
+        <item>先週</item>
+        <item>今月</item>
+        <item>全期間</item>
+    </array>
+</resources>

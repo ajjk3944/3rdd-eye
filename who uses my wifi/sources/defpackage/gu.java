@@ -1,0 +1,21 @@
+package defpackage;
+
+import java.util.HashMap;
+
+/* compiled from: r8-map-id-6c2465e8d13ff8e5d50a476d17d9ba5832a97d3f7cd313d64bb1ddbb52494e1b */
+/* loaded from: classes.dex */
+public final class gu extends os0 {
+    public final HashMap j = new HashMap();
+
+    @Override // defpackage.os0
+    public final ls0 a(Object obj) {
+        return (ls0) this.j.get(obj);
+    }
+
+    @Override // defpackage.os0
+    public final Object b(Object obj) {
+        Object objB = super.b(obj);
+        this.j.remove(obj);
+        return objB;
+    }
+}

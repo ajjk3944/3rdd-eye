@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStyle"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/content_container_land"
+        android:padding="@dimen/content_padding"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+        <FrameLayout
+            android:background="@drawable/bg_common_card"
+            android:padding="@dimen/content_padding"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:elevation="@dimen/common_card_elevation"
+            app:cardUseCompatPadding="true">
+            <com.liuzh.deviceinfo.view.GpsSkyView
+                android:layout_gravity="center"
+                android:id="@+id/sky_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/content_padding"
+            style="@style/CommonCardViewStyle">
+            <ScrollView
+                android:id="@+id/legend_container"
+                android:saveEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

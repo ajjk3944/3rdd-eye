@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ui_material_color_accent">@color/ui_blue_6_dark</color>
+    <color name="ui_material_color_background">@color/ui_background_0_dark</color>
+    <color name="ui_material_color_error">@color/ui_red_6_dark</color>
+    <color name="ui_material_color_on_background">@color/ui_text_1_dark</color>
+    <color name="ui_material_color_on_surface">@color/ui_text_1_dark</color>
+    <color name="ui_material_color_primary">@color/ui_blue_6_dark</color>
+    <color name="ui_material_color_primary_variant">@color/ui_blue_7_dark</color>
+    <color name="ui_material_color_secondary">@color/ui_blue_6_dark</color>
+    <color name="ui_material_color_secondary_variant">@color/ui_blue_7_dark</color>
+    <color name="ui_material_color_surface">@color/ui_background_0_dark</color>
+    <color name="ui_material_text_primary">@color/ui_text_1_dark</color>
+    <color name="wifiman_splash">@color/ui_blue_7_dark</color>
+</resources>

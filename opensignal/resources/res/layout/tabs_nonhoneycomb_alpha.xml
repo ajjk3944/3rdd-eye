@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/toolbar_with_logo"/>
+        <View style="@style/Divider.dark"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/navigation"/>
+            <RelativeLayout
+                android:id="@+id/dialogPlaceholder"
+                android:visibility="gone"
+                android:layout_width="@dimen/awesome_dialog_width"
+                android:layout_height="@dimen/awesome_dialog_height"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:background="@drawable/custom_dialog_shadow"
+                    android:visibility="visible"
+                    android:layout_width="@dimen/awesome_dialog_width"
+                    android:layout_height="@dimen/awesome_dialog_shadow_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"/>
+                <RelativeLayout
+                    android:id="@+id/dialog"
+                    android:visibility="visible"
+                    android:layout_width="@dimen/awesome_dialog_width"
+                    android:layout_height="@dimen/awesome_dialog_height"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_gravity="bottom"
+                android:id="@+id/navigation"
+                android:background="?android:attr/windowBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@drawable/background_color_bottom_nav_tab"
+                app:itemHorizontalTranslationEnabled="false"
+                app:itemIconTint="@drawable/background_color_icon_nav_tab"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottombar_menu"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/all_set_view"
+        android:background="@color/osm_darkerblue_trans"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/onboarding_all_set_text"
+        style="@style/Headers.h0"/>
+</FrameLayout>

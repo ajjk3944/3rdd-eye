@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coverage_tab_details_header_font_size">8dp</dimen>
+    <dimen name="coverage_tab_details_margin_between_data">12dp</dimen>
+    <dimen name="coverage_tab_details_value_font_size">13dp</dimen>
+    <dimen name="speedtest_dial_width">210dp</dimen>
+    <dimen name="stat_spinner_marginleft">6dp</dimen>
+    <dimen name="stat_spinnertwo_marginleft">36dp</dimen>
+    <dimen name="tick_no_data">20dp</dimen>
+</resources>

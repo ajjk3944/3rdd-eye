@@ -1,0 +1,38 @@
+.class public final synthetic LA8/y;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmh/l;
+
+
+# instance fields
+.field public final synthetic a:LS8/l;
+
+
+# direct methods
+.method public synthetic constructor <init>(LS8/l;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LA8/y;->a:LS8/l;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, LA8/y;->a:LS8/l;
+
+    check-cast p1, Lod/i$a;
+
+    invoke-static {v0, p1}, LA8/z;->Z(LS8/l;Lod/i$a;)LYg/J;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model SavedWifiNetwork {
+  id                String    @id @default(cuid())
+  ssid              String    @unique
+  encryptedPassword String?
+  security          String?
+  bssid             String?
+  isConnected       Boolean   @default(false)
+  addedAt           DateTime  @default(now())
+  lastConnectedAt   DateTime?
+  
+  @@map("saved_wifi_networks")
+}
+
+model KnownDevice {
+  id            String   @id @default(cuid())
+  macAddress    String   @unique
+  ipAddress     String?
+  hostname      String?
+  deviceName    String
+  vendor        String?  // From OUI lookup
+  isTrusted     Boolean  @default(false)
+  firstSeen     DateTime @default(now())
+  lastSeen      DateTime @default(now())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@map("known_devices")
+  @@index([macAddress])
+  @@index([isTrusted])
+}
+
+model DeviceDataUsage {
+  id                String   @id @default(cuid())
+  macAddress        String
+  deviceName        String
+  bytesUploaded     BigInt   @default(0)
+  bytesDownloaded   BigInt   @default(0)
+  totalBytes        BigInt   @default(0)
+  lastUpdated       DateTime @default(now())
+  date              String   // YYYY-MM-DD for daily tracking
+  
+  @@map("device_data_usage")
+  @@unique([macAddress, date])
+  @@index([macAddress])
+  @@index([date])
+  @@index([totalBytes])
+}
+
+model DeviceAlert {
+  id            String   @id @default(cuid())
+  macAddress    String
+  deviceName    String
+  alertType     String   // 'unknown_device' | 'high_data_usage'
+  severity      String   // 'low' | 'medium' | 'high' | 'critical'
+  message       String
+  details       String?
+  detectedAt    DateTime @default(now())
+  acknowledged  Boolean  @default(false)
+  
+  @@map("device_alerts")
+  @@index([macAddress])
+  @@index([detectedAt])
+  @@index([acknowledged])
+}
+
+model RouterCredentials {
+  id            Int      @id @default(autoincrement())
+  routerIP      String
+  username      String
+  password      String   // Base64 encoded
+  updatedAt     DateTime @default(now()) @updatedAt
+  
+  @@map("router_credentials")
+}

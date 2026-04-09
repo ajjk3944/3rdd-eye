@@ -1,0 +1,20 @@
+package androidx.work.impl.workers;
+
+import android.content.Context;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
+import defpackage.q70;
+import defpackage.r70;
+
+/* compiled from: r8-map-id-6c2465e8d13ff8e5d50a476d17d9ba5832a97d3f7cd313d64bb1ddbb52494e1b */
+/* loaded from: classes.dex */
+public class CombineContinuationsWorker extends Worker {
+    public CombineContinuationsWorker(Context context, WorkerParameters workerParameters) {
+        super(context, workerParameters);
+    }
+
+    @Override // androidx.work.Worker
+    public final r70 doWork() {
+        return new q70(getInputData());
+    }
+}

@@ -1,0 +1,10 @@
+package androidx.compose.ui.layout;
+
+import mh.InterfaceC6835l;
+
+/* loaded from: classes.dex */
+public abstract class o {
+    public static final androidx.compose.ui.e a(androidx.compose.ui.e eVar, InterfaceC6835l interfaceC6835l) {
+        return eVar.b0(new OnGloballyPositionedElement(interfaceC6835l));
+    }
+}

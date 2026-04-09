@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:tag="layout/activity_wake_on_lan_0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/view_title"
+        layout="@layout/view_title"/>
+    <TextView
+        android:textSize="@dimen/text_16sp"
+        android:gravity="center"
+        android:id="@+id/tv_content_tip"
+        android:paddingLeft="@dimen/router_manager_space_huge"
+        android:paddingRight="@dimen/router_manager_space_huge"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/wake_setting_tip"
+        android:layout_below="@+id/view_title"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingStart="@dimen/router_manager_space_huge"
+        android:paddingEnd="@dimen/router_manager_space_huge"/>
+    <com.wifihacker.detector.mvp.view.widget.CustomRecyclerView
+        android:id="@+id/rv_wake_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_title"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/router_manager_space_large"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onAddClick"
+        app:fabSize="normal"/>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+package com.bytedance.adsdk.ypw.emc.emc;
+
+import android.graphics.Path;
+import android.graphics.PointF;
+import com.bytedance.adsdk.ypw.emc.ypw.emc;
+import com.bytedance.adsdk.ypw.xq.ypw.yzg;
+import java.util.List;
+
+/* loaded from: classes.dex */
+public class ycc implements gbl, sz, emc.InterfaceC0106emc {
+    private final com.bytedance.adsdk.ypw.emc.ypw.emc<?, PointF> bw;
+    private final com.bytedance.adsdk.ypw.emc.ypw.emc<?, PointF> dg;
+    private boolean msw;
+    private final com.bytedance.adsdk.ypw.zz xq;
+    private final com.bytedance.adsdk.ypw.xq.ypw.ypw ycc;
+    private final String ypw;
+    private final Path emc = new Path();
+    private final ypw uym = new ypw();
+
+    public ycc(com.bytedance.adsdk.ypw.zz zzVar, com.bytedance.adsdk.ypw.xq.xq.emc emcVar, com.bytedance.adsdk.ypw.xq.ypw.ypw ypwVar) {
+        this.ypw = ypwVar.emc();
+        this.xq = zzVar;
+        com.bytedance.adsdk.ypw.emc.ypw.emc<PointF, PointF> emcVarEmc = ypwVar.xq().emc();
+        this.dg = emcVarEmc;
+        com.bytedance.adsdk.ypw.emc.ypw.emc<PointF, PointF> emcVarEmc2 = ypwVar.ypw().emc();
+        this.bw = emcVarEmc2;
+        this.ycc = ypwVar;
+        emcVar.emc(emcVarEmc);
+        emcVar.emc(emcVarEmc2);
+        emcVarEmc.emc(this);
+        emcVarEmc2.emc(this);
+    }
+
+    private void ypw() {
+        this.msw = false;
+        this.xq.invalidateSelf();
+    }
+
+    @Override // com.bytedance.adsdk.ypw.emc.emc.sz
+    public Path dg() {
+        if (this.msw) {
+            return this.emc;
+        }
+        this.emc.reset();
+        if (this.ycc.bw()) {
+            this.msw = true;
+            return this.emc;
+        }
+        PointF pointFUym = this.dg.uym();
+        float f10 = pointFUym.x / 2.0f;
+        float f11 = pointFUym.y / 2.0f;
+        float f12 = f10 * 0.55228f;
+        float f13 = 0.55228f * f11;
+        this.emc.reset();
+        if (this.ycc.dg()) {
+            float f14 = -f11;
+            this.emc.moveTo(0.0f, f14);
+            float f15 = 0.0f - f12;
+            float f16 = -f10;
+            float f17 = 0.0f - f13;
+            this.emc.cubicTo(f15, f14, f16, f17, f16, 0.0f);
+            float f18 = f13 + 0.0f;
+            this.emc.cubicTo(f16, f18, f15, f11, 0.0f, f11);
+            float f19 = f12 + 0.0f;
+            this.emc.cubicTo(f19, f11, f10, f18, f10, 0.0f);
+            this.emc.cubicTo(f10, f17, f19, f14, 0.0f, f14);
+        } else {
+            float f20 = -f11;
+            this.emc.moveTo(0.0f, f20);
+            float f21 = f12 + 0.0f;
+            float f22 = 0.0f - f13;
+            this.emc.cubicTo(f21, f20, f10, f22, f10, 0.0f);
+            float f23 = f13 + 0.0f;
+            this.emc.cubicTo(f10, f23, f21, f11, 0.0f, f11);
+            float f24 = 0.0f - f12;
+            float f25 = -f10;
+            this.emc.cubicTo(f24, f11, f25, f23, f25, 0.0f);
+            this.emc.cubicTo(f25, f22, f24, f20, 0.0f, f20);
+        }
+        PointF pointFUym2 = this.bw.uym();
+        this.emc.offset(pointFUym2.x, pointFUym2.y);
+        this.emc.close();
+        this.uym.emc(this.emc);
+        this.msw = true;
+        return this.emc;
+    }
+
+    @Override // com.bytedance.adsdk.ypw.emc.ypw.emc.InterfaceC0106emc
+    public void emc() {
+        ypw();
+    }
+
+    @Override // com.bytedance.adsdk.ypw.emc.emc.xq
+    public void emc(List<xq> list, List<xq> list2) {
+        for (int i10 = 0; i10 < list.size(); i10++) {
+            xq xqVar = list.get(i10);
+            if (xqVar instanceof ylm) {
+                ylm ylmVar = (ylm) xqVar;
+                if (ylmVar.ypw() == yzg.emc.SIMULTANEOUSLY) {
+                    this.uym.emc(ylmVar);
+                    ylmVar.emc(this);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootPlaceWidget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="20sp"
+        android:textColor="@color/osm_grey"
+        android:id="@+id/tvPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/keyline_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/osm_grey"
+        android:id="@+id/tvCountryName"
+        android:paddingBottom="@dimen/keyline_half"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/keyline_1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlaceName"/>
+    <View
+        android:id="@+id/view"
+        android:background="@color/coverage_widget_text_disabled"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountryName"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

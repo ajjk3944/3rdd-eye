@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.liuzh.deviceinfo.card.PercentCard
+        android:id="@+id/card_internal_storage"
+        android:background="@drawable/bg_common_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/common_card_elevation"
+        app:pc_icon="@drawable/ic_storage"
+        app:pc_title="@string/internal_storage"/>
+    <com.liuzh.deviceinfo.card.PercentCard
+        android:id="@+id/card_battery"
+        android:background="@drawable/bg_common_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_padding"
+        android:elevation="@dimen/common_card_elevation"
+        app:pc_icon="@drawable/ic_battery"
+        app:pc_title="@string/battery"/>
+</merge>

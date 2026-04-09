@@ -1,0 +1,18 @@
+package L0;
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+/* compiled from: MenuProvider.java */
+/* renamed from: L0.n, reason: case insensitive filesystem */
+/* loaded from: classes.dex */
+public interface InterfaceC0783n {
+    boolean a(MenuItem menuItem);
+
+    void b(Menu menu);
+
+    void c(Menu menu, MenuInflater menuInflater);
+
+    void d(Menu menu);
+}

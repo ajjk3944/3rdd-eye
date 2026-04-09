@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_padding">18dp</dimen>
+    <dimen name="content_padding_double">36dp</dimen>
+    <dimen name="content_padding_half">9dp</dimen>
+    <dimen name="content_padding_half_negative">-9dp</dimen>
+    <dimen name="content_padding_negative">-18dp</dimen>
+    <dimen name="content_padding_plus2">20dp</dimen>
+    <dimen name="content_padding_triple">54dp</dimen>
+    <dimen name="content_padding_x1_5">27dp</dimen>
+    <dimen name="content_padding_x2_5">45dp</dimen>
+    <dimen name="splash_bottom_padding_hori">42dp</dimen>
+</resources>

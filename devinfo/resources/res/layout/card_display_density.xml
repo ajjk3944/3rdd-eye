@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_display_bucket"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/bucket"
+            android:textAllCaps="true"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_dpi"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/dpi"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/xdpi"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/xdpi"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/ydpi"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/ydpi"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_logical_density"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/logical_density"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_scaled_density"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/scaled_density"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/font_scale"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/font_scale"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</merge>

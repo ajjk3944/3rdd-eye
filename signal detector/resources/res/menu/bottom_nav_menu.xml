@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_phone_signal"
+        android:id="@+id/navigation_phone"
+        android:title="@string/title_phone"/>
+    <item
+        android:icon="@drawable/ic_wifi_signal"
+        android:id="@+id/navigation_wifi"
+        android:title="@string/title_wifi"/>
+    <item
+        android:icon="@drawable/ic_other_signal"
+        android:id="@+id/navigation_other"
+        android:title="@string/title_other"/>
+</menu>

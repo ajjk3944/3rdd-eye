@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="@color/colorPrimary"/>
+            <solid android:color="@color/colorPrimarySecondary"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="@color/colorPrimary"/>
+            <solid android:color="@color/colorPrimarySecondary"/>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="4dp"/>
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/colorPrimary"/>
+                    <solid android:color="@color/colorPrimarySecondary"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="end|center_vertical"
+                android:height="20dp"
+                android:width="20dp"
+                android:drawable="@drawable/ic_pay_method_checked"
+                android:end="@dimen/content_padding"/>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="@color/color_divider"/>
+        </shape>
+    </item>
+</selector>

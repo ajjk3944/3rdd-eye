@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dataActiveTextViewS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_enabled"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/dataActiveOnImageViewS"
+        android:layout_width="@dimen/data_active_icon_size"
+        android:layout_height="@dimen/data_active_icon_size"
+        android:layout_marginLeft="@dimen/data_active_text_margin"
+        android:layout_marginTop="@dimen/data_active_icon_top_margin"
+        android:layout_marginRight="@dimen/data_active_text_margin"
+        android:src="@drawable/data_active_on"
+        android:contentDescription="data_icon_on"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/dataActiveOffImageViewS"
+        android:layout_width="@dimen/data_active_icon_size"
+        android:layout_height="@dimen/data_active_icon_size"
+        android:layout_marginLeft="@dimen/data_active_text_margin"
+        android:layout_marginTop="@dimen/data_active_icon_top_margin"
+        android:layout_marginRight="@dimen/data_active_text_margin"
+        android:src="@drawable/data_active_off"
+        android:contentDescription="data_icon_off"/>
+</LinearLayout>

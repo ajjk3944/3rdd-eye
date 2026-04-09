@@ -1,0 +1,40 @@
+package com.instagram.common.viewpoint.core;
+
+import java.util.Arrays;
+
+/* renamed from: com.facebook.ads.redexgen.X.oU, reason: case insensitive filesystem */
+/* loaded from: assets/audience_network/classes2.dex */
+public final class C1885oU {
+    public static byte[] A03;
+    public final Object A00;
+    public final Object A01;
+    public final Object A02;
+
+    static {
+        A01();
+    }
+
+    public static String A00(int i4, int i10, int i11) {
+        byte[] bArrCopyOfRange = Arrays.copyOfRange(A03, i4, i4 + i10);
+        for (int i12 = 0; i12 < bArrCopyOfRange.length; i12++) {
+            bArrCopyOfRange[i12] = (byte) ((bArrCopyOfRange[i12] ^ i11) ^ 78);
+        }
+        return new String(bArrCopyOfRange);
+    }
+
+    public static void A01() {
+        A03 = new byte[]{25, 88, 87, 93, 25, 85, 73, 113, 104, 112, 109, 116, 104, 97, 36, 97, 106, 112, 118, 109, 97, 119, 36, 115, 109, 112, 108, 36, 119, 101, 105, 97, 36, 111, 97, 125, 62, 36};
+    }
+
+    public C1885oU(Object key, Object value1, Object value2) {
+        this.A00 = key;
+        this.A01 = value1;
+        this.A02 = value2;
+    }
+
+    public final IllegalArgumentException A02() {
+        StringBuilder sbAppend = new StringBuilder().append(A00(6, 32, 74)).append(this.A00);
+        String strA00 = A00(5, 1, 38);
+        return new IllegalArgumentException(sbAppend.append(strA00).append(this.A01).append(A00(0, 5, 119)).append(this.A00).append(strA00).append(this.A02).toString());
+    }
+}

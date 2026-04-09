@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#1A3333"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Device Icon -->
+        <ImageView
+            android:id="@+id/iv_device_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_device"
+            android:tint="#00FF88"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Device Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Device Name"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_ip_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IP: 192.168.10.147"
+                android:textSize="14sp"
+                android:textColor="#AAAAAA"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_mac_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAC: AA:BB:CC:DD:EE:FF"
+                android:textSize="12sp"
+                android:textColor="#00FF88"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Status Indicator -->
+        <View
+            android:id="@+id/view_status_indicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/circle_online"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

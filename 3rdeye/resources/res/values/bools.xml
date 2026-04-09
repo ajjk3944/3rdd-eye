@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="auto_interstitials_enabled">true</bool>
+    <bool name="banner_cache_enabled">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="consent_request_enabled">true</bool>
+    <bool name="disable_onboarding_premium_offering">false</bool>
+    <bool name="disable_premium_offering">false</bool>
+    <bool name="disable_relaunch_premium_offering">false</bool>
+    <bool name="enable_system_alarm_service_default">false</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">true</bool>
+    <bool name="in_app_updates_enabled">false</bool>
+    <bool name="interstitial_muted">false</bool>
+    <bool name="ph_splash_light_status_bar">true</bool>
+    <bool name="prevent_ad_fraud">true</bool>
+    <bool name="send_performance_events">true</bool>
+    <bool name="show_contact_support_dialog">true</bool>
+    <bool name="show_interstitial_on_happy_moment">true</bool>
+    <bool name="show_interstitial_onboarding_basic">true</bool>
+    <bool name="show_relaunch_on_resume">true</bool>
+    <bool name="show_trial_on_cta">false</bool>
+    <bool name="singular_enabled">false</bool>
+    <bool name="staging_toto_enabled">false</bool>
+    <bool name="toto_enabled">true</bool>
+    <bool name="totolytics_enabled">false</bool>
+    <bool name="wait_first_interstitial_on_ad_fraud">true</bool>
+    <bool name="workmanager_test_configuration">false</bool>
+</resources>

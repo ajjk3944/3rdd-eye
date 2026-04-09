@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/card_gpu"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/gpu_renderer"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gpu_renderer"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/gpu_vendor"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gpu_vendor"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/open_gl"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gpu_version"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/opengl_extensions"
+            style="@style/CardLabel"/>
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/opengl_extensions"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/view"
+            android:drawablePadding="@dimen/content_padding_half"
+            android:textIsSelectable="false"
+            android:textAllCaps="true"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/vulkan"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/vulkan"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/frequency"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gpu_frequency"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/current_frequency"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/gpu_current_frequency"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</LinearLayout>

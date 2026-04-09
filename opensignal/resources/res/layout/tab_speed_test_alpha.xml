@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/wrapper"
+        android:background="@color/primary_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/topHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="99">
+            <com.staircase3.opensignal.views.SpeedDialView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/speedDialView"
+                android:padding="22dp"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:backgroundDialColor="@color/accent_dark_blue"
+                app:dialThickness="4dp"
+                app:latencyDialColor="@color/sky_blue"
+                app:speedDialColor="@color/orange"
+                app:speedScaleTextColor="@color/orange"
+                app:speedScaleTextSize="@dimen/speed_dial_scale_text_size"
+                app:speedScalesDownload="@array/speedScalesDownload"
+                app:speedScalesUpload="@array/speedScalesUpload"/>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/load_progress"
+            android:background="@drawable/speedtest_progress_bg"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_bar"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/seekbar_speed_alpha"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+    </LinearLayout>
+    <include layout="@layout/loading_layout"/>
+</RelativeLayout>

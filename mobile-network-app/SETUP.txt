@@ -1,0 +1,158 @@
+MOBILE NETWORK APP - SETUP INSTRUCTIONS
+========================================
+
+This app replicates WiFi Manas/ThirdEye functionality with:
+- Network topology view (ISP → Gateway → Device)
+- Real-time WiFi signal strength monitoring (auto-refreshes every 2 seconds)
+- Gateway/Router details with ping and packet loss
+- Multiple WiFi networks detection (2.4GHz, 5GHz, Hidden SSIDs)
+- Device information with cellular signal strength (SIM 1 & SIM 2)
+- ISP information with public IP and location
+- WiFi Connection Details cards (Spectrum, Radio Potential, Channel Health)
+- Dark green theme matching WiFi Manas
+- Auto-refresh functionality without flicker
+
+INSTALLATION STEPS:
+-------------------
+
+1. Navigate to the project directory:
+   cd mobile-network-app
+
+2. Install dependencies:
+   npm install
+
+3. Install iOS pods (iOS only):
+   cd ios && pod install && cd ..
+
+4. Run the app:
+   - Android: npx react-native run-android
+   - iOS: npx react-native run-ios
+
+REQUIRED PERMISSIONS:
+--------------------
+
+Android (android/app/src/main/AndroidManifest.xml):
+Add these permissions inside <manifest> tag:
+
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+iOS (ios/YourApp/Info.plist):
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>We need location access to show WiFi network information</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>We need location access to show WiFi network information</string>
+
+KEY FEATURES:
+-------------
+
+1. Main Screen (Network Topology):
+   - Visual representation: ISP → Gateway → Device
+   - Tap any node to see detailed information
+   - Shows connection status with "LIVE" badge
+   - Displays IP addresses for each node
+   - Auto-selects gateway by default
+   - Shows detailed info for selected device:
+     * Gateway: Model, Manufacturer, SSID, IP, BSSID, Security, Frequency, Channel, Signal %
+     * Device: IP Address, Subnet Mask, DNS, Link Speed (260 Mbps), Connection type
+     * ISP: Public IP, ISP name, Location, ASN
+   - WiFi Connection Details section with quality indicator (Fair/Good/Excellent)
+   - Spectrum card: WiFi Band (5 GHz), Channel Width (40 MHz)
+   - Radio Potential card: Standard (WiFi 4), MIMO (2x2), Signal (-64 dBm)
+   - Channel Health card: Channel number, Utilization
+
+2. Gateway Detail Screen:
+   - Gateway/AP tabs
+   - MAC address, Model, Manufacturer, Device Type
+   - Network section: IP Address, Ping (auto-updates), Packet Loss
+   - WiFi Networks list with:
+     * Network name (or "Hidden SSID")
+     * Frequency (2.4 GHz / 5 GHz)
+     * "CONNECTED" badge for active network
+     * Signal strength in dBm with color coding
+     * Channel and channel width
+     * BSSID
+     * Animated signal strength bar
+   - UPNP section: Product Site, Manufacturer Site, Serial Number
+   - Open Ports section with "Scan Ports" button
+
+3. Device Detail Screen:
+   - Device icon and name (e.g., "POCO M3")
+   - "Me" badge
+   - Model, Manufacturer, Device Type, Firmware Version (Android 12), Uptime
+   - Network section: IP Address, Subnet Mask, DNS, Link Speed, Connection
+   - Cellular section: SIM 1 & SIM 2 signal strength with color-coded dBm values
+
+4. ISP Detail Screen:
+   - Public IP address
+   - ISP name
+   - ASN (Autonomous System Number)
+   - City and Country
+   - Ping to ISP (auto-updates)
+
+5. Auto-Refresh System:
+   - Network data: Every 10 seconds
+   - Ping & WiFi signal: Every 2 seconds
+   - Cellular signal: Every 3 seconds
+   - Smooth updates without full re-render using React state
+
+6. Real Network Data:
+   - @react-native-community/netinfo for connection state
+   - react-native-device-info for device details
+   - react-native-network-info for IP/gateway
+   - axios for ISP information from ipinfo.io
+   - Real-time WiFi signal strength from device
+   - Actual ping measurements to gateway and ISP
+
+7. Visual Design:
+   - Dark green theme (#0A1F1A background, #0F2A20 cards)
+   - Color-coded signal strength (green >-50dBm, yellow >-70dBm, red <-70dBm)
+   - Animated signal bars
+   - Status badges (LIVE, CONNECTED, Available)
+   - Warning badges for Radio Potential issues
+   - Blue text for IP addresses and links
+   - Green text for good ping values
+
+TROUBLESHOOTING:
+----------------
+
+If you encounter build errors:
+1. Clear cache: npx react-native start --reset-cache
+2. Clean build: cd android && ./gradlew clean && cd ..
+3. Reinstall dependencies: rm -rf node_modules && npm install
+
+For permission issues:
+1. Ensure all permissions are added to AndroidManifest.xml
+2. Request permissions at runtime (already implemented in NetworkContext)
+3. Check device settings to ensure permissions are granted
+
+If WiFi details don't show:
+1. Make sure you're connected to a WiFi network
+2. Grant location permissions (required for WiFi scanning on Android)
+3. Check that ACCESS_FINE_LOCATION permission is granted
+
+DIFFERENCES FROM YOUR SCREENSHOTS:
+----------------------------------
+
+The app you showed in screenshots is "ThirdEye" - a different app.
+This is "mobile-network-app" that we created together.
+
+To see the new design:
+1. Make sure you've rebuilt the app: npx react-native run-android
+2. The main screen now shows the network topology (ISP → Gateway → Device)
+3. Tap on each node to see detailed information
+4. Scroll down to see WiFi Connection Details cards
+5. Navigate to Gateway/Device/ISP detail screens for more info
+
+The design now matches WiFi Manas with:
+- Network topology visualization
+- Dark green theme
+- Real-time signal monitoring
+- Detailed connection information
+- Auto-refreshing data
+

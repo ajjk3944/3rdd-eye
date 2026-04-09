@@ -1,0 +1,19 @@
+package com.google.android.gms.internal.ads;
+
+import android.os.Bundle;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes3.dex */
+public final class t50 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final Bundle f16705a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public final Bundle f16706b;
+
+    public t50(Bundle bundle, Bundle bundle2) {
+        this.f16705a = bundle;
+        this.f16706b = bundle2;
+    }
+}

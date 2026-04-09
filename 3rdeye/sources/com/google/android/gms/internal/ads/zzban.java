@@ -1,0 +1,33 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes2.dex */
+public final class zzban {
+    private final zzbac zza;
+    private final int zzb;
+    private final int zzc;
+
+    public zzban(int i, int i10, int i11) {
+        this.zzb = i;
+        i10 = (i10 > 64 || i10 < 0) ? 64 : i10;
+        if (i11 <= 0) {
+            this.zzc = 1;
+        } else {
+            this.zzc = i11;
+        }
+        this.zza = new zzbal(i10);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:29:0x0094  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final java.lang.String zza(java.util.ArrayList r17, java.util.ArrayList r18) throws java.io.IOException {
+        /*
+            Method dump skipped, instructions count: 285
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.internal.ads.zzban.zza(java.util.ArrayList, java.util.ArrayList):java.lang.String");
+    }
+}

@@ -1,0 +1,91 @@
+package com.singular.sdk.internal;
+
+import com.singular.sdk.SingularConfig;
+import com.singular.sdk.internal.Api;
+import java.io.IOException;
+
+/* loaded from: classes2.dex */
+public class ApiGDPRUnder13 extends BaseApi {
+    private static final SingularLog logger = SingularLog.getLogger("ApiGDPRUnder13");
+    static final String path = "/opengdpr";
+
+    public class OnResolveCallback implements Api.OnApiCallback {
+        public OnResolveCallback() {
+        }
+
+        @Override // com.singular.sdk.internal.Api.OnApiCallback
+        public boolean handle(SingularInstance singularInstance, int i, String str) {
+            return i == 200;
+        }
+    }
+
+    public static class Params extends SingularParamsBase {
+        private Params() {
+        }
+
+        public static Params build(SingularInstance singularInstance) {
+            return new Params().withBaseParams().withSingularConfig(singularInstance.getSingularConfig()).withDeviceInfo(singularInstance.getDeviceInfo());
+        }
+
+        private Params withBaseParams() {
+            put("op", "under_13");
+            return this;
+        }
+
+        private Params withSingularConfig(SingularConfig singularConfig) {
+            put("a", singularConfig.apiKey);
+            return this;
+        }
+
+        @Override // com.singular.sdk.internal.SingularParamsBase
+        public Params withDeviceInfo(DeviceInfo deviceInfo) {
+            super.withDeviceInfo(deviceInfo);
+            put("sdk", Utils.getSdkVersion());
+            return this;
+        }
+    }
+
+    public ApiGDPRUnder13(long j4) {
+        super(Constants.API_TYPE_GDPR_UNDER_13, j4);
+    }
+
+    @Override // com.singular.sdk.internal.Api
+    public Api.OnApiCallback getOnApiCallback() {
+        return new OnResolveCallback();
+    }
+
+    @Override // com.singular.sdk.internal.Api
+    public String getPath() {
+        return path;
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi, com.singular.sdk.internal.Api
+    public /* bridge */ /* synthetic */ long getTimestamp() {
+        return super.getTimestamp();
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi, com.singular.sdk.internal.Api
+    public /* bridge */ /* synthetic */ String getType() {
+        return super.getType();
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi
+    public /* bridge */ /* synthetic */ String getUrl() {
+        return super.getUrl();
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi
+    public /* bridge */ /* synthetic */ boolean isAdmonEvent() {
+        return super.isAdmonEvent();
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi, com.singular.sdk.internal.Api
+    public /* bridge */ /* synthetic */ boolean makeRequest(SingularInstance singularInstance) throws IOException {
+        return super.makeRequest(singularInstance);
+    }
+
+    @Override // com.singular.sdk.internal.BaseApi, com.singular.sdk.internal.Api
+    public /* bridge */ /* synthetic */ String toJsonAsString() {
+        return super.toJsonAsString();
+    }
+}

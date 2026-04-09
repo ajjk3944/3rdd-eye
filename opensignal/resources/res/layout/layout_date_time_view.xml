@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/padding_small"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding_small">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/network_date_view"
+        android:layout_height="@dimen/network_date_view"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_calendar_a"/>
+    <TextView
+        android:textColor="@color/neutral_1"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tv_dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        style="@style/TextTypography.TypeP2Gre"/>
+</LinearLayout>

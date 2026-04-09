@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/gr1"
+        android:checkableBehavior="none">
+        <item
+            android:icon="@drawable/ic_menu_router"
+            android:id="@+id/action_router_password"
+            android:title="@string/action_router_password"/>
+        <item
+            android:icon="@drawable/ic_menu_ping"
+            android:id="@+id/action_ping"
+            android:title="@string/action_ping"/>
+        <item
+            android:icon="@drawable/ic_port_scan"
+            android:id="@+id/action_port"
+            android:title="@string/action_port_scan"/>
+        <item
+            android:icon="@drawable/ic_menu_router_admin"
+            android:id="@+id/action_router_admin"
+            android:title="@string/action_router_admin"/>
+        <item
+            android:icon="@drawable/ic_menu_settings"
+            android:id="@+id/action_settings"
+            android:title="@string/action_settings"/>
+    </group>
+    <group
+        android:id="@+id/gr4"
+        android:checkableBehavior="none">
+        <item
+            android:icon="@drawable/ic_shopping_cart"
+            android:id="@+id/action_pro_version"
+            android:title="@string/action_upgrade"
+            app:actionViewClass="android.widget.ImageView"/>
+    </group>
+    <item android:title="@string/nav_com_title">
+        <menu>
+            <item
+                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/action_share"
+                android:title="@string/action_share"/>
+            <item
+                android:icon="@drawable/ic_play_store"
+                android:id="@+id/action_other"
+                android:title="@string/action_other"/>
+        </menu>
+    </item>
+</menu>

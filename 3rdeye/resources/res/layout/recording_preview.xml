@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/preview_layout"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToOutline="true"/>
+    </FrameLayout>
+    <Chronometer
+        android:textColor="@color/white"
+        android:id="@+id/time_stamp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/stop_video"
+        app:layout_constraintEnd_toEndOf="@+id/stop_video"
+        app:layout_constraintStart_toStartOf="@+id/stop_video"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/stop_video"
+        android:padding="4dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/round_fiber"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close_preview"
+        android:padding="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:tint="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_preview_close"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

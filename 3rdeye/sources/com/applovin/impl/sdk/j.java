@@ -1,0 +1,396 @@
+package com.applovin.impl.sdk;
+
+import android.os.Bundle;
+import com.applovin.communicator.AppLovinCommunicator;
+import com.applovin.communicator.AppLovinCommunicatorMessage;
+import com.applovin.communicator.AppLovinCommunicatorPublisher;
+import com.applovin.communicator.AppLovinCommunicatorSubscriber;
+import com.applovin.impl.C2123i;
+import com.applovin.impl.C2126j0;
+import com.applovin.impl.a7;
+import com.applovin.impl.communicator.CommunicatorMessageImpl;
+import com.applovin.impl.l3;
+import com.applovin.impl.l4;
+import com.applovin.impl.q2;
+import com.applovin.impl.r5;
+import com.applovin.impl.sdk.network.d;
+import com.applovin.impl.sdk.utils.BundleUtils;
+import com.applovin.impl.sdk.utils.CollectionUtils;
+import com.applovin.impl.sdk.utils.JsonUtils;
+import com.applovin.impl.sdk.utils.StringUtils;
+import com.applovin.impl.u6;
+import com.applovin.impl.w4;
+import com.applovin.mediation.adapter.MaxAdapter;
+import com.applovin.sdk.AppLovinSdkUtils;
+import com.applovin.sdk.AppLovinWebViewActivity;
+import com.google.ads.mediation.facebook.FacebookMediationAdapter;
+import com.google.android.gms.common.internal.ImagesContract;
+import io.appmetrica.analytics.networktasks.internal.CommonUrlParts;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/* loaded from: classes.dex */
+public class j implements AppLovinCommunicatorSubscriber, AppLovinCommunicatorPublisher {
+
+    /* renamed from: a, reason: collision with root package name */
+    private final k f21159a;
+
+    /* renamed from: b, reason: collision with root package name */
+    private final AppLovinCommunicator f21160b;
+
+    public j(k kVar) {
+        this.f21159a = kVar;
+        AppLovinCommunicator appLovinCommunicator = AppLovinCommunicator.getInstance(k.o());
+        this.f21160b = appLovinCommunicator;
+        if (((Boolean) kVar.a(l4.f19755H6)).booleanValue()) {
+            appLovinCommunicator.a(kVar);
+            appLovinCommunicator.subscribe(this, u6.f21547a);
+        }
+    }
+
+    public void a(JSONObject jSONObject, boolean z10) throws JSONException {
+        if (b("safedk_init") && C2123i.c()) {
+            Bundle bundle = new Bundle();
+            bundle.putString(AppLovinWebViewActivity.INTENT_EXTRA_KEY_SDK_KEY, this.f21159a.i0());
+            bundle.putString("applovin_random_token", this.f21159a.h0());
+            bundle.putString("compass_random_token", this.f21159a.v());
+            bundle.putString(CommonUrlParts.DEVICE_TYPE, AppLovinSdkUtils.isTablet(k.o()) ? "tablet" : "phone");
+            bundle.putString("init_success", String.valueOf(z10));
+            bundle.putParcelableArrayList("installed_mediation_adapters", JsonUtils.toBundle(l3.b(this.f21159a)));
+            JSONObject jSONObject2 = JsonUtils.getJSONObject(jSONObject, "communicator_settings", (JSONObject) null);
+            Bundle bundle2 = (Bundle) bundle.clone();
+            bundle2.putString("user_id", this.f21159a.w0().e());
+            JSONObject jSONObject3 = JsonUtils.getJSONObject(jSONObject2, "safedk_settings", new JSONObject());
+            if (!((Boolean) this.f21159a.a(l4.f19763I6)).booleanValue()) {
+                JSONObject jSONObject4 = new JSONObject();
+                JsonUtils.putBoolean(jSONObject4, "deactivated", true);
+                JsonUtils.putJSONObject(jSONObject3, "safeDKDeactivation", jSONObject4);
+            }
+            bundle2.putBundle("settings", JsonUtils.toBundle(jSONObject3));
+            this.f21159a.O();
+            if (o.a()) {
+                this.f21159a.O().a("CommunicatorService", "Sending \"safedk_init\" message: " + bundle);
+            }
+            a(bundle2, "safedk_init");
+        }
+    }
+
+    public void b(String str, String str2) {
+        if (b("user_info") && C2123i.c()) {
+            Bundle bundle = new Bundle(2);
+            bundle.putString("user_id", StringUtils.emptyIfNull(str));
+            bundle.putString("applovin_random_token", str2);
+            a(bundle, "user_info");
+        }
+    }
+
+    @Override // com.applovin.communicator.AppLovinCommunicatorEntity
+    public String getCommunicatorId() {
+        return "applovin_sdk";
+    }
+
+    @Override // com.applovin.communicator.AppLovinCommunicatorSubscriber
+    public void onMessageReceived(AppLovinCommunicatorMessage appLovinCommunicatorMessage) {
+        Map<String, Object> map;
+        long j4;
+        int i;
+        long j10;
+        Map<String, Object> map2;
+        if (((Boolean) this.f21159a.a(l4.f19755H6)).booleanValue()) {
+            if ("send_http_request".equalsIgnoreCase(appLovinCommunicatorMessage.getTopic())) {
+                Bundle messageData = appLovinCommunicatorMessage.getMessageData();
+                Map<String, String> stringMap = BundleUtils.toStringMap(messageData.getBundle("query_params"));
+                Map<String, Object> map3 = BundleUtils.toMap(messageData.getBundle("post_body"));
+                Map<String, String> stringMap2 = BundleUtils.toStringMap(messageData.getBundle("headers"));
+                String string = messageData.getString(FacebookMediationAdapter.KEY_ID, "");
+                if (!map3.containsKey(AppLovinWebViewActivity.INTENT_EXTRA_KEY_SDK_KEY)) {
+                    map3.put(AppLovinWebViewActivity.INTENT_EXTRA_KEY_SDK_KEY, this.f21159a.i0());
+                }
+                this.f21159a.e0().e(new d.b().d(messageData.getString(ImagesContract.URL)).a(messageData.getString("backup_url")).b(stringMap).c(map3).a(stringMap2).a(((Boolean) this.f21159a.a(l4.f19783L4)).booleanValue()).b(string).a());
+                return;
+            }
+            if (!"send_http_request_v2".equalsIgnoreCase(appLovinCommunicatorMessage.getTopic())) {
+                if ("set_ad_request_query_params".equalsIgnoreCase(appLovinCommunicatorMessage.getTopic())) {
+                    this.f21159a.k().addCustomQueryParams(a7.a((Map) BundleUtils.toMap(appLovinCommunicatorMessage.getMessageData())));
+                    return;
+                } else if ("set_ad_request_post_body".equalsIgnoreCase(appLovinCommunicatorMessage.getTopic())) {
+                    this.f21159a.k().setCustomPostBody(BundleUtils.toJSONObject(appLovinCommunicatorMessage.getMessageData()));
+                    return;
+                } else {
+                    if ("set_mediate_request_post_body_data".equalsIgnoreCase(appLovinCommunicatorMessage.getTopic())) {
+                        this.f21159a.X().setCustomPostBodyData(BundleUtils.toJSONObject(appLovinCommunicatorMessage.getMessageData()));
+                        return;
+                    }
+                    return;
+                }
+            }
+            Bundle messageData2 = appLovinCommunicatorMessage.getMessageData();
+            String string2 = messageData2.getString("http_method", "POST");
+            long millis = messageData2.containsKey("timeout_sec") ? TimeUnit.SECONDS.toMillis(messageData2.getLong("timeout_sec")) : ((Long) this.f21159a.a(l4.f19890b3)).longValue();
+            int i10 = messageData2.getInt("retry_count", ((Integer) this.f21159a.a(l4.f19898c3)).intValue());
+            long millis2 = messageData2.containsKey("retry_delay_sec") ? TimeUnit.SECONDS.toMillis(messageData2.getLong("retry_delay_sec")) : ((Long) this.f21159a.a(l4.f19906d3)).longValue();
+            Map<String, String> stringMap3 = BundleUtils.toStringMap(messageData2.getBundle("query_params"));
+            if ("GET".equalsIgnoreCase(string2)) {
+                if (messageData2.getBoolean("include_data_collector_info", true)) {
+                    map2 = null;
+                    stringMap3.putAll(BundleUtils.toStringMap(CollectionUtils.toBundle(this.f21159a.B().a((Map) null, false, false))));
+                } else {
+                    map2 = null;
+                }
+                j4 = millis;
+                i = i10;
+                j10 = millis2;
+                map = map2;
+            } else {
+                map = BundleUtils.toMap(messageData2.getBundle("post_body"));
+                if (messageData2.getBoolean("include_data_collector_info", true)) {
+                    Map mapD = this.f21159a.B().D();
+                    Map mapN = this.f21159a.B().n();
+                    j10 = millis2;
+                    if (mapN.containsKey("idfv") && mapN.containsKey("idfv_scope")) {
+                        i = i10;
+                        String str = (String) mapN.get("idfv");
+                        j4 = millis;
+                        Integer num = (Integer) mapN.get("idfv_scope");
+                        num.getClass();
+                        mapN.remove("idfv");
+                        mapN.remove("idfv_scope");
+                        mapD.put("idfv", str);
+                        mapD.put("idfv_scope", num);
+                    } else {
+                        j4 = millis;
+                        i = i10;
+                    }
+                    mapD.put("server_installed_at", this.f21159a.a(l4.f19986o));
+                    mapD.put(AppLovinWebViewActivity.INTENT_EXTRA_KEY_SDK_KEY, this.f21159a.i0());
+                    map.put("app", mapD);
+                    map.put("device", mapN);
+                } else {
+                    j4 = millis;
+                    i = i10;
+                    j10 = millis2;
+                }
+            }
+            this.f21159a.q0().a((w4) new C2126j0(appLovinCommunicatorMessage.getPublisherId(), com.applovin.impl.sdk.network.a.a(this.f21159a).b(messageData2.getString(ImagesContract.URL)).a(messageData2.getString("backup_url")).b(stringMap3).c(string2).a((Map) BundleUtils.toStringMap(messageData2.getBundle("headers"))).a(map != null ? new JSONObject(map) : null).c((int) j4).a(i).b((int) j10).a((Object) new JSONObject()).a(messageData2.getBoolean("is_encoding_enabled", false)).a(), this.f21159a), r5.b.OTHER);
+        }
+    }
+
+    public void b(q2 q2Var, String str) {
+        if (b("max_ad_events")) {
+            Bundle bundleA = a(q2Var);
+            bundleA.putString("type", str);
+            this.f21159a.O();
+            if (o.a()) {
+                this.f21159a.O().a("CommunicatorService", "Sending \"max_ad_events\" message: " + bundleA);
+            }
+            a(bundleA, "max_ad_events");
+        }
+    }
+
+    public void b(q2 q2Var) {
+        if (b("max_revenue_events")) {
+            Bundle bundleA = a(q2Var);
+            bundleA.putAll(JsonUtils.toBundle(q2Var.N()));
+            bundleA.putString("country_code", this.f21159a.w().getCountryCode());
+            a(bundleA, "max_revenue_events");
+        }
+    }
+
+    public void b(List list) {
+        if (b("test_mode_networks_updated")) {
+            if (list == null || list.isEmpty()) {
+                a(Bundle.EMPTY, "test_mode_networks_updated");
+                return;
+            }
+            Bundle bundle = new Bundle();
+            bundle.putStringArrayList("test_mode_networks", new ArrayList<>(list));
+            a(bundle, "test_mode_networks_updated");
+        }
+    }
+
+    public void a(q2 q2Var, String str) {
+        if (b("ad_callback_blocked_after_hidden")) {
+            Bundle bundleA = a(q2Var);
+            bundleA.putString("callback_name", str);
+            a(bundleA, "ad_callback_blocked_after_hidden");
+        }
+    }
+
+    private boolean b(String str) {
+        if (((Boolean) this.f21159a.a(l4.f19755H6)).booleanValue()) {
+            return this.f21159a.c(l4.f19747G6).contains(str) || this.f21160b.hasSubscriber(str);
+        }
+        return false;
+    }
+
+    public void a(MaxAdapter.InitializationStatus initializationStatus, String str) {
+        if (b("adapter_initialization_status")) {
+            Bundle bundle = new Bundle();
+            bundle.putString("adapter_class", str);
+            bundle.putInt("init_status", initializationStatus.getCode());
+            a(bundle, "adapter_initialization_status");
+        }
+    }
+
+    public void a() {
+        if (b("privacy_setting_updated")) {
+            a(new Bundle(), "privacy_setting_updated");
+        }
+    }
+
+    public void a(String str, String str2) {
+        if (b("network_sdk_version_updated")) {
+            Bundle bundle = new Bundle();
+            bundle.putString("adapter_class", str2);
+            bundle.putString("sdk_version", str);
+            a(bundle, "network_sdk_version_updated");
+        }
+    }
+
+    public void a(List list) {
+        if (b("live_networks_updated")) {
+            if (list == null || list.isEmpty()) {
+                a(Bundle.EMPTY, "live_networks_updated");
+                return;
+            }
+            Bundle bundle = new Bundle();
+            bundle.putStringArrayList("live_networks", new ArrayList<>(list));
+            a(bundle, "live_networks_updated");
+        }
+    }
+
+    public void a(String str, String str2, String str3) {
+        if (b("responses")) {
+            String strMaybeConvertToIndentedString = JsonUtils.maybeConvertToIndentedString(str3, 2);
+            String strMaybeConvertToIndentedString2 = JsonUtils.maybeConvertToIndentedString(str, 2);
+            Bundle bundle = new Bundle();
+            bundle.putString("request_url", str2);
+            bundle.putString("request_body", strMaybeConvertToIndentedString);
+            bundle.putString("response", strMaybeConvertToIndentedString2);
+            a(bundle, "responses");
+        }
+    }
+
+    public void a(String str, String str2, int i, Object obj, String str3, boolean z10) {
+        if (b("receive_http_response")) {
+            Bundle bundle = new Bundle();
+            bundle.putString(FacebookMediationAdapter.KEY_ID, str);
+            bundle.putString(ImagesContract.URL, str2);
+            bundle.putInt("code", i);
+            bundle.putBundle("body", JsonUtils.toBundle(obj));
+            bundle.putBoolean("success", z10);
+            BundleUtils.putString("error_message", str3, bundle);
+            a(bundle, "receive_http_response");
+        }
+    }
+
+    public void a(Bundle bundle, String str) {
+        if (b(str)) {
+            this.f21160b.getMessagingService().publish(CommunicatorMessageImpl.create(bundle, str, this, this.f21159a.c(l4.f19747G6).contains(str)));
+        }
+    }
+
+    public boolean a(String str) {
+        return u6.f21547a.contains(str);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:18:0x00a0  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    private android.os.Bundle a(com.applovin.impl.q2 r5) {
+        /*
+            r4 = this;
+            android.os.Bundle r0 = new android.os.Bundle
+            r0.<init>()
+            java.lang.String r1 = r5.O()
+            java.lang.String r2 = "id"
+            r0.putString(r2, r1)
+            java.lang.String r1 = r5.c()
+            java.lang.String r2 = "network_name"
+            r0.putString(r2, r1)
+            java.lang.String r1 = r5.getAdUnitId()
+            java.lang.String r2 = "max_ad_unit_id"
+            r0.putString(r2, r1)
+            java.lang.String r1 = r5.P()
+            java.lang.String r2 = "third_party_ad_placement_id"
+            r0.putString(r2, r1)
+            com.applovin.mediation.MaxAdFormat r1 = r5.getFormat()
+            java.lang.String r1 = r1.getLabel()
+            java.lang.String r2 = "ad_format"
+            r0.putString(r2, r1)
+            java.lang.String r1 = r5.getCreativeId()
+            java.lang.String r2 = "creative_id"
+            com.applovin.impl.sdk.utils.BundleUtils.putStringIfValid(r2, r1, r0)
+            java.lang.String r1 = r5.v()
+            java.lang.String r2 = "adomain"
+            com.applovin.impl.sdk.utils.BundleUtils.putStringIfValid(r2, r1, r0)
+            java.lang.String r1 = r5.getDspName()
+            java.lang.String r2 = "dsp_name"
+            com.applovin.impl.sdk.utils.BundleUtils.putStringIfValid(r2, r1, r0)
+            java.lang.String r1 = r5.c()
+            java.lang.String r2 = "CUSTOM_NETWORK_SDK"
+            boolean r1 = r2.equalsIgnoreCase(r1)
+            if (r1 == 0) goto L66
+            java.lang.String r1 = r5.getNetworkName()
+            java.lang.String r2 = "custom_sdk_network_name"
+            r0.putString(r2, r1)
+        L66:
+            org.json.JSONObject r1 = r5.x()
+            android.os.Bundle r1 = com.applovin.impl.sdk.utils.JsonUtils.toBundle(r1)
+            r0.putAll(r1)
+            boolean r1 = r5 instanceof com.applovin.impl.y2
+            java.lang.String r2 = "ad_view"
+            java.lang.String r3 = "N/A"
+            if (r1 == 0) goto Lab
+            boolean r1 = r5 instanceof com.applovin.impl.s2
+            if (r1 == 0) goto L84
+            com.applovin.impl.s2 r5 = (com.applovin.impl.s2) r5
+            android.view.View r5 = r5.y()
+            goto La1
+        L84:
+            boolean r1 = r5 instanceof com.applovin.impl.u2
+            if (r1 == 0) goto La0
+            com.applovin.impl.u2 r5 = (com.applovin.impl.u2) r5
+            boolean r1 = r5.r0()
+            if (r1 != 0) goto La0
+            com.applovin.mediation.nativeAds.MaxNativeAdView r1 = r5.l0()
+            if (r1 == 0) goto L9b
+            com.applovin.mediation.nativeAds.MaxNativeAdView r5 = r5.l0()
+            goto La1
+        L9b:
+            android.view.ViewGroup r5 = r5.m0()
+            goto La1
+        La0:
+            r5 = 0
+        La1:
+            if (r5 == 0) goto La7
+            java.lang.String r3 = com.applovin.impl.r7.a(r5)
+        La7:
+            r0.putString(r2, r3)
+            return r0
+        Lab:
+            boolean r1 = r5 instanceof com.applovin.impl.t2
+            if (r1 == 0) goto Lcf
+            com.applovin.impl.t2 r5 = (com.applovin.impl.t2) r5
+            android.os.Bundle r5 = r5.j0()
+            java.lang.String r1 = "applovin_ad_view_info"
+            android.os.Bundle r5 = r5.getBundle(r1)
+            java.lang.String r1 = "ad_view_address"
+            java.lang.String r1 = com.applovin.impl.sdk.utils.BundleUtils.getString(r1, r3, r5)
+            r0.putString(r2, r1)
+            java.lang.String r1 = "video_view_address"
+            java.lang.String r5 = com.applovin.impl.sdk.utils.BundleUtils.getString(r1, r3, r5)
+            java.lang.String r1 = "video_view"
+            r0.putString(r1, r5)
+        Lcf:
+            return r0
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.applovin.impl.sdk.j.a(com.applovin.impl.q2):android.os.Bundle");
+    }
+}

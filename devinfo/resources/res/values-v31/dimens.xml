@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="noti_overview_content_padding_end">4dp</dimen>
+    <dimen name="noti_overview_content_padding_start">0dp</dimen>
+    <dimen name="noti_overview_ramarc_margin_start">1dp</dimen>
+</resources>

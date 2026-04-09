@@ -1,0 +1,21 @@
+package e4;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public final class g0 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final float[] f22340a = new float[20];
+
+    /* renamed from: b, reason: collision with root package name */
+    public final long[] f22341b = new long[20];
+
+    /* renamed from: c, reason: collision with root package name */
+    public float f22342c = 0.0f;
+
+    /* renamed from: d, reason: collision with root package name */
+    public int f22343d = 0;
+
+    /* renamed from: e, reason: collision with root package name */
+    public int f22344e = 0;
+}

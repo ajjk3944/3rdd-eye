@@ -1,0 +1,21 @@
+package com.google.android.gms.internal.measurement;
+
+import N7.C1154e9;
+import androidx.work.s;
+import java.util.List;
+
+/* compiled from: com.google.android.gms:play-services-measurement@@21.1.1 */
+/* loaded from: classes2.dex */
+public final class zzbj extends zzaw {
+    @Override // com.google.android.gms.internal.measurement.zzaw
+    public final zzap zza(String str, zzg zzgVar, List list) {
+        if (str == null || str.isEmpty() || !zzgVar.zzh(str)) {
+            throw new IllegalArgumentException(s.d("Command not found: ", str));
+        }
+        zzap zzapVarZzd = zzgVar.zzd(str);
+        if (zzapVarZzd instanceof zzai) {
+            return ((zzai) zzapVarZzd).zza(zzgVar, list);
+        }
+        throw new IllegalArgumentException(C1154e9.i("Function ", str, " is not defined"));
+    }
+}

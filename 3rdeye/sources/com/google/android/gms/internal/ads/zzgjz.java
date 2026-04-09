@@ -1,0 +1,21 @@
+package com.google.android.gms.internal.ads;
+
+import java.security.GeneralSecurityException;
+import javax.crypto.Cipher;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes2.dex */
+final class zzgjz extends ThreadLocal {
+    public static final Cipher zza() {
+        try {
+            return (Cipher) zzgwa.zza.zza("AES/GCM/NoPadding");
+        } catch (GeneralSecurityException e4) {
+            throw new IllegalStateException(e4);
+        }
+    }
+
+    @Override // java.lang.ThreadLocal
+    public final /* bridge */ /* synthetic */ Object initialValue() {
+        return zza();
+    }
+}

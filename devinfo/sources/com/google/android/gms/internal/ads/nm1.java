@@ -1,0 +1,9 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes3.dex */
+public abstract class nm1 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final mm1 f14334a = mm1.f13958b;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Headers.h2" parent="@style/Headers">
+        <item name="android:textSize">22sp</item>
+    </style>
+</resources>

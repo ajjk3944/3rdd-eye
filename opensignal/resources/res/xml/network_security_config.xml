@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">google.com
+        </domain>
+        <domain includeSubdomains="true">storage.googleapis.com
+        </domain>
+        <domain includeSubdomains="true">d11qof99tjkti7.cloudfront.net
+        </domain>
+        <domain includeSubdomains="true">opensignal.akamaized.net
+        </domain>
+        <domain includeSubdomains="true">d2kn31nm262mtr.cloudfront.net
+        </domain>
+        <domain includeSubdomains="true">dujavh6z7vcr6.cloudfront.net
+        </domain>
+    </domain-config>
+</network-security-config>

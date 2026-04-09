@@ -1,0 +1,46 @@
+package com.android.billingclient.api;
+
+import android.os.Bundle;
+import android.os.RemoteException;
+import org.json.JSONException;
+
+/* loaded from: classes.dex */
+final class zzbc extends com.google.android.gms.internal.play_billing.zzz {
+    final ExternalOfferReportingDetailsListener zza;
+    final zzch zzb;
+    final int zzc;
+
+    public /* synthetic */ zzbc(ExternalOfferReportingDetailsListener externalOfferReportingDetailsListener, zzch zzchVar, int i10, zzbl zzblVar) {
+        this.zza = externalOfferReportingDetailsListener;
+        this.zzb = zzchVar;
+        this.zzc = i10;
+    }
+
+    @Override // com.google.android.gms.internal.play_billing.zzaa
+    public final void zza(Bundle bundle) throws RemoteException {
+        if (bundle == null) {
+            zzch zzchVar = this.zzb;
+            BillingResult billingResult = zzcj.zzk;
+            zzchVar.zzb(zzcg.zzb(95, 24, billingResult), this.zzc);
+            this.zza.onExternalOfferReportingDetailsResponse(billingResult, null);
+            return;
+        }
+        int iZzb = com.google.android.gms.internal.play_billing.zze.zzb(bundle, "BillingClient");
+        BillingResult billingResultZza = zzcj.zza(iZzb, com.google.android.gms.internal.play_billing.zze.zzh(bundle, "BillingClient"));
+        if (iZzb != 0) {
+            com.google.android.gms.internal.play_billing.zze.zzl("BillingClient", "createExternalOfferReportingDetailsAsync() failed. Response code: " + iZzb);
+            this.zzb.zzb(zzcg.zzb(23, 24, billingResultZza), this.zzc);
+            this.zza.onExternalOfferReportingDetailsResponse(billingResultZza, null);
+            return;
+        }
+        try {
+            this.zza.onExternalOfferReportingDetailsResponse(billingResultZza, new ExternalOfferReportingDetails(bundle.getString("CREATE_EXTERNAL_PAYMENT_REPORTING_DETAILS")));
+        } catch (JSONException e10) {
+            com.google.android.gms.internal.play_billing.zze.zzm("BillingClient", "Error when parsing invalid external offer reporting details. \n Exception: ", e10);
+            zzch zzchVar2 = this.zzb;
+            BillingResult billingResult2 = zzcj.zzk;
+            zzchVar2.zzb(zzcg.zzb(104, 24, billingResult2), this.zzc);
+            this.zza.onExternalOfferReportingDetailsResponse(billingResult2, null);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbNotificationStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_notification_type_statusbar"
+        style="@style/RadioButtonStyle"/>
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbNotificationVibrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_notification_type_vibrate"
+        style="@style/RadioButtonStyle"/>
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbNotificationSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_notification_type_sound"
+        style="@style/RadioButtonStyle"/>
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbNotificationAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_notification_type_all"
+        style="@style/RadioButtonStyle"/>
+</LinearLayout>

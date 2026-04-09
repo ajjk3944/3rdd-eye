@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/page_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/keyline_2"
+        app:layout_constraintBottom_toTopOf="@+id/page_title_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/page_title_textview"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:layout_marginEnd="@dimen/keyline_2"
+        app:layout_constraintBottom_toTopOf="@+id/page_subtitle_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginBottom="@dimen/keyline_2"
+        style="@style/Onboarding.Title"/>
+    <TextView
+        android:id="@+id/page_subtitle_textview"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/keyline_2"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:layout_marginEnd="@dimen/keyline_2"
+        app:layout_constraintBottom_toTopOf="@+id/page_description_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Onboarding.Subtitle"/>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/page_description_textview"
+        android:layout_marginLeft="@dimen/keyline_2"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginRight="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_10"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:layout_marginEnd="@dimen/keyline_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Onboarding.Description"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

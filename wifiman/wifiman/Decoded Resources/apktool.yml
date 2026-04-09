@@ -1,0 +1,30 @@
+version: 2.12.1
+apkFileName: QzvflCclAgZFEWQCEGsbOFCqAOqpTjZF.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 34
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 212010003
+  versionName: 2.12.1
+doNotCompress:
+- arsc
+- dex
+- png
+- webp
+- META-INF/services/Aj.e
+- META-INF/services/Ii.K
+- META-INF/services/Ni.q
+- META-INF/services/kotlin.reflect.jvm.internal.impl.builtins.b
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- assets/mlkit_odt_default_classifier/labeler_with_validation.tflite
+- assets/mlkit_odt_localizer/localizer_with_validation.tflite
+- assets/mlkit_odt_localizer/mobile_object_localizer_labelmap
+- assets/model.tflite
+- okhttp3/internal/publicsuffix/publicsuffixes.gz
+- version.properties

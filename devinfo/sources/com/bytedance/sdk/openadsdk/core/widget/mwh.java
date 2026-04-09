@@ -1,0 +1,44 @@
+package com.bytedance.sdk.openadsdk.core.widget;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public final class mwh extends com.bytedance.sdk.openadsdk.core.le.yu {
+    private float ouw;
+
+    public mwh(Context context) {
+        this(context, null);
+    }
+
+    @Override // com.bytedance.sdk.openadsdk.core.le.yu, android.widget.ImageView, android.view.View
+    public final void onMeasure(int i4, int i10) {
+        int mode = View.MeasureSpec.getMode(i4);
+        int size = View.MeasureSpec.getSize(i4);
+        int mode2 = View.MeasureSpec.getMode(i10);
+        int size2 = View.MeasureSpec.getSize(i10);
+        int i11 = getLayoutParams().width;
+        int i12 = getLayoutParams().height;
+        float f10 = this.ouw;
+        if (f10 > 0.0f) {
+            if (i11 == -2) {
+                size = (int) (size2 * f10);
+                mode = 1073741824;
+            } else if (i12 == -2) {
+                size2 = (int) (size / f10);
+                mode2 = 1073741824;
+            }
+        }
+        setMeasuredDimension(View.MeasureSpec.makeMeasureSpec(size, mode), View.MeasureSpec.makeMeasureSpec(size2, mode2));
+    }
+
+    public final void setRatio(float f10) {
+        this.ouw = f10;
+    }
+
+    private mwh(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet, 0);
+    }
+}

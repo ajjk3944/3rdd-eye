@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Seulement icône Statusbar</item>
+        <item>Vibrer</item>
+        <item>Sonnerie</item>
+        <item>Tout !</item>
+    </array>
+    <array name="stat_type">
+        <item>Mon signal</item>
+        <item>Usage de données</item>
+    </array>
+    <array name="time_period">
+        <item>Pendant la dernière heure</item>
+        <item>Aujourd\'hui</item>
+        <item>Ce mois</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Aujourd\'hui</item>
+        <item>Ce mois-ci</item>
+    </array>
+    <array name="time_period_new">
+        <item>Aujourd\'hui</item>
+        <item>Hier</item>
+        <item>Semaine dernière</item>
+        <item>Ce mois-ci</item>
+        <item>Tout</item>
+    </array>
+</resources>

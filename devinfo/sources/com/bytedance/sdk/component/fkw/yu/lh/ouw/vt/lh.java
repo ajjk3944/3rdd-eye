@@ -1,0 +1,35 @@
+package com.bytedance.sdk.component.fkw.yu.lh.ouw.vt;
+
+import android.graphics.Bitmap;
+import com.bytedance.sdk.component.fkw.zih;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public class lh implements zih {
+    private final zih ouw;
+    private final com.bytedance.sdk.component.fkw.yu.lh.ouw.ouw vt;
+
+    public lh(zih zihVar) {
+        this(zihVar, null);
+    }
+
+    @Override // com.bytedance.sdk.component.fkw.ouw
+    public final /* bridge */ /* synthetic */ Bitmap ouw(String str) {
+        return this.ouw.ouw(str);
+    }
+
+    @Override // com.bytedance.sdk.component.fkw.ouw
+    public final /* bridge */ /* synthetic */ boolean vt(String str) {
+        return this.ouw.vt(str);
+    }
+
+    private lh(zih zihVar, com.bytedance.sdk.component.fkw.yu.lh.ouw.ouw ouwVar) {
+        this.ouw = zihVar;
+        this.vt = ouwVar;
+    }
+
+    @Override // com.bytedance.sdk.component.fkw.ouw
+    public final /* synthetic */ boolean ouw(String str, Bitmap bitmap) {
+        return this.ouw.ouw(str, bitmap);
+    }
+}

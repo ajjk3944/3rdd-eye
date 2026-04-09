@@ -1,0 +1,8 @@
+package c2;
+
+/* loaded from: classes.dex */
+public interface k {
+    String a();
+
+    boolean isSupported();
+}

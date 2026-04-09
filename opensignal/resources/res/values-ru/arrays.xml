@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Только значок в статус баре</item>
+        <item>Вибрировать</item>
+        <item>Звук</item>
+        <item>Всё</item>
+    </array>
+    <array name="stat_type">
+        <item>Время по типу связи</item>
+        <item>Использование данных</item>
+    </array>
+    <array name="time_period">
+        <item>Предыдущий час</item>
+        <item>Сегодня</item>
+        <item>В этом месяце</item>
+    </array>
+</resources>

@@ -1,0 +1,84 @@
+.class final Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/n;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/ubnt/usurvey/ui/signal/floorplan/a;->n(Ljava/lang/String;)Lgg/z;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# static fields
+.field public static final a:Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;
+
+    invoke-direct {v0}, Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;-><init>()V
+
+    sput-object v0, Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;->a:Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;
+
+    return-void
+.end method
+
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Throwable;)Lgg/D;
+    .locals 2
+
+    const-string/jumbo v0, "error"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    instance-of v0, p1, Lcom/ui/wifiman/model/signalmapper/floorplan/WifimanFloorplanSessionGpxSerializer$Error;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/ubnt/usurvey/ui/signal/floorplan/WifimanFloorplanViewControllerManager$Error$RecordDeserializationFailed;
+
+    const-string/jumbo v1, "Failed to deserialize gpx"
+
+    invoke-direct {v0, v1, p1}, Lcom/ubnt/usurvey/ui/signal/floorplan/WifimanFloorplanViewControllerManager$Error$RecordDeserializationFailed;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :cond_0
+    invoke-static {p1}, Lgg/z;->p(Ljava/lang/Throwable;)Lgg/z;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-virtual {p0, p1}, Lcom/ubnt/usurvey/ui/signal/floorplan/a$e;->a(Ljava/lang/Throwable;)Lgg/D;
+
+    move-result-object p1
+
+    return-object p1
+.end method

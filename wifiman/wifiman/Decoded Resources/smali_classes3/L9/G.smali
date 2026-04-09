@@ -1,0 +1,64 @@
+.class public final synthetic LL9/G;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmh/p;
+
+
+# instance fields
+.field public final synthetic a:LL9/H;
+
+.field public final synthetic b:Lmh/q;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+
+# direct methods
+.method public synthetic constructor <init>(LL9/H;Lmh/q;II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, LL9/G;->a:LL9/H;
+
+    iput-object p2, p0, LL9/G;->b:Lmh/q;
+
+    iput p3, p0, LL9/G;->c:I
+
+    iput p4, p0, LL9/G;->d:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, LL9/G;->a:LL9/H;
+
+    iget-object v1, p0, LL9/G;->b:Lmh/q;
+
+    iget v2, p0, LL9/G;->c:I
+
+    iget v3, p0, LL9/G;->d:I
+
+    move-object v4, p1
+
+    check-cast v4, LT/l;
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-static/range {v0 .. v5}, LL9/H;->b(LL9/H;Lmh/q;IILT/l;I)LYg/J;
+
+    move-result-object p1
+
+    return-object p1
+.end method

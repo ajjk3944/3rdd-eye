@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/processor"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/processor"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/frequency"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/cpu_freq"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/supported_abis"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/supported_abis"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/cpu_hardware"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/cpu_hardware"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/cpu_governor"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/cpu_governor"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="/proc/cpuinfo"
+            style="@style/CardLabel"/>
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/proc_cpuinfo"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/view"
+            android:drawablePadding="@dimen/content_padding_half"
+            android:textIsSelectable="false"
+            android:textAllCaps="true"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</merge>

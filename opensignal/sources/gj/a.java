@@ -1,0 +1,25 @@
+package gj;
+
+/* loaded from: classes.dex */
+public abstract /* synthetic */ class a {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ int[] f9590a;
+
+    static {
+        int[] iArr = new int[kk.b.values().length];
+        try {
+            iArr[kk.b.YOUTUBE.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
+        }
+        try {
+            iArr[kk.b.FACEBOOK.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
+        }
+        try {
+            iArr[kk.b.TWITCH.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        f9590a = iArr;
+    }
+}

@@ -1,0 +1,651 @@
+package oi;
+
+import ak.s;
+import ak.t;
+import android.os.Build;
+import br.l;
+import java.util.HashMap;
+import java.util.List;
+import ni.b0;
+import ni.c0;
+import ni.d;
+import ni.d0;
+import ni.e0;
+import ni.f0;
+import ni.g;
+import ni.i;
+import ni.i0;
+import ni.j;
+import ni.j0;
+import ni.j1;
+import ni.k;
+import ni.k0;
+import ni.l0;
+import ni.m;
+import ni.m0;
+import ni.n0;
+import ni.p0;
+import ni.q0;
+import ni.r;
+import ni.r0;
+import ni.y;
+import org.json.JSONException;
+import org.json.JSONObject;
+import vc.e;
+import xj.h;
+
+/* loaded from: classes.dex */
+public final class a implements h {
+
+    /* renamed from: a, reason: collision with root package name */
+    public final /* synthetic */ int f19519a;
+
+    /* renamed from: d, reason: collision with root package name */
+    public final h f19520d;
+
+    public /* synthetic */ a(h hVar, int i10) {
+        this.f19519a = i10;
+        this.f19520d = hVar;
+    }
+
+    public static void b(i iVar, HashMap map) {
+        e.F(map, "DT_DELTA_TX_BYTES_WIFI", iVar != null ? iVar.f17898a : null);
+        e.F(map, "DT_DELTA_RX_BYTES_WIFI", iVar != null ? iVar.f17899b : null);
+        e.F(map, "DT_DELTA_TX_BYTES_CELL", iVar != null ? iVar.f17900c : null);
+        e.F(map, "DT_DELTA_RX_BYTES_CELL", iVar != null ? iVar.f17901d : null);
+        e.F(map, "DT_DELTA_INTERVAL", iVar != null ? iVar.f17902e : null);
+        e.F(map, "DT_DELTA_TX_DROPS_WIFI", iVar != null ? iVar.f17903f : null);
+        e.F(map, "DT_DELTA_TX_PACKETS_WIFI", iVar != null ? iVar.f17904g : null);
+        e.F(map, "DT_DELTA_TX_DROPS_CELL", iVar != null ? iVar.f17905h : null);
+        e.F(map, "DT_DELTA_TX_PACKETS_CELL", iVar != null ? iVar.f17906i : null);
+        e.F(map, "DT_DELTA_RX_DROPS_WIFI", iVar != null ? iVar.j : null);
+        e.F(map, "DT_DELTA_RX_PACKETS_WIFI", iVar != null ? iVar.k : null);
+        e.F(map, "DT_DELTA_RX_DROPS_CELL", iVar != null ? iVar.f17907l : null);
+        e.F(map, "DT_DELTA_RX_PACKETS_CELL", iVar != null ? iVar.f17908m : null);
+        e.F(map, "DT_TOT_TX_DROPS_WIFI", iVar != null ? iVar.f17909n : null);
+        e.F(map, "DT_TOT_TX_PACKETS_WIFI", iVar != null ? iVar.f17910o : null);
+        e.F(map, "DT_TOT_TX_DROPS_CELL", iVar != null ? iVar.f17911p : null);
+        e.F(map, "DT_TOT_TX_PACKETS_CELL", iVar != null ? iVar.f17912q : null);
+        e.F(map, "DT_TOT_RX_DROPS_WIFI", iVar != null ? iVar.f17913r : null);
+        e.F(map, "DT_TOT_RX_PACKETS_WIFI", iVar != null ? iVar.f17914s : null);
+        e.F(map, "DT_TOT_RX_DROPS_CELL", iVar != null ? iVar.f17915t : null);
+        e.F(map, "DT_TOT_RX_PACKETS_CELL", iVar != null ? iVar.f17916u : null);
+        e.F(map, "DT_TOT_RX_BYTES_CELL", iVar != null ? iVar.f17917v : null);
+        e.F(map, "DT_TOT_RX_BYTES_WIFI", iVar != null ? iVar.f17918w : null);
+        e.F(map, "DT_TOT_TX_BYTES_CELL", iVar != null ? iVar.f17919x : null);
+        e.F(map, "DT_TOT_TX_BYTES_WIFI", iVar != null ? iVar.f17920y : null);
+    }
+
+    public static void c(j jVar, HashMap map) {
+        e.F(map, "CONNECTION_ID", jVar != null ? jVar.f17947a : null);
+        e.F(map, "CONNECTION_START_TIME", jVar != null ? jVar.f17948b : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_TX", jVar != null ? jVar.f17949c : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_TX_WIFI", jVar != null ? jVar.f17950d : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_TX_CELL", jVar != null ? jVar.f17951e : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_RX", jVar != null ? jVar.f17952f : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_RX_WIFI", jVar != null ? jVar.f17953g : null);
+        e.F(map, "CONNECTION_DELTA_BYTES_RX_CELL", jVar != null ? jVar.f17954h : null);
+    }
+
+    public static void d(k kVar, HashMap map) {
+        e.F(map, "DEVICE_STORAGE_FREE_BYTES", kVar != null ? kVar.f17988a : null);
+        e.F(map, "DEVICE_STORAGE_USED_BYTES", kVar != null ? kVar.f17989b : null);
+        e.F(map, "DEVICE_RAM_FREE_BYTES", kVar != null ? kVar.f17990c : null);
+        e.F(map, "DEVICE_RAM_USED_BYTES", kVar != null ? kVar.f17991d : null);
+    }
+
+    public static void e(r rVar, HashMap map) {
+        Boolean bool;
+        e.F(map, "IS_ESIM_ENABLED", (rVar == null || (bool = rVar.f18116a) == null) ? null : Integer.valueOf(bool.booleanValue() ? 1 : 0));
+        e.F(map, "ESIM_OS_VERSION", rVar != null ? rVar.f18117b : null);
+        e.F(map, "ESIM_CARD_ID_FOR_DEFAULT_EUICC", rVar != null ? rVar.f18118c : null);
+    }
+
+    public static void f(y yVar, HashMap map) {
+        e.F(map, "LAST_PUBLIC_IP", yVar != null ? yVar.f18297a : null);
+        e.F(map, "LAST_PUBLIC_IP_TIMESTAMP", yVar != null ? yVar.f18298b : null);
+        e.F(map, "LAST_PUBLIC_IPS", yVar != null ? yVar.f18299c : null);
+    }
+
+    public static void g(b0 b0Var, HashMap map) {
+        e.F(map, "LIGHT", b0Var != null ? b0Var.f17670b : null);
+        e.F(map, "LIGHT_ACC", b0Var != null ? b0Var.f17669a : null);
+    }
+
+    public static void h(e0 e0Var, HashMap map) {
+        Boolean bool;
+        Boolean bool2;
+        Boolean bool3;
+        Boolean bool4;
+        Boolean bool5;
+        Boolean bool6;
+        Boolean bool7;
+        Boolean bool8;
+        Boolean bool9;
+        Boolean bool10;
+        Boolean bool11;
+        Boolean bool12;
+        Boolean bool13;
+        Boolean bool14;
+        Boolean bool15;
+        Boolean bool16;
+        Boolean bool17;
+        Boolean bool18;
+        Boolean bool19;
+        Boolean bool20;
+        Boolean bool21;
+        Boolean bool22;
+        Boolean bool23;
+        Boolean bool24;
+        Boolean bool25;
+        Boolean bool26;
+        Boolean bool27;
+        Boolean bool28;
+        Boolean bool29;
+        Boolean bool30;
+        Boolean bool31;
+        Boolean bool32;
+        Boolean bool33;
+        Integer numValueOf = null;
+        e.F(map, "NC_IS_CAPTIVE_PORTAL", (e0Var == null || (bool33 = e0Var.f17773a) == null) ? null : Integer.valueOf(bool33.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_CBS_AVAILABLE", (e0Var == null || (bool32 = e0Var.f17774b) == null) ? null : Integer.valueOf(bool32.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_DUN_AVAILABLE", (e0Var == null || (bool31 = e0Var.f17775c) == null) ? null : Integer.valueOf(bool31.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_EIMS_AVAILABLE", (e0Var == null || (bool30 = e0Var.f17776d) == null) ? null : Integer.valueOf(bool30.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_FOREGROUND_APPS", (e0Var == null || (bool29 = e0Var.f17777e) == null) ? null : Integer.valueOf(bool29.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_FOTA_AVAILABLE", (e0Var == null || (bool28 = e0Var.f17778f) == null) ? null : Integer.valueOf(bool28.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_IA_AVAILABLE", (e0Var == null || (bool27 = e0Var.f17779g) == null) ? null : Integer.valueOf(bool27.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_IMS_AVAILABLE", (e0Var == null || (bool26 = e0Var.f17780h) == null) ? null : Integer.valueOf(bool26.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_INTERNET_AVAILABLE", (e0Var == null || (bool25 = e0Var.f17781i) == null) ? null : Integer.valueOf(bool25.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_MMS_AVAILABLE", (e0Var == null || (bool24 = e0Var.j) == null) ? null : Integer.valueOf(bool24.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_RCS_AVAILABLE", (e0Var == null || (bool23 = e0Var.f17787q) == null) ? null : Integer.valueOf(bool23.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_SUPL_AVAILABLE", (e0Var == null || (bool22 = e0Var.f17788r) == null) ? null : Integer.valueOf(bool22.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_WIFI_P2P_AVAILABLE", (e0Var == null || (bool21 = e0Var.f17791u) == null) ? null : Integer.valueOf(bool21.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_XCAP_AVAILABLE", (e0Var == null || (bool20 = e0Var.f17792v) == null) ? null : Integer.valueOf(bool20.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_CONGESTED", (e0Var == null || (bool19 = e0Var.k) == null) ? null : Integer.valueOf(bool19.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_METERED", (e0Var == null || (bool18 = e0Var.f17782l) == null) ? null : Integer.valueOf(bool18.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_RESTRICTED", (e0Var == null || (bool17 = e0Var.f17783m) == null) ? null : Integer.valueOf(bool17.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_ROAMING", (e0Var == null || (bool16 = e0Var.f17784n) == null) ? null : Integer.valueOf(bool16.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_SUSPENDED", (e0Var == null || (bool15 = e0Var.f17785o) == null) ? null : Integer.valueOf(bool15.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_NOT_VPN", (e0Var == null || (bool14 = e0Var.f17786p) == null) ? null : Integer.valueOf(bool14.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRUSTED", (e0Var == null || (bool13 = e0Var.f17789s) == null) ? null : Integer.valueOf(bool13.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_VALIDATED", (e0Var == null || (bool12 = e0Var.f17790t) == null) ? null : Integer.valueOf(bool12.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_BLUETOOTH", (e0Var == null || (bool11 = e0Var.f17793w) == null) ? null : Integer.valueOf(bool11.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_CELLULAR", (e0Var == null || (bool10 = e0Var.f17794x) == null) ? null : Integer.valueOf(bool10.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_ETHERNET", (e0Var == null || (bool9 = e0Var.f17795y) == null) ? null : Integer.valueOf(bool9.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_LOWPAN", (e0Var == null || (bool8 = e0Var.f17796z) == null) ? null : Integer.valueOf(bool8.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_VPN", (e0Var == null || (bool7 = e0Var.A) == null) ? null : Integer.valueOf(bool7.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_WIFI", (e0Var == null || (bool6 = e0Var.B) == null) ? null : Integer.valueOf(bool6.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_TRANSPORT_WIFI_AWARE", (e0Var == null || (bool5 = e0Var.C) == null) ? null : Integer.valueOf(bool5.booleanValue() ? 1 : 0));
+        e.F(map, "NC_UPSTREAM_BANDWIDTH_KBPS", e0Var != null ? e0Var.D : null);
+        e.F(map, "NC_DOWNSTREAM_BANDWIDTH_KBPS", e0Var != null ? e0Var.E : null);
+        e.F(map, "NC_IS_NETWORK_ENTERPRISE", (e0Var == null || (bool4 = e0Var.F) == null) ? null : Integer.valueOf(bool4.booleanValue() ? 1 : 0));
+        e.F(map, "NC_IS_CONNECTED_TO_HEAD_UNIT", (e0Var == null || (bool3 = e0Var.G) == null) ? null : Integer.valueOf(bool3.booleanValue() ? 1 : 0));
+        e.F(map, "NC_CAPABILITIES", e0Var != null ? e0Var.H : null);
+        e.F(map, "NC_IS_LOCAL_NETWORK", (e0Var == null || (bool2 = e0Var.I) == null) ? null : Integer.valueOf(bool2.booleanValue() ? 1 : 0));
+        if (e0Var != null && (bool = e0Var.J) != null) {
+            numValueOf = Integer.valueOf(bool.booleanValue() ? 1 : 0);
+        }
+        e.F(map, "NC_IS_SATELLITE", numValueOf);
+    }
+
+    public static void i(k0 k0Var, HashMap map) {
+        e.F(map, "GSM_SIGNAL_STRENGTH", k0Var != null ? k0Var.f17993b : null);
+        e.F(map, "GSM_BIT_ERROR_RATE", k0Var != null ? k0Var.f17992a : null);
+        e.F(map, "CDMA_DBM", k0Var != null ? k0Var.f17994c : null);
+        e.F(map, "CDMA_ECIO", k0Var != null ? k0Var.f17995d : null);
+        e.F(map, "EVDO_DBM", k0Var != null ? k0Var.f17996e : null);
+        e.F(map, "EVDO_ECIO", k0Var != null ? k0Var.f17997f : null);
+        e.F(map, "EVDO_SNR", k0Var != null ? k0Var.f17998g : null);
+        e.F(map, "SIGNAL_STRENGTH_STRING", k0Var != null ? k0Var.f17999h : null);
+        e.F(map, "SIGNAL_STRENGTH_TIME", k0Var != null ? k0Var.f18000i : null);
+    }
+
+    public static void j(l0 l0Var, HashMap map) {
+        e.F(map, "SIM_CARRIER_ID", l0Var != null ? l0Var.f18006a : null);
+        e.F(map, "SIM_CARRIER_NAME", l0Var != null ? l0Var.f18007b : null);
+        e.F(map, "SIM_SPECIFIC_CARRIER_ID", l0Var != null ? l0Var.f18008c : null);
+        e.F(map, "SIM_SPECIFIC_CARRIER_NAME", l0Var != null ? l0Var.f18009d : null);
+        e.F(map, "SIM_STATE", l0Var != null ? l0Var.f18010e : null);
+        e.F(map, "SIM_GROUP_ID_LEVEL1", l0Var != null ? l0Var.f18011f : null);
+        e.F(map, "ACCESS_POINT_NAME", l0Var != null ? l0Var.f18012g : null);
+    }
+
+    public static void k(r0 r0Var, HashMap map) {
+        e.F(map, "PHYSICAL_CHANNEL_CONFIG_STRING", r0Var != null ? r0Var.f18119a : null);
+        e.F(map, "PHYSICAL_CHANNEL_CONFIG_TIMESTAMP", r0Var != null ? r0Var.f18120b : null);
+    }
+
+    private final Object l(Object obj) {
+        Boolean bool;
+        Boolean bool2;
+        Boolean bool3;
+        Boolean bool4;
+        Boolean bool5;
+        Boolean bool6;
+        Boolean bool7;
+        Boolean bool8;
+        Boolean bool9;
+        Boolean bool10;
+        Boolean bool11;
+        Boolean bool12;
+        Boolean bool13;
+        Boolean bool14;
+        Boolean bool15;
+        Boolean bool16;
+        Boolean bool17;
+        Boolean bool18;
+        Boolean bool19;
+        Boolean bool20;
+        Boolean bool21;
+        Boolean bool22;
+        Boolean bool23;
+        Boolean bool24;
+        Boolean bool25;
+        Boolean bool26;
+        Boolean bool27;
+        Boolean bool28;
+        Boolean bool29;
+        Boolean bool30;
+        Boolean bool31;
+        Boolean bool32;
+        Boolean bool33;
+        Boolean bool34;
+        Boolean bool35;
+        Boolean bool36;
+        Boolean bool37;
+        Boolean bool38;
+        g gVar = (g) obj;
+        l.e(gVar, "input");
+        HashMap map = new HashMap();
+        map.put("_id", Long.valueOf(gVar.f17822a));
+        map.put("TIME", Long.valueOf(gVar.f17827f));
+        map.put("NAME", gVar.f17824c);
+        map.put("ANDROID_SDK", gVar.f17828g);
+        e.F(map, "ANDROID_SDK_FULL", gVar.f17829h);
+        e.F(map, "ANDROID_VRS", gVar.f17831l);
+        String str = gVar.f17830i;
+        map.put("APP_VRS_CODE", str);
+        map.put("CLIENT_VRS_CODE", str);
+        map.put("APP_VRS_CODE", str);
+        map.put("DC_VRS_CODE", gVar.k);
+        map.put("DB_VRS_CODE", Integer.valueOf(gVar.f17832m));
+        map.put("REPORT_CONFIG_REVISION", Integer.valueOf(gVar.f17833n));
+        map.put("REPORT_CONFIG_ID", Integer.valueOf(gVar.f17834o));
+        map.put("CONFIG_HASH", gVar.f17835p);
+        map.put("COHORT_ID", gVar.f17836q);
+        map.put("NETWORK_CONNECTION_TYPE", Integer.valueOf(gVar.f17845z));
+        e.F(map, "CELLS_INFO", gVar.f17844y);
+        ni.l lVar = gVar.f17843x;
+        e.F(map, "DATA_ENABLED", (lVar == null || (bool38 = lVar.f18001a) == null) ? null : Integer.valueOf(bool38.booleanValue() ? 1 : 0));
+        e.F(map, "PREFERRED_NETWORK_MODE", lVar != null ? lVar.f18002b : null);
+        e.F(map, "ADAPTIVE_CONNECTIVITY_ENABLED", (lVar == null || (bool37 = lVar.f18003c) == null) ? null : Integer.valueOf(bool37.booleanValue() ? 1 : 0));
+        e.F(map, "IS_AIRPLANE_MODE_ON", (lVar == null || (bool36 = lVar.f18004d) == null) ? null : Integer.valueOf(bool36.booleanValue() ? 1 : 0));
+        e.F(map, "IS_TETHERING", (lVar == null || (bool35 = lVar.f18005e) == null) ? null : Integer.valueOf(bool35.booleanValue() ? 1 : 0));
+        j0 j0Var = gVar.f17837r;
+        e.F(map, "SS_IS_MANUAL", j0Var != null ? Integer.valueOf(j0Var.f17955a ? 1 : 0) : null);
+        e.F(map, "SS_OPERATOR_ALPHA_LNG", j0Var != null ? j0Var.f17956b : null);
+        e.F(map, "SS_OPERATOR_NUM", j0Var != null ? j0Var.f17957c : null);
+        e.F(map, "SS_ROAMING", j0Var != null ? Integer.valueOf(j0Var.f17958d ? 1 : 0) : null);
+        e.F(map, "SS_STATE", j0Var != null ? j0Var.f17959e : null);
+        e.F(map, "SS_IS_USING_CARRIER_AGGREGATION", (j0Var == null || (bool34 = j0Var.f17960f) == null) ? null : Integer.valueOf(bool34.booleanValue() ? 1 : 0));
+        e.F(map, "SS_STRING_VALUE", j0Var != null ? j0Var.f17961g : null);
+        e.F(map, "SS_CELL_BANDWIDTHS", j0Var != null ? j0Var.f17962h : null);
+        e.F(map, "SS_UPDATE_TIME", j0Var != null ? j0Var.f17963i : null);
+        e.F(map, "NETWORK_REGISTRATION_INFO", j0Var != null ? j0Var.j : null);
+        f0 f0Var = gVar.f17838s;
+        if (f0Var != null) {
+            Boolean boolValueOf = Boolean.valueOf(f0Var.f17812a);
+            h hVar = this.f19520d;
+            map.put("PM_READ_PHONE_STATE", hVar.a(boolValueOf));
+            map.put("PM_READ_BASIC_PHONE_STATE", hVar.a(Boolean.valueOf(f0Var.f17813b)));
+            map.put("PM_ACCESS_FINE_LOCATION", hVar.a(Boolean.valueOf(f0Var.f17814c)));
+            map.put("PM_ACCESS_COARSE_LOCATION", hVar.a(Boolean.valueOf(f0Var.f17815d)));
+            map.put("PM_ACCESS_BACKGROUND_LOCATION", hVar.a(Boolean.valueOf(f0Var.f17816e)));
+            map.put("PM_ACCESS_WIFI_STATE", hVar.a(Boolean.valueOf(f0Var.f17817f)));
+            map.put("PM_ACCESS_NETWORK_STATE", hVar.a(Boolean.valueOf(f0Var.f17818g)));
+            map.put("PM_RECEIVE_BOOT_COMPLETED", hVar.a(Boolean.valueOf(f0Var.f17819h)));
+            map.put("PM_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS", hVar.a(Boolean.valueOf(f0Var.f17820i)));
+        }
+        c0 c0Var = gVar.f17839t;
+        if (c0Var != null) {
+            Double d6 = c0Var.f17698c;
+            Double d10 = c0Var.f17697b;
+            if (d10 != null && d6 != null) {
+                e.F(map, "ALTITUDE", c0Var.f17696a);
+                e.F(map, "LATITUDE", d10);
+                e.F(map, "LONGITUDE", d6);
+                e.F(map, "LOC_ACCURACY", c0Var.f17699d);
+                e.F(map, "LOC_AGE", c0Var.f17700e);
+                Boolean bool39 = c0Var.f17701f;
+                e.F(map, "LOC_MOCKING_ENABLED", bool39 != null ? Integer.valueOf(bool39.booleanValue() ? 1 : 0) : null);
+                e.F(map, "LOC_SPEED", c0Var.f17702g);
+                e.F(map, "LOC_TIME", c0Var.f17703h);
+                e.F(map, "LOC_PROVIDER", c0Var.f17704i);
+                e.F(map, "LOC_MSL_ALTITUDE_METERS", c0Var.j);
+                e.F(map, "LOC_MSL_ALTITUDE_ACCURACY_METERS", c0Var.k);
+                e.F(map, "ALTITUDE_ACCURACY_METERS", c0Var.f17705l);
+            }
+        }
+        d0 d0Var = gVar.f17840u;
+        if (d0Var != null) {
+            Boolean bool40 = d0Var.f17740a;
+            e.F(map, "LOC_ENABLED", bool40 != null ? Integer.valueOf(bool40.booleanValue() ? 1 : 0) : null);
+        }
+        m0 m0Var = gVar.f17841v;
+        e.F(map, "SB_ACTIVE_COUNT", m0Var != null ? m0Var.f18020a : null);
+        e.F(map, "SB_ACTIVE_COUNT_MAX", m0Var != null ? m0Var.f18021b : null);
+        e.F(map, "SB_CARRIER_NAME", m0Var != null ? m0Var.f18022c : null);
+        e.F(map, "SB_DATA_ROAMING", m0Var != null ? m0Var.f18023d : null);
+        e.F(map, "SB_DISPLAY_NAME", m0Var != null ? m0Var.f18024e : null);
+        e.F(map, "SB_ID", m0Var != null ? m0Var.f18025f : null);
+        e.F(map, "SB_IS_DATA_SIM", (m0Var == null || (bool33 = m0Var.f18026g) == null) ? null : Integer.valueOf(bool33.booleanValue() ? 1 : 0));
+        e.F(map, "SB_IS_DEFAULT_SIM", (m0Var == null || (bool32 = m0Var.f18027h) == null) ? null : Integer.valueOf(bool32.booleanValue() ? 1 : 0));
+        e.F(map, "SB_IS_SMS_SIM", (m0Var == null || (bool31 = m0Var.f18028i) == null) ? null : Integer.valueOf(bool31.booleanValue() ? 1 : 0));
+        e.F(map, "SB_IS_VOICE_SIM", (m0Var == null || (bool30 = m0Var.j) == null) ? null : Integer.valueOf(bool30.booleanValue() ? 1 : 0));
+        e.F(map, "SB_IS_ACTIVE_DATA_SIM", (m0Var == null || (bool29 = m0Var.k) == null) ? null : Integer.valueOf(bool29.booleanValue() ? 1 : 0));
+        e.F(map, "SB_MCCMNC_LIST", m0Var != null ? m0Var.f18029l : null);
+        e.F(map, "SB_NETWORK_ID", m0Var != null ? m0Var.f18030m : null);
+        e.F(map, "SB_SLOT_INDEX", m0Var != null ? m0Var.f18031n : null);
+        e.F(map, "SB_CARD_ID", m0Var != null ? m0Var.f18032o : null);
+        e.F(map, "SB_IS_EMBEDDED", (m0Var == null || (bool28 = m0Var.f18033p) == null) ? null : Integer.valueOf(bool28.booleanValue() ? 1 : 0));
+        e.F(map, "SB_ACTIVE_DATA_ID", m0Var != null ? m0Var.f18034q : null);
+        e.F(map, "SB_DEFAULT_ID", m0Var != null ? m0Var.f18036s : null);
+        e.F(map, "SB_DEFAULT_DATA_ID", m0Var != null ? m0Var.f18035r : null);
+        e.F(map, "SB_DEFAULT_VOICE_ID", m0Var != null ? m0Var.f18037t : null);
+        e.F(map, "SB_DEFAULT_SMS_ID", m0Var != null ? m0Var.f18038u : null);
+        p0 p0Var = gVar.f17842w;
+        e.F(map, "CALL_STATE", p0Var != null ? p0Var.f18080a : null);
+        e.F(map, "DATA_ACTIVITY", p0Var != null ? p0Var.f18081b : null);
+        e.F(map, "DATA_STATE", p0Var != null ? p0Var.f18082c : null);
+        e.F(map, "IS_NETWORK_ROAMING", p0Var != null ? Integer.valueOf(p0Var.f18083d.booleanValue() ? 1 : 0) : null);
+        e.F(map, "CAPABILITY_SLICING_SUPPORTED", (p0Var == null || (bool27 = p0Var.f18093p) == null) ? null : Integer.valueOf(bool27.booleanValue() ? 1 : 0));
+        e.F(map, "NETWORK_ID", p0Var != null ? p0Var.f18084e : null);
+        e.F(map, "NETWORK_ID_SIM", p0Var != null ? p0Var.f18085f : null);
+        e.F(map, "NETWORK_NAME", p0Var != null ? p0Var.f18086g : null);
+        e.F(map, "NETWORK_NAME_SIM", p0Var != null ? p0Var.f18087h : null);
+        e.F(map, "NETWORK_TYPE_INT", p0Var != null ? p0Var.f18088i : null);
+        e.F(map, "VOICE_NETWORK_TYPE_INT", p0Var != null ? p0Var.j : null);
+        e.F(map, "ACTIVE_MODEM_COUNT", p0Var != null ? p0Var.k : null);
+        e.F(map, "SUPPORTED_MODEM_COUNT", p0Var != null ? p0Var.f18089l : null);
+        e.F(map, "IS_DATA_CAPABLE", (p0Var == null || (bool26 = p0Var.f18090m) == null) ? null : Integer.valueOf(bool26.booleanValue() ? 1 : 0));
+        e.F(map, "IS_DATA_CONNECTION_ALLOWED", (p0Var == null || (bool25 = p0Var.f18091n) == null) ? null : Integer.valueOf(bool25.booleanValue() ? 1 : 0));
+        e.F(map, "DATA_DISABLED_REASONS", p0Var != null ? p0Var.f18092o : null);
+        e.F(map, "EQUIVALENT_HOME_PLMNS", p0Var != null ? p0Var.f18094q : null);
+        e.F(map, "IS_ACTIVE_NETWORK_METERED", (p0Var == null || (bool24 = p0Var.f18095r) == null) ? null : Integer.valueOf(bool24.booleanValue() ? 1 : 0));
+        e.F(map, "RESTRICT_BACKGROUND_STATUS", p0Var != null ? p0Var.f18096s : null);
+        e.F(map, "DNS_SERVERS", p0Var != null ? p0Var.f18100w : null);
+        e.F(map, "PREMIUM_CAPABILITIES_AVAILABLE_FOR_PURCHASE", p0Var != null ? p0Var.f18101x : null);
+        e.F(map, "IS_MOBILE_DATE_ENABLED_BY_USER", (p0Var == null || (bool23 = p0Var.f18102y) == null) ? null : Integer.valueOf(bool23.booleanValue() ? 1 : 0));
+        e.F(map, "SUBSCRIPTION_ID", p0Var != null ? p0Var.f18103z : null);
+        n0 n0Var = gVar.A;
+        e.F(map, "IS_APP_INACTIVE", (n0Var == null || (bool22 = n0Var.f18064h) == null) ? null : Integer.valueOf(bool22.booleanValue() ? 1 : 0));
+        e.F(map, "FOREGROUND_APP_PROCESS", (n0Var == null || (bool21 = n0Var.f18057a) == null) ? null : Integer.valueOf(bool21.booleanValue() ? 1 : 0));
+        e.F(map, "IS_DEVICE_IDLE", (n0Var == null || (bool20 = n0Var.f18058b) == null) ? null : Integer.valueOf(bool20.booleanValue() ? 1 : 0));
+        e.F(map, "IS_DEVICE_LIGHT_IDLE", (n0Var == null || (bool19 = n0Var.f18059c) == null) ? null : Integer.valueOf(bool19.booleanValue() ? 1 : 0));
+        e.F(map, "IS_EXEMPT_FROM_LOW_POWER_STANDBY", (n0Var == null || (bool18 = n0Var.f18060d) == null) ? null : Integer.valueOf(bool18.booleanValue() ? 1 : 0));
+        e.F(map, "IS_ALLOWED_IN_LOW_POWER_STANDBY_REASON_TPSA", (n0Var == null || (bool17 = n0Var.f18061e) == null) ? null : Integer.valueOf(bool17.booleanValue() ? 1 : 0));
+        e.F(map, "IS_LOW_POWER_STANDBY_ENABLED", (n0Var == null || (bool16 = n0Var.f18062f) == null) ? null : Integer.valueOf(bool16.booleanValue() ? 1 : 0));
+        e.F(map, "IS_POWER_SAVE_MODE", (n0Var == null || (bool15 = n0Var.f18063g) == null) ? null : Integer.valueOf(bool15.booleanValue() ? 1 : 0));
+        e.F(map, "APP_STANDBY_BUCKET", n0Var != null ? n0Var.f18065i : null);
+        e.F(map, "IS_IGNORING_BATTERY_OPTIMIZATIONS", (n0Var == null || (bool14 = n0Var.j) == null) ? null : Integer.valueOf(bool14.booleanValue() ? 1 : 0));
+        e.F(map, "EXPERIMENTAL", gVar.B);
+        j1 j1Var = gVar.C;
+        e.F(map, "WF_BSSID", j1Var != null ? j1Var.f17964a : null);
+        e.F(map, "WF_FREQ", j1Var != null ? j1Var.f17965b : null);
+        e.F(map, "WF_SSID", j1Var != null ? j1Var.f17966c : null);
+        e.F(map, "WF_HIDDEN_SSID", (j1Var == null || (bool13 = j1Var.f17967d) == null) ? null : Integer.valueOf(bool13.booleanValue() ? 1 : 0));
+        e.F(map, "WF_LINK_SPD", j1Var != null ? j1Var.f17968e : null);
+        e.F(map, "WF_RSSI", j1Var != null ? j1Var.f17969f : null);
+        e.F(map, "WF_IP", j1Var != null ? j1Var.f17970g : null);
+        e.F(map, "WF_SUPPLICANT_STATE", j1Var != null ? j1Var.f17971h : null);
+        e.F(map, "WF_CAPABILITIES", j1Var != null ? j1Var.f17972i : null);
+        e.F(map, "WF_CENTER_FQ_0", j1Var != null ? j1Var.j : null);
+        e.F(map, "WF_CENTER_FQ_1", j1Var != null ? j1Var.k : null);
+        e.F(map, "WF_CHANNEL_WD", j1Var != null ? j1Var.f17973l : null);
+        e.F(map, "WF_FQ", j1Var != null ? j1Var.f17974m : null);
+        e.F(map, "WF_80211MC", (j1Var == null || (bool12 = j1Var.f17975n) == null) ? null : Integer.valueOf(bool12.booleanValue() ? 1 : 0));
+        e.F(map, "WF_PASSPOINT", (j1Var == null || (bool11 = j1Var.f17976o) == null) ? null : Integer.valueOf(bool11.booleanValue() ? 1 : 0));
+        e.F(map, "WF_LEVEL", j1Var != null ? j1Var.f17977p : null);
+        e.F(map, "WF_OPERATOR_NAME", j1Var != null ? j1Var.f17978q : null);
+        e.F(map, "WF_VENUE_NAME", j1Var != null ? j1Var.f17979r : null);
+        e.F(map, "WF_SCAN_AGE", j1Var != null ? j1Var.f17980s : null);
+        e.F(map, "WIFI_ON", (j1Var == null || (bool10 = j1Var.f17981t) == null) ? null : Integer.valueOf(bool10.booleanValue() ? 1 : 0));
+        e.F(map, "WF_STANDARD", j1Var != null ? j1Var.f17982u : null);
+        e.F(map, "WF_SUBSCRIPTION_ID", j1Var != null ? j1Var.f17983v : null);
+        e.F(map, "WF_TX_LINK_SPEED_MBPS", j1Var != null ? j1Var.f17984w : null);
+        e.F(map, "WF_RX_LINK_SPEED_MBPS", j1Var != null ? j1Var.f17985x : null);
+        e.F(map, "WF_PROVISIONER_CARRIER_NAME", j1Var != null ? j1Var.f17986y : null);
+        e.F(map, "WF_CURRENT_SECURITY_TYPE", j1Var != null ? j1Var.f17987z : null);
+        e.F(map, "WF_INFO_STRING", j1Var != null ? j1Var.A : null);
+        e.F(map, "WF_OBTAINING_IP_ADDRESS_DURATION", j1Var != null ? j1Var.B : null);
+        e.F(map, "WF_AUTHENTICATION_DURATION", j1Var != null ? j1Var.C : null);
+        e.F(map, "WF_PASSPOINT_UNIQUE_ID", j1Var != null ? j1Var.K : null);
+        e.F(map, "LAST_WF_BSSID", j1Var != null ? j1Var.D : null);
+        e.F(map, "LAST_WF_BSSID_TIMESTAMP", j1Var != null ? j1Var.E : null);
+        e.F(map, "LAST_WF_SSID", j1Var != null ? j1Var.F : null);
+        e.F(map, "IS_AGGRESSIVE_ROAMING_MODE_SUPPORTED", (j1Var == null || (bool9 = j1Var.G) == null) ? null : Integer.valueOf(bool9.booleanValue() ? 1 : 0));
+        e.F(map, "IS_D2D_SUPPORTED_WHEN_INFRA_STA_DISABLED", (j1Var == null || (bool8 = j1Var.H) == null) ? null : Integer.valueOf(bool8.booleanValue() ? 1 : 0));
+        e.F(map, "IS_WEP_SUPPORTED", (j1Var == null || (bool7 = j1Var.I) == null) ? null : Integer.valueOf(bool7.booleanValue() ? 1 : 0));
+        e.F(map, "IS_WPA_PERSONAL_SUPPORTED", (j1Var == null || (bool6 = j1Var.J) == null) ? null : Integer.valueOf(bool6.booleanValue() ? 1 : 0));
+        e.F(map, "IS_80211AZ_NTB_RESPONDER", (j1Var == null || (bool5 = j1Var.L) == null) ? null : Integer.valueOf(bool5.booleanValue() ? 1 : 0));
+        e.F(map, "IS_TWT_RESPONDER", (j1Var == null || (bool4 = j1Var.M) == null) ? null : Integer.valueOf(bool4.booleanValue() ? 1 : 0));
+        m mVar = gVar.D;
+        e.F(map, "DHCP_DNS1", mVar != null ? mVar.f18013a : null);
+        e.F(map, "DHCP_DNS2", mVar != null ? mVar.f18014b : null);
+        e.F(map, "DHCP_GATEWAY", mVar != null ? mVar.f18015c : null);
+        e.F(map, "DHCP_IP", mVar != null ? mVar.f18016d : null);
+        e.F(map, "DHCP_LEASE_DUR", mVar != null ? mVar.f18017e : null);
+        e.F(map, "DHCP_NETMASK", mVar != null ? mVar.f18018f : null);
+        e.F(map, "DHCP_SERVER_ADDR", mVar != null ? mVar.f18019g : null);
+        h(gVar.E, map);
+        ni.a aVar = gVar.F;
+        e.F(map, "BT_LEVEL", aVar != null ? aVar.f17621a : null);
+        e.F(map, "BT_SCALE", aVar != null ? aVar.f17622b : null);
+        e.F(map, "BT_HEALTH", aVar != null ? aVar.f17627g : null);
+        e.F(map, "BT_PLUGGED", aVar != null ? aVar.f17623c : null);
+        e.F(map, "BT_STATUS", aVar != null ? aVar.f17624d : null);
+        e.F(map, "BT_TECH", aVar != null ? aVar.f17625e : null);
+        e.F(map, "BT_TEMP", aVar != null ? aVar.f17626f : null);
+        e.F(map, "BT_VOLT", aVar != null ? aVar.f17628h : null);
+        e.F(map, "BT_PRESENT", (aVar == null || (bool3 = aVar.f17629i) == null) ? null : Integer.valueOf(bool3.booleanValue() ? 1 : 0));
+        e.F(map, "BT_CURRENT_AVERAGE", aVar != null ? aVar.j : null);
+        e.F(map, "BT_CURRENT_NOW", aVar != null ? aVar.k : null);
+        e.F(map, "BT_CHARGE_COUNTER", aVar != null ? aVar.f17630l : null);
+        e.F(map, "BT_ENERGY_COUNTER", aVar != null ? aVar.f17631m : null);
+        e.F(map, "BT_CHARGING_CYCLE_COUNT", aVar != null ? aVar.f17632n : null);
+        ni.c cVar = gVar.G;
+        e.F(map, "GSM_CID", cVar != null ? cVar.f17687a : null);
+        e.F(map, "GSM_LAC", cVar != null ? cVar.f17688b : null);
+        e.F(map, "GSM_MCC", cVar != null ? cVar.f17689c : null);
+        e.F(map, "GSM_MNC", cVar != null ? cVar.f17690d : null);
+        e.F(map, "GSM_ARFCN", cVar != null ? cVar.f17691e : null);
+        e.F(map, "GSM_BSIC", cVar != null ? cVar.f17692f : null);
+        e.F(map, "CS_GSM_ASU", cVar != null ? cVar.f17693g : null);
+        e.F(map, "CS_GSM_DBM", cVar != null ? cVar.f17694h : null);
+        e.F(map, "CS_GSM_LEVEL", cVar != null ? cVar.f17695i : null);
+        d dVar = gVar.H;
+        e.F(map, "LTE_CI", dVar != null ? dVar.f17729a : null);
+        e.F(map, "LTE_PCI", dVar != null ? dVar.f17730b : null);
+        e.F(map, "LTE_TAC", dVar != null ? dVar.f17731c : null);
+        e.F(map, "LTE_MCC", dVar != null ? dVar.f17733e : null);
+        e.F(map, "LTE_MNC", dVar != null ? dVar.f17732d : null);
+        e.F(map, "LTE_EARFCN", dVar != null ? dVar.f17734f : null);
+        e.F(map, "CS_LTE_ASU", dVar != null ? dVar.f17735g : null);
+        e.F(map, "CS_LTE_RSRQ", dVar != null ? dVar.j : null);
+        e.F(map, "CS_LTE_RSSNR", dVar != null ? dVar.k : null);
+        e.F(map, "CS_LTE_DBM", dVar != null ? dVar.f17736h : null);
+        e.F(map, "CS_LTE_LEVEL", dVar != null ? dVar.f17737i : null);
+        e.F(map, "CS_LTE_TIMING_ADVANCE", dVar != null ? dVar.f17738l : null);
+        e.F(map, "LTE_CI_CONNECTION_STATUS", dVar != null ? dVar.f17739m : null);
+        ni.b bVar = gVar.I;
+        e.F(map, "CDMA_BSID", bVar != null ? bVar.f17658a : null);
+        e.F(map, "CDMA_SYS_ID", bVar != null ? bVar.f17659b : null);
+        e.F(map, "CDMA_NET_ID", bVar != null ? bVar.f17660c : null);
+        e.F(map, "CDMA_LAT", bVar != null ? bVar.f17661d : null);
+        e.F(map, "CDMA_LNG", bVar != null ? bVar.f17662e : null);
+        e.F(map, "CS_CDMA_ASU", bVar != null ? bVar.f17663f : null);
+        e.F(map, "CS_CDMA_DBM", bVar != null ? bVar.f17664g : null);
+        e.F(map, "CS_CDMA_ECIO", bVar != null ? bVar.f17665h : null);
+        e.F(map, "CS_CDMA_LEVEL", bVar != null ? bVar.f17666i : null);
+        e.F(map, "CS_EVDO_DBM", bVar != null ? bVar.j : null);
+        e.F(map, "CS_EVDO_ECIO", bVar != null ? bVar.k : null);
+        e.F(map, "CS_EVDO_LEVEL", bVar != null ? bVar.f17667l : null);
+        e.F(map, "CS_EVDO_SNR", bVar != null ? bVar.f17668m : null);
+        ni.e eVar = gVar.J;
+        e.F(map, "WCDMA_CID", eVar != null ? eVar.f17764a : null);
+        e.F(map, "WCDMA_LAC", eVar != null ? eVar.f17765b : null);
+        e.F(map, "WCDMA_MCC", eVar != null ? eVar.f17766c : null);
+        e.F(map, "WCDMA_MNC", eVar != null ? eVar.f17767d : null);
+        e.F(map, "WCDMA_PSC", eVar != null ? eVar.f17768e : null);
+        e.F(map, "WCDMA_UARFCN", eVar != null ? eVar.f17769f : null);
+        e.F(map, "CS_WCDMA_ASU", eVar != null ? eVar.f17770g : null);
+        e.F(map, "CS_WCDMA_DBM", eVar != null ? eVar.f17771h : null);
+        e.F(map, "CS_WCDMA_LEVEL", eVar != null ? eVar.f17772i : null);
+        j(gVar.K, map);
+        i0 i0Var = gVar.L;
+        e.F(map, "SCREEN_ON", (i0Var == null || (bool2 = i0Var.f17921a) == null) ? null : Integer.valueOf(bool2.booleanValue() ? 1 : 0));
+        e.F(map, "SCREEN_LOCKED", (i0Var == null || (bool = i0Var.f17922b) == null) ? null : Integer.valueOf(bool.booleanValue() ? 1 : 0));
+        e(gVar.M, map);
+        i(gVar.N, map);
+        q0 q0Var = gVar.O;
+        e.F(map, "DISPLAY_NETWORK_TYPE_INT", q0Var != null ? q0Var.f18113a : null);
+        e.F(map, "DISPLAY_OVERRIDE_NETWORK_TYPE_INT", q0Var != null ? q0Var.f18114b : null);
+        e.F(map, "DISPLAY_NETWORK_TYPE_UPDATE_TIME", q0Var != null ? q0Var.f18115c : null);
+        f(gVar.P, map);
+        b(gVar.Q, map);
+        k(gVar.R, map);
+        e.F(map, "ELAPSED_REAL_TIME", gVar.S);
+        e.F(map, "AUDIO_MODE", Integer.valueOf(gVar.T));
+        c(gVar.U, map);
+        d(gVar.V, map);
+        g(gVar.W, map);
+        Boolean bool41 = gVar.X;
+        e.F(map, "IS_CONNECTED", bool41 != null ? Integer.valueOf(bool41.booleanValue() ? 1 : 0) : null);
+        e.F(map, "NETWORK_STATE", gVar.Y);
+        e.F(map, "NETWORK_DETAILED_STATE", gVar.Z);
+        return map;
+    }
+
+    @Override // xj.h
+    public final Object a(Object obj) throws JSONException {
+        switch (this.f19519a) {
+            case 0:
+                return l(obj);
+            case 1:
+                ni.h hVar = (ni.h) obj;
+                l.e(hVar, "input");
+                s sVar = hVar.K;
+                HashMap map = new HashMap();
+                map.put("_id", Long.valueOf(hVar.f17860a));
+                map.put("NAME", hVar.f17862c);
+                map.put("COHORT_ID", hVar.f17871n);
+                map.put("APP_VRS_CODE", Long.valueOf(hVar.f17866g));
+                map.put("DC_VRS_CODE", hVar.f17867h);
+                map.put("DB_VRS_CODE", Integer.valueOf(hVar.f17868i));
+                map.put("ANDROID_VRS", hVar.j);
+                map.put("ANDROID_SDK", Integer.valueOf(hVar.k));
+                e.F(map, "ANDROID_SDK_FULL", hVar.f17869l);
+                map.put("CLIENT_VRS_CODE", Long.valueOf(hVar.f17870m));
+                map.put("REPORT_CONFIG_REVISION", Integer.valueOf(hVar.f17872o));
+                map.put("REPORT_CONFIG_ID", Integer.valueOf(hVar.f17873p));
+                map.put("CONFIG_HASH", hVar.f17874q);
+                map.put("TIME", Long.valueOf(hVar.f17865f));
+                map.put("NETWORK_ROAMING", Integer.valueOf(hVar.f17875r ? 1 : 0));
+                Boolean boolValueOf = Boolean.valueOf(hVar.f17876s);
+                h hVar2 = this.f19520d;
+                map.put("PM_READ_PHONE_STATE", hVar2.a(boolValueOf));
+                map.put("PM_READ_BASIC_PHONE_STATE", hVar2.a(Boolean.valueOf(hVar.f17877t)));
+                map.put("PM_ACCESS_FINE_LOCATION", hVar2.a(Boolean.valueOf(hVar.f17878u)));
+                map.put("PM_ACCESS_COARSE_LOCATION", hVar2.a(Boolean.valueOf(hVar.f17879v)));
+                map.put("PM_ACCESS_BACKGROUND_LOCATION", hVar2.a(Boolean.valueOf(hVar.f17880w)));
+                map.put("PM_ACCESS_WIFI_STATE", hVar2.a(Boolean.valueOf(hVar.f17881x)));
+                map.put("PM_ACCESS_NETWORK_STATE", hVar2.a(Boolean.valueOf(hVar.f17882y)));
+                map.put("PM_RECEIVE_BOOT_COMPLETED", hVar2.a(Boolean.valueOf(hVar.f17883z)));
+                map.put("PM_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS", hVar2.a(Boolean.valueOf(hVar.A)));
+                e.G("EXOPLAYER_VERSION", hVar.B, map);
+                Boolean bool = hVar.C;
+                e.F(map, "EXOPLAYER_DASH_AVAILABLE", bool != null ? Integer.valueOf(bool.booleanValue() ? 1 : 0) : null);
+                e.G("EXOPLAYER_DASH_INFERRED_VERSION", hVar.D, map);
+                Boolean bool2 = hVar.E;
+                e.F(map, "EXOPLAYER_HLS_AVAILABLE", bool2 != null ? Integer.valueOf(bool2.booleanValue() ? 1 : 0) : null);
+                e.G("EXOPLAYER_HLS_INFERRED_VERSION", hVar.F, map);
+                e.F(map, "KOTLIN_VERSION", hVar.G);
+                e.F(map, "ANDROID_MIN_SDK", hVar.H);
+                e.F(map, "APP_STANDBY_BUCKET", hVar.I);
+                e.F(map, "SDK_DATA_USAGE_INFO", hVar.J);
+                e.F(map, "CONNECTION_ID", sVar != null ? sVar.f656a : null);
+                e.F(map, "CONNECTION_START_TIME", sVar != null ? sVar.f659d : null);
+                e.F(map, "ACCESS_POINT_NAME", hVar.L);
+                e.F(map, "SIM_CARRIER_ID", hVar.M);
+                e.G("MEDIA3_VERSION", hVar.N, map);
+                Boolean bool3 = hVar.O;
+                e.F(map, "MEDIA3_DASH_AVAILABLE", bool3 != null ? Integer.valueOf(bool3.booleanValue() ? 1 : 0) : null);
+                Boolean bool4 = hVar.P;
+                e.F(map, "MEDIA3_HLS_AVAILABLE", bool4 != null ? Integer.valueOf(bool4.booleanValue() ? 1 : 0) : null);
+                e.F(map, "LAST_PUBLIC_IPS", hVar.Q);
+                return map;
+            default:
+                t tVar = (t) obj;
+                l.e(tVar, "input");
+                JSONObject jSONObject = new JSONObject();
+                jSONObject.put("MODEL", Build.MODEL);
+                jSONObject.put("MANUFACTURER", Build.MANUFACTURER);
+                jSONObject.put("TOS_APP_VERSION_CODE", tVar.f697b);
+                jSONObject.put("PHONE_TYPE", tVar.f698c);
+                jSONObject.put("TOS_TIME", tVar.f701f);
+                jSONObject.put("CLIENT_CODE", tVar.f702g);
+                jSONObject.put("DEVICE_ID_TIME", tVar.f703h);
+                jSONObject.put("PACKAGE_NAME", tVar.k);
+                List list = tVar.f705l;
+                jSONObject.put("INSTALLED_SDK_PACKAGES", list.toString());
+                jSONObject.put("INSTALLED_SDKS", list.size());
+                jSONObject.put("ANDROID_TARGET_SDK", tVar.f706m);
+                xu.d.Y(jSONObject, "MANUFACTURER_CODE", tVar.f696a);
+                xu.d.Y(jSONObject, "TOS_NETWORK_ID", tVar.f699d);
+                xu.d.Y(jSONObject, "TOS_NETWORK_ID_SIM", tVar.f700e);
+                xu.d.Y(jSONObject, "TYPE_ALLOCATION_CODE", tVar.f704i);
+                Boolean boolValueOf2 = Boolean.valueOf(tVar.f707n);
+                h hVar3 = this.f19520d;
+                jSONObject.put("PM_READ_PHONE_STATE", ((Number) hVar3.a(boolValueOf2)).intValue());
+                jSONObject.put("PM_READ_BASIC_PHONE_STATE", ((Number) hVar3.a(Boolean.valueOf(tVar.f708o))).intValue());
+                jSONObject.put("PM_ACCESS_FINE_LOCATION", ((Number) hVar3.a(Boolean.valueOf(tVar.f709p))).intValue());
+                jSONObject.put("PM_ACCESS_COARSE_LOCATION", ((Number) hVar3.a(Boolean.valueOf(tVar.f710q))).intValue());
+                jSONObject.put("PM_ACCESS_BACKGROUND_LOCATION", ((Number) hVar3.a(Boolean.valueOf(tVar.f711r))).intValue());
+                jSONObject.put("PM_ACCESS_WIFI_STATE", ((Number) hVar3.a(Boolean.valueOf(tVar.f712s))).intValue());
+                jSONObject.put("PM_ACCESS_NETWORK_STATE", ((Number) hVar3.a(Boolean.valueOf(tVar.f713t))).intValue());
+                jSONObject.put("PM_RECEIVE_BOOT_COMPLETED", ((Number) hVar3.a(Boolean.valueOf(tVar.f714u))).intValue());
+                jSONObject.put("PM_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS", ((Number) hVar3.a(Boolean.valueOf(tVar.f715v))).intValue());
+                jSONObject.put("IS_CORE_ENABLED", tVar.f716w ? 1 : 0);
+                jSONObject.put("IS_SPEED_CELL_ENABLED", tVar.f717x ? 1 : 0);
+                jSONObject.put("IS_SPEED_WIFI_ENABLED", tVar.f718y ? 1 : 0);
+                jSONObject.put("TOS_GOOGLE_PLAY_SERVICES_VERSION", tVar.A);
+                xu.d.Y(jSONObject, "TOS_SB_NETWORK_ID", tVar.f719z);
+                xu.d.Y(jSONObject, "TOS_NETWORK_NAME", tVar.D);
+                xu.d.Y(jSONObject, "TOS_NETWORK_NAME_SIM", tVar.E);
+                xu.d.Y(jSONObject, "TOS_LATITUDE", tVar.B);
+                xu.d.Y(jSONObject, "TOS_LONGITUDE", tVar.C);
+                xu.d.Y(jSONObject, "PHONE_COUNT", Integer.valueOf(tVar.F.intValue()));
+                jSONObject.put("SDK_GENERATION", 4);
+                xu.d.Y(jSONObject, "SOC_MANUFACTURER", tVar.G);
+                xu.d.Y(jSONObject, "SOC_MODEL", tVar.H);
+                xu.d.Y(jSONObject, "SKU", tVar.I);
+                xu.d.Y(jSONObject, "ODM_SKU", tVar.J);
+                xu.d.Y(jSONObject, "TAGS", Build.TAGS);
+                xu.d.Y(jSONObject, "DEVICE_RAM_TOTAL_BYTES", tVar.K);
+                xu.d.Y(jSONObject, "DEVICE_STORAGE_TOTAL_BYTES", tVar.L);
+                xu.d.Y(jSONObject, "DEVICE_LANGUAGE", tVar.M);
+                xu.d.Y(jSONObject, "DEVICE_COUNTRY_CODE", tVar.N);
+                xu.d.Y(jSONObject, "DEVICE_USER_AGENT", tVar.O);
+                xu.d.Y(jSONObject, "SCREEN_WIDTH_LANDSCAPE", tVar.P);
+                xu.d.Y(jSONObject, "SCREEN_HEIGHT_LANDSCAPE", tVar.Q);
+                xu.d.Y(jSONObject, "HARDWARE", Build.HARDWARE);
+                jSONObject.put("SDK_PROCESS", 0);
+                jSONObject.put("SDK_PID", 16);
+                xu.d.Y(jSONObject, "REGISTRATION_KEY", tVar.R);
+                xu.d.Z(jSONObject, "SDK_PACKAGE_NAME", "com.opensignal.sdk");
+                xu.d.Y(jSONObject, "TIMEZONE_OFFSET_MS", tVar.S);
+                xu.d.Z(jSONObject, "TIMEZONE_ID", tVar.T);
+                return jSONObject;
+        }
+    }
+}

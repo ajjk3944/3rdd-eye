@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Statusbar icon only</item>
+        <item>สั่น</item>
+        <item>เสียง</item>
+        <item>Everything!</item>
+    </array>
+    <array name="stat_type">
+        <item>เวลา ตาม ชนิดของโครงข่าย</item>
+        <item>การใช้งานdata</item>
+    </array>
+    <array name="time_period">
+        <item>ชั่วโมงที่แล้ว</item>
+        <item>วันนี้</item>
+        <item>เดือนนี้</item>
+    </array>
+</resources>

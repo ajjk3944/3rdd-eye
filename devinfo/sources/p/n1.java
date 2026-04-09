@@ -1,0 +1,23 @@
+package p;
+
+import android.widget.AbsListView;
+import java.lang.reflect.Field;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public abstract class n1 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final Field f30778a;
+
+    static {
+        Field declaredField = null;
+        try {
+            declaredField = AbsListView.class.getDeclaredField("mIsChildViewEnabled");
+            declaredField.setAccessible(true);
+        } catch (NoSuchFieldException e2) {
+            e2.printStackTrace();
+        }
+        f30778a = declaredField;
+    }
+}

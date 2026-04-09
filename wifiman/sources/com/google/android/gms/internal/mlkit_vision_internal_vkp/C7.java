@@ -1,0 +1,41 @@
+package com.google.android.gms.internal.mlkit_vision_internal_vkp;
+
+/* loaded from: classes.dex */
+public final class C7 extends AbstractC4516a2 implements A2 {
+    private static final C7 zzb;
+    private int zzd;
+    private C4718s7 zze;
+    private double zzf;
+    private double zzg;
+
+    static {
+        C7 c72 = new C7();
+        zzb = c72;
+        AbstractC4516a2.p(C7.class, c72);
+    }
+
+    private C7() {
+    }
+
+    @Override // com.google.android.gms.internal.mlkit_vision_internal_vkp.AbstractC4516a2
+    protected final Object v(int i10, Object obj, Object obj2) {
+        int i11 = i10 - 1;
+        if (i11 == 0) {
+            return (byte) 1;
+        }
+        if (i11 == 2) {
+            return AbstractC4516a2.m(zzb, "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001ဉ\u0000\u0002\u0000\u0003\u0000", new Object[]{"zzd", "zze", "zzf", "zzg"});
+        }
+        if (i11 == 3) {
+            return new C7();
+        }
+        A7 a72 = null;
+        if (i11 == 4) {
+            return new B7(a72);
+        }
+        if (i11 != 5) {
+            return null;
+        }
+        return zzb;
+    }
+}

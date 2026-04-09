@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Tylko Statusbar ikonę</item>
+        <item>Wibracje</item>
+        <item>Dźwięk</item>
+        <item>Wszystkie!</item>
+    </array>
+    <array name="stat_type">
+        <item>Mój sygnał</item>
+        <item>Wykorzystanie danych</item>
+    </array>
+    <array name="time_period">
+        <item>Ostatnia godzina</item>
+        <item>Dziś</item>
+        <item>W tym miesiącu</item>
+    </array>
+</resources>

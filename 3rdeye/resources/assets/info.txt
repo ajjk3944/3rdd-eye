@@ -1,0 +1,7 @@
+name: Singular-v12.4.0-df4fbbcd.master
+env: release
+git_commit: df4fbbcd
+git_branch: master
+version_name: 12.4.0
+version_code:1
+build_date: Wed, 8 Nov 2023 17:38:09 +0530

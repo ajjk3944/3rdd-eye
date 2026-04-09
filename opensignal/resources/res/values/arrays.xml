@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="exo_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>@string/exo_controls_playback_speed_normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="exo_speed_multiplied_by_100">
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+        <item>125</item>
+        <item>150</item>
+        <item>200</item>
+    </array>
+    <array name="notification_scale">
+        <item>Statusbar icon only</item>
+        <item>Vibrate</item>
+        <item>Sound</item>
+        <item>Everything!</item>
+    </array>
+    <array name="speedScalesDownload">
+        <item>0</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+    </array>
+    <array name="speedScalesUpload">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </array>
+    <array name="stat_type">
+        <item>Network availability</item>
+        <item>Data usage</item>
+    </array>
+    <array name="time_period">
+        <item>Last hour</item>
+        <item>Today</item>
+        <item>This month</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Today</item>
+        <item>This month</item>
+    </array>
+    <array name="time_period_new">
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>Past week</item>
+        <item>This month</item>
+        <item>All time</item>
+    </array>
+</resources>

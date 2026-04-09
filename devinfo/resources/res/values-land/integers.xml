@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="fa_overview_txt_maxlen">16</integer>
+    <integer name="mtrl_calendar_header_orientation">0</integer>
+    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+    <integer name="recyclerview_grid_span_count_1_2">2</integer>
+    <integer name="recyclerview_grid_span_count_2_4">4</integer>
+    <integer name="thermal_span_count">12</integer>
+</resources>

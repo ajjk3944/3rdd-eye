@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_common_card"
+    android:padding="@dimen/content_padding"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/content_padding">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/missing_permission"
+        android:fontFamily="sans-serif-medium"/>
+    <TextView
+        android:textColor="?android:attr/textColorPrimary"
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_padding_half"
+        android:maxWidth="@dimen/allapps_permission_card_max_width"/>
+    <com.google.android.material.button.MaterialButton
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:id="@+id/btn_grant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grant"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+</LinearLayout>

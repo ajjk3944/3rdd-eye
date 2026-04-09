@@ -1,0 +1,68 @@
+package com.instagram.common.viewpoint.core;
+
+import com.applovin.shadow.okhttp3.internal.ws.WebSocketProtocol;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+/* renamed from: com.facebook.ads.redexgen.X.Ck, reason: case insensitive filesystem */
+/* loaded from: assets/audience_network/classes2.dex */
+public final class C0422Ck implements InterfaceC1403gB {
+    public static byte[] A01;
+    public final boolean A00;
+
+    static {
+        A01();
+    }
+
+    public static String A00(int i4, int i10, int i11) {
+        byte[] bArrCopyOfRange = Arrays.copyOfRange(A01, i4, i4 + i10);
+        for (int i12 = 0; i12 < bArrCopyOfRange.length; i12++) {
+            bArrCopyOfRange[i12] = (byte) ((bArrCopyOfRange[i12] ^ i11) ^ WebSocketProtocol.PAYLOAD_SHORT);
+        }
+        return new String(bArrCopyOfRange);
+    }
+
+    public static void A01() {
+        A01 = new byte[]{75, 14, 48, 28, 29, 7, 22, 29, 7, 73, 83, 42, 29, 27, 29, 17, 14, 29, 88, 13, 10, 20, 66, 88, 30, 57, 44, 57, 56, 62, 119, 109};
+    }
+
+    public C0422Ck(boolean z3) {
+        this.A00 = z3;
+    }
+
+    private void A02(Map<String, List<String>> map) {
+        if (map != null) {
+            for (String str : map.keySet()) {
+                for (String header : map.get(str)) {
+                    String str2 = str + A00(1, 1, 74) + header;
+                }
+            }
+        }
+    }
+
+    @Override // com.instagram.common.viewpoint.core.InterfaceC1403gB
+    public final boolean AAZ() {
+        return this.A00;
+    }
+
+    @Override // com.instagram.common.viewpoint.core.InterfaceC1403gB
+    public final void ABt(HttpURLConnection httpURLConnection, Object obj) throws IOException {
+        String str = httpURLConnection.getRequestMethod() + A00(0, 1, 21) + httpURLConnection.getURL().toString();
+        if (obj instanceof String) {
+            String str2 = A00(2, 9, 13) + ((String) obj);
+        }
+        A02(httpURLConnection.getRequestProperties());
+    }
+
+    @Override // com.instagram.common.viewpoint.core.InterfaceC1403gB
+    public final void ABu(InterfaceC1386fu interfaceC1386fu) {
+        if (interfaceC1386fu != null) {
+            String str = A00(11, 13, 6) + interfaceC1386fu.getUrl();
+            String str2 = A00(24, 8, 51) + interfaceC1386fu.A9C();
+            A02(interfaceC1386fu.A8E());
+        }
+    }
+}

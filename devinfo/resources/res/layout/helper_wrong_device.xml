@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="22dp"
+    android:paddingTop="18dp"
+    android:paddingRight="22dp"
+    android:paddingBottom="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="22dp"
+    android:paddingVertical="18dp">
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/msg"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wrong_device_name_feedback_content"
+        android:fontFamily="sans-serif-medium"
+        android:paddingHorizontal="4dp"/>
+    <EditText
+        android:textSize="14sp"
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/input_device_name"
+        android:singleLine="true"
+        android:maxLength="10"/>
+</LinearLayout>

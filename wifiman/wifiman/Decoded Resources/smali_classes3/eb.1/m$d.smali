@@ -1,0 +1,77 @@
+.class final Leb/m$d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/n;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Leb/m;->g()Lgg/z;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Leb/m;
+
+
+# direct methods
+.method constructor <init>(Leb/m;)V
+    .locals 0
+
+    iput-object p1, p0, Leb/m$d;->a:Leb/m;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Leb/j;)Lgg/D;
+    .locals 1
+
+    const-string/jumbo v0, "webSocket"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Leb/m$d;->a:Leb/m;
+
+    invoke-static {v0, p1}, Leb/m;->d(Leb/m;Leb/j;)V
+
+    iget-object p1, p0, Leb/m$d;->a:Leb/m;
+
+    invoke-virtual {p1}, Leb/m;->h()Lgg/s;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lgg/s;->P()Lgg/z;
+
+    move-result-object p1
+
+    sget-object v0, Leb/m$d$a;->a:Leb/m$d$a;
+
+    invoke-virtual {p1, v0}, Lgg/z;->A(Lkg/n;)Lgg/z;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Leb/j;
+
+    invoke-virtual {p0, p1}, Leb/m$d;->a(Leb/j;)Lgg/D;
+
+    move-result-object p1
+
+    return-object p1
+.end method

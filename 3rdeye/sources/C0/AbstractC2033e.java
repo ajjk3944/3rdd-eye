@@ -1,0 +1,17 @@
+package c0;
+
+import androidx.camera.core.impl.InterfaceC1680b0;
+import c0.AbstractC2038j;
+
+/* compiled from: AudioMimeInfo.java */
+/* renamed from: c0.e, reason: case insensitive filesystem */
+/* loaded from: classes.dex */
+public abstract class AbstractC2033e extends AbstractC2038j {
+
+    /* compiled from: AudioMimeInfo.java */
+    /* renamed from: c0.e$a */
+    public static abstract class a extends AbstractC2038j.a<a> {
+    }
+
+    public abstract InterfaceC1680b0.a c();
+}

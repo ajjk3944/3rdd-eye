@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PhSplashTheme" parent="@style/Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/PhPostSplashTheme</item>
+        <item name="windowSplashScreenBackground">@color/ph_splash_background</item>
+    </style>
+    <style name="SplashScreenTheme" parent="@style/PhSplashTheme">
+        <item name="android:windowBackground">@color/ph_app_background_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowSplashScreenBackground">@color/ph_app_background_color</item>
+        <item name="colorAccent">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="ph_splash_background_color">@color/ph_app_background_color</item>
+        <item name="ph_splash_title_color">@color/ph_cta_color</item>
+    </style>
+    <style name="Theme.SplashScreen" parent="@style/Base.Theme.SplashScreen.DayNight">
+        <item name="android:windowSplashScreenBackground">?attr/windowSplashScreenBackground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">?attr/windowSplashScreenAnimatedIcon</item>
+        <item name="android:windowSplashScreenAnimationDuration">?attr/windowSplashScreenAnimationDuration</item>
+    </style>
+</resources>

@@ -1,0 +1,33 @@
+<!-- 
+    Add this to your AndroidManifest.xml file
+    Place permissions before <application> tag
+    Place activity inside <application> tag
+-->
+
+<!-- PERMISSIONS - Add before <application> -->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+<!-- ACTIVITY - Add inside <application> -->
+<application>
+    <!-- Your existing activities -->
+    
+    <!-- Connected Devices Activity -->
+    <activity
+        android:name=".network.ConnectedDevicesActivity"
+        android:label="Connected Devices"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        android:exported="false">
+        <!-- Optional: Add intent filter if you want to launch from other apps -->
+        <!-- 
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        -->
+    </activity>
+    
+</application>

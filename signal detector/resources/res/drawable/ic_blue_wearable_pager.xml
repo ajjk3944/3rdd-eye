@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M0 256c0-70.6 57.4-128 128-128h768c70.6 0 128 57.4 128 128v512c0 70.6-57.4 128-128 128H128c-70.6 0-128-57.4-128-128V256z m128 64v128c0 35.4 28.6 64 64 64h640c35.4 0 64-28.6 64-64v-128c0-35.4-28.6-64-64-64H192c-35.4 0-64 28.6-64 64z m32 320c-26.6 0-48 21.4-48 48s21.4 48 48 48h112c26.6 0 48-21.4 48-48s-21.4-48-48-48H160z m272 0c-26.6 0-48 21.4-48 48s21.4 48 48 48h96c26.6 0 48-21.4 48-48s-21.4-48-48-48h-96z"/>
+</vector>

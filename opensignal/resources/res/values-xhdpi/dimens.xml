@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coverage_dialog_background_offset_y">20dp</dimen>
+    <dimen name="large_margin">0dp</dimen>
+    <dimen name="padding_large">8dp</dimen>
+    <dimen name="select_test_intro">22sp</dimen>
+    <dimen name="speedtest_dial_width">210dp</dimen>
+    <dimen name="standard_margin">4dp</dimen>
+    <dimen name="start_test_button_icon_width">60dp</dimen>
+    <dimen name="test_button_top_margin">34dp</dimen>
+    <dimen name="try_different_test">16sp</dimen>
+    <dimen name="video_result_text">10sp</dimen>
+</resources>

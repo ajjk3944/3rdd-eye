@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="stat_type">
+        <item>Tempo per tipo di rete</item>
+        <item>Utilizzo dati</item>
+    </array>
+    <array name="time_period">
+        <item>Ultima ora</item>
+        <item>Oggi</item>
+        <item>Questo mese</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Oggi</item>
+        <item>Questo mese</item>
+    </array>
+    <array name="time_period_new">
+        <item>Oggi</item>
+        <item>Ieri</item>
+        <item>La settimana scorsa</item>
+        <item>Questo mese</item>
+        <item>Sempre</item>
+    </array>
+</resources>

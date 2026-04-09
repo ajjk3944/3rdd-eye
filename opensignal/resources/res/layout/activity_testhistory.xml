@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/primary_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar_include"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            layout="@layout/toolbar_with_logo"/>
+        <View style="@style/Divider.dark"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/testHistoryTabs"
+            android:background="@color/primary_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIconTint="@color/primary_2"
+            app:tabIndicatorColor="@color/primary_1"
+            app:tabIndicatorGravity="bottom"
+            app:tabInlineLabel="true"
+            app:tabPadding="@dimen/small_margin"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/LowerCaseTextAppearance"
+            app:tabTextColor="@color/neutral_3"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/testHistoryViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,171 @@
+.class public final enum Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+.super Ljava/lang/Enum;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4019
+    name = "a"
+.end annotation
+
+
+# static fields
+.field private static final synthetic $ENTRIES:Lfh/a;
+
+.field private static final synthetic $VALUES:[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+.field public static final enum BETA:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+.field public static final enum INTERNAL:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+.field public static final enum RELEASE:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+
+# instance fields
+.field private final id:Ljava/lang/String;
+
+
+# direct methods
+.method private static final synthetic $values()[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+    .locals 3
+
+    sget-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->RELEASE:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    sget-object v1, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->BETA:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    sget-object v2, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->INTERNAL:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    filled-new-array {v0, v1, v2}, [Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    const/4 v1, 0x0
+
+    const-string v2, "release"
+
+    const-string v3, "RELEASE"
+
+    invoke-direct {v0, v3, v1, v2}, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->RELEASE:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    new-instance v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    const/4 v1, 0x1
+
+    const-string v2, "beta-public"
+
+    const-string v3, "BETA"
+
+    invoke-direct {v0, v3, v1, v2}, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->BETA:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    new-instance v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    const/4 v1, 0x2
+
+    const-string v2, "internal"
+
+    const-string v3, "INTERNAL"
+
+    invoke-direct {v0, v3, v1, v2}, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->INTERNAL:Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    invoke-static {}, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->$values()[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->$VALUES:[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    invoke-static {v0}, Lfh/b;->a([Ljava/lang/Enum;)Lfh/a;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->$ENTRIES:Lfh/a;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->id:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static getEntries()Lfh/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lfh/a;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->$ENTRIES:Lfh/a;
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+    .locals 1
+
+    const-class v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+    .locals 1
+
+    sget-object v0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->$VALUES:[Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getId()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/ui/wifiman/model/ubiquiti/firmware/api/ApiUbiquitiFirmware$a;->id:Ljava/lang/String;
+
+    return-object v0
+.end method

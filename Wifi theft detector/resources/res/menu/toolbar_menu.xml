@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_no_ad"
+        android:id="@+id/menu_no_ad"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_setting"
+        android:id="@+id/menu_setting"
+        android:title="@string/setting"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_phone_cleaner"
+        android:id="@+id/menu_phone_cleaner"
+        android:visible="false"
+        android:title=""
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_wifi"
+        android:id="@+id/menu_wifi_list"
+        android:title="@string/menu_wifi_list"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_router"
+        android:id="@+id/menu_router_setting"
+        android:title="@string/router_setting"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_menu_rate_us"
+        android:id="@+id/menu_rate_us"
+        android:title="@string/ok_sure"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_share_us"
+        android:title="@string/share_to_friends"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_more_tools"
+        android:visible="false"
+        android:title="@string/more_tools"
+        app:showAsAction="never"/>
+</menu>

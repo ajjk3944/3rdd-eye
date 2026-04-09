@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>nur Symbol in der Statusbar</item>
+        <item>Vibration</item>
+        <item>Ton</item>
+        <item>alles!</item>
+    </array>
+    <array name="stat_type">
+        <item>Dauer nach Netzwerk-Typ</item>
+        <item>Datenverbrauch</item>
+    </array>
+    <array name="time_period">
+        <item>Letzte Stunde</item>
+        <item>Heute</item>
+        <item>Diesen Monat</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Heute</item>
+        <item>Diesen Monat</item>
+    </array>
+    <array name="time_period_new">
+        <item>Heute</item>
+        <item>Gestern</item>
+        <item>Letzte Woche</item>
+        <item>Dieser Monat</item>
+        <item>Die ganze Zeit</item>
+    </array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/notify_container"
+    android:background="@drawable/bg_common_card_ripple_radius"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/content_padding">
+    <TextView
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:ellipsize="marquee"
+        android:id="@+id/notify_content"
+        android:paddingLeft="@dimen/content_padding"
+        android:paddingTop="@dimen/content_padding_half"
+        android:paddingRight="@dimen/content_padding"
+        android:paddingBottom="@dimen/content_padding_half"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:paddingHorizontal="@dimen/content_padding"
+        android:paddingVertical="@dimen/content_padding_half">
+        <requestFocus/>
+    </TextView>
+    <ImageView
+        android:id="@+id/btn_close_notify"
+        android:background="?android:attr/actionBarItemBackground"
+        android:padding="5dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:alpha="0.8"
+        app:tint="?android:attr/textColorSecondary"/>
+</LinearLayout>

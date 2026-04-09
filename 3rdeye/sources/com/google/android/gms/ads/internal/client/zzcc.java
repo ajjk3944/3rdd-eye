@@ -1,0 +1,29 @@
+package com.google.android.gms.ads.internal.client;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.RemoteException;
+import com.google.android.gms.internal.ads.zzayr;
+import com.google.android.gms.internal.ads.zzayt;
+
+/* compiled from: com.google.android.gms:play-services-ads-api@@24.4.0 */
+/* loaded from: classes.dex */
+public final class zzcc extends zzayr implements zzce {
+    public zzcc(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.client.IAdPreloadCallback");
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzce
+    public final void zze(zzfv zzfvVar) throws RemoteException {
+        Parcel parcelZza = zza();
+        zzayt.zzd(parcelZza, zzfvVar);
+        zzdb(1, parcelZza);
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzce
+    public final void zzf(zzfv zzfvVar) throws RemoteException {
+        Parcel parcelZza = zza();
+        zzayt.zzd(parcelZza, zzfvVar);
+        zzdb(2, parcelZza);
+    }
+}

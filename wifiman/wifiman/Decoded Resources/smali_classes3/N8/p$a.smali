@@ -1,0 +1,81 @@
+.class final LN8/p$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/n;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = LN8/p;->u0()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:LN8/p;
+
+
+# direct methods
+.method constructor <init>(LN8/p;)V
+    .locals 0
+
+    iput-object p1, p0, LN8/p$a;->a:LN8/p;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(LN8/a$a$a;)Lgg/f;
+    .locals 3
+
+    const-string/jumbo v0, "it"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p0, LN8/p$a;->a:LN8/p;
+
+    invoke-static {p1}, LN8/p;->q0(LN8/p;)Li8/a;
+
+    move-result-object p1
+
+    new-instance v0, Li8/a$b$c;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2, v1}, Li8/a$b$c;-><init>(LQe/c$a;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    new-array v1, v2, [Li8/a$b;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    invoke-interface {p1, v1}, Li8/a;->a([Li8/a$b;)Lgg/b;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, LN8/a$a$a;
+
+    invoke-virtual {p0, p1}, LN8/p$a;->a(LN8/a$a$a;)Lgg/f;
+
+    move-result-object p1
+
+    return-object p1
+.end method

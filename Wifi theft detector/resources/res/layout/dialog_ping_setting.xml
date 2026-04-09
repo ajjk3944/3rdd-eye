@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:tag="layout/dialog_ping_setting_0"
+    android:padding="@dimen/router_manager_space_large"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/PingSettingStyle">
+        <TextView
+            android:text="@string/ping_count_title"
+            style="@style/PingSettingTitleStyle"/>
+        <EditText
+            android:id="@+id/edit_ping_count"
+            android:text="5"
+            android:maxLines="1"
+            android:maxLength="5"
+            style="@style/PingSettingTextStyle"/>
+    </LinearLayout>
+    <LinearLayout style="@style/PingSettingStyle">
+        <TextView
+            android:text="@string/ping_timeout_title"
+            android:maxEms="5"
+            style="@style/PingSettingTitleStyle"/>
+        <EditText
+            android:id="@+id/edit_port_timeout"
+            android:text="10"
+            android:maxLines="1"
+            android:maxLength="5"
+            style="@style/PingSettingTextStyle"/>
+    </LinearLayout>
+    <LinearLayout style="@style/PingSettingStyle">
+        <TextView
+            android:text="@string/packet_size_title"
+            style="@style/PingSettingTitleStyle"/>
+        <EditText
+            android:id="@+id/edit_packet_size"
+            android:text="58"
+            android:maxLines="1"
+            android:maxLength="8"
+            style="@style/PingSettingTextStyle"/>
+    </LinearLayout>
+    <LinearLayout style="@style/PingSettingStyle">
+        <TextView
+            android:text="@string/time_live_title"
+            style="@style/PingSettingTitleStyle"/>
+        <EditText
+            android:id="@+id/edit_time_to_live"
+            android:text="64"
+            android:maxLines="1"
+            android:maxLength="5"
+            style="@style/PingSettingTextStyle"/>
+    </LinearLayout>
+    <LinearLayout style="@style/PingSettingStyle">
+        <TextView
+            android:text="@string/ping_interval_title"
+            style="@style/PingSettingTitleStyle"/>
+        <EditText
+            android:id="@+id/edit_pings_interval"
+            android:text="1"
+            android:maxLines="1"
+            android:maxLength="5"
+            style="@style/PingSettingTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

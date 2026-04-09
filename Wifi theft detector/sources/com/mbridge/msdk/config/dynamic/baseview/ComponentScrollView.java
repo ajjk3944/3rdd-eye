@@ -1,0 +1,75 @@
+package com.mbridge.msdk.config.dynamic.baseview;
+
+import android.content.Context;
+import android.text.TextUtils;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ScrollView;
+import com.mbridge.msdk.config.dynamic.baseview.cusview.XMLView;
+import com.mbridge.msdk.config.dynamic.baseview.inter.a;
+import com.mbridge.msdk.config.dynamic.utils.d;
+import com.mbridge.msdk.config.dynamic.utils.f;
+import com.mbridge.msdk.foundation.tools.q0;
+import java.util.Map;
+
+/* loaded from: classes3.dex */
+public class ComponentScrollView extends ScrollView implements a {
+    public XMLView xmlView;
+
+    public ComponentScrollView(Context context, AttributeSet attributeSet) {
+        super(context);
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        try {
+            this.xmlView = d.a((View) this);
+        } catch (Exception e10) {
+            q0.b("MBScrollView", "onAttachedToWindow异常: " + e10.getMessage());
+        }
+    }
+
+    @Override // android.widget.ScrollView, android.view.ViewGroup, android.view.View
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+    }
+
+    public void setViewClickListener() {
+        setOnClickListener(new View.OnClickListener() { // from class: u6.j
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                this.f24542a.a(view);
+            }
+        });
+    }
+
+    @Override // com.mbridge.msdk.config.dynamic.baseview.inter.a
+    public void setXmlData(Map<String, Object> map) {
+        if (map == null) {
+            return;
+        }
+        try {
+            String strValueOf = String.valueOf(map.get("clickable"));
+            if (TextUtils.isEmpty(strValueOf) || !strValueOf.equals("true")) {
+                return;
+            }
+            setViewClickListener();
+        } catch (Exception e10) {
+            q0.b("MBScrollView", "setXmlData异常: " + e10.getMessage());
+        }
+    }
+
+    @Override // com.mbridge.msdk.config.dynamic.baseview.inter.a
+    public void updateBindData(String str, Object obj) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void a(View view) {
+        XMLView xMLView = this.xmlView;
+        if (xMLView != null) {
+            xMLView.updateTouchView(view);
+        }
+        f.a(this.xmlView, view.getTag(), null);
+    }
+}

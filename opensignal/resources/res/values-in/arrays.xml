@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Hanya ikon statusbar</item>
+        <item>Getar</item>
+        <item>Suara</item>
+        <item>Semuanya!</item>
+    </array>
+    <array name="stat_type">
+        <item>Waktu berdasar tipe jaringan</item>
+        <item>Penggunaan Data</item>
+    </array>
+    <array name="time_period">
+        <item>Jam terakhir</item>
+        <item>Hari ini</item>
+        <item>Bulan ini</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Hari ini</item>
+        <item>Bulan ini</item>
+    </array>
+    <array name="time_period_new">
+        <item>Hari ini</item>
+        <item>Kemarin</item>
+        <item>Minggu lalu</item>
+        <item>Bulan ini</item>
+        <item>Sepanjang waktu</item>
+    </array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/complementary_1_pressed">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/complementary_1_dark"/>
+            <size
+                android:height="@dimen/start_test_button_inner_size"
+                android:width="@dimen/start_test_button_inner_size"/>
+        </shape>
+    </item>
+    <item android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/complementary_1"/>
+            <size
+                android:height="@dimen/start_test_button_inner_size"
+                android:width="@dimen/start_test_button_inner_size"/>
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/mask"
+        android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
+            <size
+                android:height="@dimen/start_test_button_inner_size"
+                android:width="@dimen/start_test_button_inner_size"/>
+        </shape>
+    </item>
+</ripple>

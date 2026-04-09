@@ -1,0 +1,20 @@
+package R;
+
+import android.view.View;
+import android.view.WindowInsets;
+
+/* loaded from: classes.dex */
+public abstract class D {
+    public static WindowInsets a(View view, WindowInsets windowInsets) {
+        int i = Q.f3277a;
+        return view.dispatchApplyWindowInsets(windowInsets);
+    }
+
+    public static WindowInsets b(View view, WindowInsets windowInsets) {
+        return view.onApplyWindowInsets(windowInsets);
+    }
+
+    public static void c(View view) {
+        view.requestApplyInsets();
+    }
+}

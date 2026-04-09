@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group_1"
+        android:menuCategory="container">
+        <item
+            android:id="@+id/select_all"
+            android:title="@string/fa_select_all"
+            app:showAsAction="withText"/>
+        <item
+            android:id="@+id/select_all_off"
+            android:title="@string/fa_select_all_off"
+            app:showAsAction="withText"/>
+    </group>
+    <group
+        android:id="@+id/group_2"
+        android:menuCategory="container">
+        <item
+            android:id="@+id/select_keep_smart"
+            android:title="@string/fa_select_keep_smart"/>
+        <item
+            android:id="@+id/select_keep_newest"
+            android:title="@string/fa_select_keep_newest"/>
+        <item
+            android:id="@+id/select_keep_oldest"
+            android:title="@string/fa_select_keep_oldest"/>
+        <item
+            android:id="@+id/select_keep_path_longest"
+            android:title="@string/fa_select_keep_longest_path"/>
+        <item
+            android:id="@+id/select_keep_path_shortest"
+            android:title="@string/fa_select_keep_shortest_path"/>
+    </group>
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_menu_no_ad"
+        android:id="@+id/menu_upgrade"
+        android:title="@string/upgrade_pro"/>
+    <item
+        android:icon="@drawable/ic_setting"
+        android:id="@+id/menu_setting"
+        android:title="@string/setting"/>
+    <item
+        android:icon="@drawable/ic_menu_rate_us"
+        android:id="@+id/menu_rate_us"
+        android:title="@string/rate_us"/>
+    <item
+        android:icon="@drawable/ic_menu_share"
+        android:id="@+id/menu_share"
+        android:title="@string/menu_share"/>
+    <item
+        android:icon="@drawable/ic_menu_aboutus"
+        android:id="@+id/menu_about_us"
+        android:title="@string/menu_about_us"/>
+    <item
+        android:icon="@drawable/ic_menu_wake"
+        android:id="@+id/menu_privacy_policy"
+        android:title="@string/privacy_policy"/>
+    <item
+        android:icon="@drawable/ic_more"
+        android:id="@+id/menu_more_tools"
+        android:visible="false"
+        android:title="@string/more_tools"/>
+</menu>

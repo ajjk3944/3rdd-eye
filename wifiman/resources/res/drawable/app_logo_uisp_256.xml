@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="56dp"
+    android:width="56dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+    <group>
+        <clip-path android:pathData="M0,0h256v256h-256z"/>
+        <path
+            android:fillColor="@drawable/_app_logo_uisp_256__0_res_0x7f07001d"
+            android:pathData="M0,0h256v256h-256z"/>
+        <path
+            android:fillColor="@drawable/_app_logo_uisp_256__1_res_0x7f07001e"
+            android:pathData="M166.66,85.4C169.53,88.27 169.53,92.91 166.66,95.77L159.03,103.41C156.16,106.27 151.52,106.27 148.66,103.41C145.8,100.54 145.8,95.9 148.66,93.04L156.3,85.4C159.16,82.54 163.8,82.54 166.66,85.4Z"
+            android:fillType="evenOdd"/>
+        <path
+            android:fillColor="@drawable/_app_logo_uisp_256__2_res_0x7f07001f"
+            android:pathData="M173.04,95.72C182.03,95.72 189.33,88.43 189.33,79.43C189.33,70.44 182.03,63.14 173.04,63.14C164.04,63.14 156.75,70.44 156.75,79.43C156.75,88.43 164.04,95.72 173.04,95.72Z"/>
+        <path
+            android:fillColor="@drawable/_app_logo_uisp_256__3_res_0x7f070020"
+            android:pathData="M195.34,139.54L154.14,98.34L112.94,57.14C110.09,54.29 105.49,54.29 102.64,57.14C90.26,69.52 83.44,85.97 83.44,103.48C83.44,120.99 90.26,137.45 102.64,149.83C115.02,162.21 131.48,169.04 148.99,169.04C166.5,169.04 182.96,162.21 195.34,149.83C196.71,148.47 197.47,146.62 197.47,144.69C197.47,142.76 195.34,139.54 195.34,139.54Z"/>
+        <path
+            android:fillColor="@drawable/_app_logo_uisp_256__4_res_0x7f070021"
+            android:pathData="M80.04,152.51C80.11,152.35 80.31,152.29 80.46,152.39L122.45,180.39C122.51,180.42 122.54,180.47 122.57,180.53L129.47,201.25C129.53,201.43 129.4,201.62 129.2,201.62H59.43C59.22,201.62 59.09,201.41 59.17,201.23L80.04,152.51Z"/>
+    </group>
+</vector>

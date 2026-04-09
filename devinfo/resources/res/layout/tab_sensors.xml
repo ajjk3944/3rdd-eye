@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/content_padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/sensor_count"
+        android:background="@drawable/bg_common_card"
+        android:padding="@dimen/content_padding_half"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content_padding"
+        android:layout_marginRight="@dimen/content_padding"
+        android:lines="1"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
+        android:elevation="@dimen/common_card_elevation"
+        android:layout_marginHorizontal="@dimen/content_padding"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="11sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"/>
+    <ProgressBar
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:paddingLeft="@dimen/content_padding_half"
+        android:paddingRight="@dimen/content_padding_half"
+        android:paddingBottom="@dimen/content_padding_half"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/content_padding_half"
+        android:paddingHorizontal="@dimen/content_padding_half"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="@integer/recyclerview_grid_span_count_1_2"/>
+</LinearLayout>

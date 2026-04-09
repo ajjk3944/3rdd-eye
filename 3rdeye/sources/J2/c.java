@@ -1,0 +1,33 @@
+package J2;
+
+import com.singular.sdk.internal.Constants;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+
+/* compiled from: Util.java */
+/* loaded from: classes.dex */
+public final class c {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final Charset f2750a = Charset.forName("US-ASCII");
+
+    static {
+        Charset.forName(Constants.ENCODING);
+    }
+
+    public static void a(File file) throws IOException {
+        File[] fileArrListFiles = file.listFiles();
+        if (fileArrListFiles == null) {
+            throw new IOException("not a readable directory: " + file);
+        }
+        for (File file2 : fileArrListFiles) {
+            if (file2.isDirectory()) {
+                a(file2);
+            }
+            if (!file2.delete()) {
+                throw new IOException("failed to delete file: " + file2);
+            }
+        }
+    }
+}

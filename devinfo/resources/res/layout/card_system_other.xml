@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/java_runtime"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/java_runtime"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/java_vm"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/jvm"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/jvm_stack_size"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/jvm_stack_size"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/kernel_arch"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/kernel_arch"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/kernel_version"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/kernel"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/open_gl"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/open_gl"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/se_linux"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/se_linux"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/openssl_version"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/openssl_version"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</LinearLayout>

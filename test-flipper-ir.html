@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipper IR Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0a0f0a;
+            color: #fff;
+        }
+        h1 {
+            color: #10b981;
+        }
+        .test-section {
+            background: #0d120d;
+            border: 1px solid #10b981;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        button {
+            background: #10b981;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+        }
+        button:hover {
+            background: #059669;
+        }
+        .result {
+            background: #1f2937;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .success {
+            color: #10b981;
+        }
+        .error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Flipper IR Integration Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Load IR File</h2>
+        <p>Test loading a Samsung TV remote from Flipper-IRDB</p>
+        <button onclick="testLoadFile()">Load Samsung TV Remote</button>
+        <div id="test1-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Parse IR Signals</h2>
+        <p>Test parsing IR signals from the loaded file</p>
+        <button onclick="testParseSignals()">Parse Signals</button>
+        <div id="test2-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Convert to Android Format</h2>
+        <p>Test converting Flipper signals to Android IR patterns</p>
+        <button onclick="testConvertToAndroid()">Convert Signals</button>
+        <div id="test3-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Database Browser</h2>
+        <p>Test browsing categories and brands</p>
+        <button onclick="testDatabaseBrowser()">Browse Database</button>
+        <div id="test4-result" class="result"></div>
+    </div>
+
+    <script type="module">
+        let loadedFile = null;
+        let parsedSignals = null;
+
+        window.testLoadFile = async function() {
+            const result = document.getElementById('test1-result');
+            result.innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/Flipper-IRDB-main/TVs/Samsung/Samsung_AA59-00602A.ir');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const content = await response.text();
+                loadedFile = content;
+                
+                result.innerHTML = `<span class="success">✓ Success!</span>\n\nFile loaded: ${content.length} bytes\n\nFirst 500 characters:\n${content.substring(0, 500)}...`;
+            } catch (error) {
+                result.innerHTML = `<span class="error">✗ Error:</span> ${error.message}\n\nMake sure you ran copy-flipper-db.bat first!`;
+            }
+        };
+
+        window.testParseSignals = function() {
+            const result = document.getElementById('test2-result');
+            
+            if (!loadedFile) {
+                result.innerHTML = '<span class="error">✗ Error:</span> Please run Test 1 first!';
+                return;
+            }
+
+            try {
+                const lines = loadedFile.split('\\n');
+                const signals = [];
+                let currentSignal = null;
+
+                for (const line of lines) {
+                    const trimmed = line.trim();
+                    if (!trimmed || trimmed.startsWith('#')) continue;
+
+                    const [key, ...valueParts] = trimmed.split(':');
+                    const value = valueParts.join(':').trim();
+
+                    if (key === 'name') {
+                        if (currentSignal) signals.push(currentSignal);
+                        currentSignal = { name: value };
+                    } else if (currentSignal) {
+                        currentSignal[key] = value;
+                    }
+                }
+                if (currentSignal) signals.push(currentSignal);
+
+                parsedSignals = signals;
+                
+                result.innerHTML = `<span class="success">✓ Success!</span>\n\nParsed ${signals.length} signals:\n\n${signals.map(s => `- ${s.name} (${s.type || 'unknown'})`).join('\\n')}`;
+            } catch (error) {
+                result.innerHTML = `<span class="error">✗ Error:</span> ${error.message}`;
+            }
+        };
+
+        window.testConvertToAndroid = function() {
+            const result = document.getElementById('test3-result');
+            
+            if (!parsedSignals) {
+                result.innerHTML = '<span class="error">✗ Error:</span> Please run Test 2 first!';
+                return;
+            }
+
+            try {
+                const converted = [];
+                
+                for (const signal of parsedSignals.slice(0, 5)) {
+                    if (signal.type === 'parsed' && signal.protocol === 'Samsung32') {
+                        const address = signal.address ? parseInt(signal.address.split(' ')[0], 16) : 0;
+                        const command = signal.command ? parseInt(signal.command.split(' ')[0], 16) : 0;
+                        
+                        converted.push({
+                            name: signal.name,
+                            protocol: signal.protocol,
+                            address: address,
+                            command: command,
+                            frequency: 38000
+                        });
+                    }
+                }
+                
+                result.innerHTML = `<span class="success">✓ Success!</span>\n\nConverted ${converted.length} signals:\n\n${JSON.stringify(converted, null, 2)}`;
+            } catch (error) {
+                result.innerHTML = `<span class="error">✗ Error:</span> ${error.message}`;
+            }
+        };
+
+        window.testDatabaseBrowser = function() {
+            const result = document.getElementById('test4-result');
+            
+            const categories = [
+                { id: 'tvs', name: 'TVs', brands: ['Samsung', 'LG', 'Sony'] },
+                { id: 'acs', name: 'Air Conditioners', brands: ['Samsung', 'LG', 'Daikin'] },
+                { id: 'fans', name: 'Fans', brands: ['Dyson', 'Honeywell', 'Lasko'] }
+            ];
+            
+            result.innerHTML = `<span class="success">✓ Success!</span>\n\nAvailable categories:\n\n${categories.map(c => `${c.name}:\\n  ${c.brands.join(', ')}`).join('\\n\\n')}`;
+        };
+    </script>
+</body>
+</html>

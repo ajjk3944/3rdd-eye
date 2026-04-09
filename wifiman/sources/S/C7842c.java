@@ -1,0 +1,41 @@
+package s;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.EdgeEffect;
+
+/* renamed from: s.c, reason: case insensitive filesystem */
+/* loaded from: classes.dex */
+final class C7842c {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final C7842c f60734a = new C7842c();
+
+    private C7842c() {
+    }
+
+    public final EdgeEffect a(Context context, AttributeSet attributeSet) {
+        try {
+            return new EdgeEffect(context, attributeSet);
+        } catch (Throwable unused) {
+            return new EdgeEffect(context);
+        }
+    }
+
+    public final float b(EdgeEffect edgeEffect) {
+        try {
+            return edgeEffect.getDistance();
+        } catch (Throwable unused) {
+            return 0.0f;
+        }
+    }
+
+    public final float c(EdgeEffect edgeEffect, float f10, float f11) {
+        try {
+            return edgeEffect.onPullDistance(f10, f11);
+        } catch (Throwable unused) {
+            edgeEffect.onPull(f10, f11);
+            return 0.0f;
+        }
+    }
+}

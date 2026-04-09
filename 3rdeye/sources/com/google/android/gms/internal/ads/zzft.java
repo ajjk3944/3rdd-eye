@@ -1,0 +1,11 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes2.dex */
+public final class zzft {
+    public final int zza;
+
+    public zzft(int i, int i10, boolean z10) {
+        this.zza = i;
+    }
+}

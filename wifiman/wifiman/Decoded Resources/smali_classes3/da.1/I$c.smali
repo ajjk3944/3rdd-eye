@@ -1,0 +1,65 @@
+.class final Lda/I$c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/f;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lda/I;->T0(Ljava/lang/String;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lda/I;
+
+
+# direct methods
+.method constructor <init>(Lda/I;)V
+    .locals 0
+
+    iput-object p1, p0, Lda/I$c;->a:Lda/I;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lhg/c;)V
+    .locals 1
+
+    const-string/jumbo v0, "it"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lda/I$c;->a:Lda/I;
+
+    invoke-virtual {p1}, Lda/I;->g0()LLi/z;
+
+    move-result-object p1
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, LLi/y;->j(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public bridge synthetic accept(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Lhg/c;
+
+    invoke-virtual {p0, p1}, Lda/I$c;->a(Lhg/c;)V
+
+    return-void
+.end method

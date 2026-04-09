@@ -1,0 +1,15 @@
+package com.bumptech.glide.load.data;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public interface d {
+    Class a();
+
+    void b();
+
+    void cancel();
+
+    int d();
+
+    void e(com.bumptech.glide.i iVar, c cVar);
+}

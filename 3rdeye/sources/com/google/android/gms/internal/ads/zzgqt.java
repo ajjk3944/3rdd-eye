@@ -1,0 +1,25 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes2.dex */
+public final class zzgqt {
+    public static byte[] zza(byte[] bArr) {
+        if (bArr.length != 16) {
+            throw new IllegalArgumentException("value must be a block.");
+        }
+        byte[] bArr2 = new byte[16];
+        int i = 0;
+        while (i < 16) {
+            int i10 = i + 1;
+            byte b10 = bArr[i];
+            byte b11 = (byte) ((b10 + b10) & 254);
+            bArr2[i] = b11;
+            if (i < 15) {
+                bArr2[i] = (byte) (((bArr[i10] >> 7) & 1) | b11);
+            }
+            i = i10;
+        }
+        bArr2[15] = (byte) (((byte) ((bArr[0] >> 7) & 135)) ^ bArr2[15]);
+        return bArr2;
+    }
+}

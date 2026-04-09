@@ -1,0 +1,98 @@
+.class final Lx8/a$h;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/n;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lx8/a;->u0()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lx8/a;
+
+
+# direct methods
+.method constructor <init>(Lx8/a;)V
+    .locals 0
+
+    iput-object p1, p0, Lx8/a$h;->a:Lx8/a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/ui/wifiman/ui/signal/l;)Lgg/f;
+    .locals 1
+
+    const-string/jumbo v0, "cntType"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    instance-of v0, p1, Lcom/ui/wifiman/ui/signal/l$a;
+
+    if-nez v0, :cond_2
+
+    instance-of v0, p1, Lcom/ui/wifiman/ui/signal/l$b$a;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lcom/ui/wifiman/ui/signal/l$b$b;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lx8/a$h;->a:Lx8/a;
+
+    check-cast p1, Lcom/ui/wifiman/ui/signal/l$b$b;
+
+    invoke-static {v0, p1}, Lx8/a;->D0(Lx8/a;Lcom/ui/wifiman/ui/signal/l$b$b;)Lgg/b;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lx8/a$h;->a:Lx8/a;
+
+    invoke-static {p1}, Lx8/a;->C0(Lx8/a;)Lgg/b;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/ui/wifiman/ui/signal/l;
+
+    invoke-virtual {p0, p1}, Lx8/a$h;->a(Lcom/ui/wifiman/ui/signal/l;)Lgg/f;
+
+    move-result-object p1
+
+    return-object p1
+.end method

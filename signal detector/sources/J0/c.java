@@ -1,0 +1,28 @@
+package J0;
+
+import A.f;
+import android.os.Parcel;
+
+/* loaded from: classes.dex */
+public class c extends RuntimeException {
+    public c(String str) {
+        super(str);
+    }
+
+    public c(String str, Parcel parcel) {
+        int iDataPosition = parcel.dataPosition();
+        int iDataSize = parcel.dataSize();
+        int length = String.valueOf(str).length();
+        StringBuilder sb = new StringBuilder(length + 13 + String.valueOf(iDataPosition).length() + 6 + String.valueOf(iDataSize).length());
+        sb.append(str);
+        sb.append(" Parcel: pos=");
+        sb.append(iDataPosition);
+        sb.append(" size=");
+        sb.append(iDataSize);
+        super(sb.toString());
+    }
+
+    public c(int i) {
+        super(f.i(i, "r: ", new StringBuilder(String.valueOf(i).length() + 3)));
+    }
+}

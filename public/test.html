@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test</title>
+    <style>
+        body {
+            background: #0a1f1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            background: #1ed87b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        button:active {
+            background: #19b869;
+        }
+        a {
+            display: block;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #1a3329;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Test Page</h1>
+    <p>Testing if buttons work in Android WebView</p>
+    
+    <button onclick="testClick()">Test Button (onclick)</button>
+    
+    <button id="testBtn">Test Button (addEventListener)</button>
+    
+    <a href="/camera-detector/magnetic">Link to Magnetic Detector</a>
+    
+    <div id="output">Click a button to test...</div>
+
+    <script>
+        console.log('JavaScript is running!');
+        
+        function testClick() {
+            document.getElementById('output').innerHTML = 'onclick button works! ✓';
+            alert('onclick button clicked!');
+        }
+        
+        document.getElementById('testBtn').addEventListener('click', function() {
+            document.getElementById('output').innerHTML = 'addEventListener button works! ✓';
+            alert('addEventListener button clicked!');
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            document.getElementById('output').innerHTML += '<br>JavaScript loaded successfully!';
+        });
+    </script>
+</body>
+</html>

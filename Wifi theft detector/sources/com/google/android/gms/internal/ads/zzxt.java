@@ -1,0 +1,35 @@
+package com.google.android.gms.internal.ads;
+
+import com.mbridge.msdk.playercommon.exoplayer2.source.ExtractorMediaSource;
+
+/* loaded from: classes2.dex */
+public final class zzxt implements zzwj {
+    private final zzha zza;
+    private final zzxc zzb;
+    private int zzc;
+    private final zzaaw zzd;
+
+    public zzxt(zzha zzhaVar, final zzafa zzafaVar) {
+        zzxc zzxcVar = new zzxc() { // from class: com.google.android.gms.internal.ads.zzxs
+            @Override // com.google.android.gms.internal.ads.zzxc
+            public final /* synthetic */ zzxd zza(zzpq zzpqVar) {
+                return new zzvm(zzafaVar);
+            }
+        };
+        zzaaw zzaawVar = new zzaaw(-1);
+        this.zza = zzhaVar;
+        this.zzb = zzxcVar;
+        this.zzd = zzaawVar;
+        this.zzc = ExtractorMediaSource.DEFAULT_LOADING_CHECK_INTERVAL_BYTES;
+    }
+
+    public final zzxt zza(int i10) {
+        this.zzc = i10;
+        return this;
+    }
+
+    public final zzxu zzb(zzak zzakVar) {
+        zzakVar.zzb.getClass();
+        return new zzxu(zzakVar, this.zza, this.zzb, zzto.zza, this.zzd, this.zzc, false, 0, null, null, null);
+    }
+}

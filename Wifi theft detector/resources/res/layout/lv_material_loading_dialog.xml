@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_corner_semi_transparent"
+    android:padding="@dimen/material_space_large"
+    android:layout_width="@dimen/material_loading_width"
+    android:layout_height="@dimen/material_loading_width">
+    <com.youdao.material.views.WYProgressView
+        android:id="@+id/progress_wheel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:matProg_barColor="@android:color/white"
+        app:matProg_progressIndeterminate="true"/>
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_space_common"
+        android:text="@string/md_loading"/>
+</LinearLayout>

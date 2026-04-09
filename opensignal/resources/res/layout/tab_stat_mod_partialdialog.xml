@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:background="@color/primary_2"
+        android:padding="@dimen/standard_margin"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="10dp">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/complementary_3"
+            android:gravity="center"
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/Headers.h2"/>
+        <TextView
+            android:id="@+id/dialog_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_below="@+id/dialog_title"
+            style="@style/Paragraph.p2_medium"/>
+    </RelativeLayout>
+</merge>

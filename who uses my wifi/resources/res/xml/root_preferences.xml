@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/pref_header_general">
+        <ListPreference
+            android:icon="@drawable/ic_theme"
+            android:entries="@array/themePrefArray"
+            android:title="@string/pref_theme_title"
+            android:key="key_theme"
+            android:defaultValue="default"
+            android:dialogTitle="@string/pref_theme_title"
+            android:entryValues="@array/themeValueArray"
+            app:useSimpleSummaryProvider="true"/>
+        <ListPreference
+            android:icon="@drawable/ic_sort"
+            android:entries="@array/sortPrefArray"
+            android:title="@string/pref_sort_title"
+            android:key="sortPref"
+            android:defaultValue="ip"
+            android:dialogTitle="@string/pref_sort_title"
+            android:entryValues="@array/sortValueArray"
+            app:useSimpleSummaryProvider="true"/>
+        <CheckBoxPreference
+            android:icon="@drawable/ic_vibration"
+            android:title="@string/pref_vibrate_title"
+            android:key="key_vibrate_finish"
+            android:summary="@string/pref_vibrate_summary"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_title_about">
+        <Preference
+            android:title="@string/pref_localization"
+            app:key="key_localization"/>
+        <Preference
+            android:title="@string/pref_feedback_title"
+            android:key="key_feedback"/>
+        <Preference
+            android:title="@string/pref_open_source"
+            android:key="key_open_source"/>
+        <Preference
+            android:title="@string/pref_policy_title"
+            android:key="key_privacy"/>
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="key_privacy_settings"
+            app:title="@string/pref_privacy_settings"/>
+        <Preference
+            android:title="@string/pref_version_title"
+            android:key="key_version"/>
+    </PreferenceCategory>
+</PreferenceScreen>

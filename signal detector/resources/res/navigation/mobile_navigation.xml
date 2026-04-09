@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_phone">
+    <fragment
+        android:label="@string/title_phone"
+        android:name="com.lefan.signal.ui.phone.PhoneFragment"
+        android:id="@+id/navigation_phone"/>
+    <fragment
+        android:label="@string/title_wifi"
+        android:name="com.lefan.signal.ui.wifi.WifiFragment"
+        android:id="@+id/navigation_wifi"/>
+    <fragment
+        android:label="@string/title_other"
+        android:name="com.lefan.signal.ui.other.OtherFragment"
+        android:id="@+id/navigation_other"/>
+</navigation>

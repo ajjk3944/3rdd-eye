@@ -1,0 +1,34 @@
+.class public abstract Lkotlin/jvm/internal/W;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lth/q;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkotlin/jvm/internal/W$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Lkotlin/jvm/internal/W$a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lkotlin/jvm/internal/W$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lkotlin/jvm/internal/W$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    sput-object v0, Lkotlin/jvm/internal/W;->a:Lkotlin/jvm/internal/W$a;
+
+    return-void
+.end method

@@ -1,0 +1,48 @@
+package com.bytedance.sdk.openadsdk.emc.dg;
+
+import com.bytedance.sdk.openadsdk.api.open.PAGAppOpenAd;
+import com.bytedance.sdk.openadsdk.api.open.PAGAppOpenAdLoadListener;
+import com.bytedance.sdk.openadsdk.utils.iyl;
+
+/* loaded from: classes.dex */
+public class emc implements PAGAppOpenAdLoadListener {
+    private final PAGAppOpenAdLoadListener emc;
+
+    public emc(PAGAppOpenAdLoadListener pAGAppOpenAdLoadListener) {
+        this.emc = pAGAppOpenAdLoadListener;
+    }
+
+    @Override // com.bytedance.sdk.openadsdk.api.PAGLoadListener, com.bytedance.sdk.openadsdk.common.uym
+    public void onError(final int i10, final String str) {
+        if (this.emc == null) {
+            return;
+        }
+        if (str == null) {
+            str = "Unknown exception.";
+        }
+        iyl.emc(new Runnable() { // from class: com.bytedance.sdk.openadsdk.emc.dg.emc.1
+            @Override // java.lang.Runnable
+            public void run() {
+                if (emc.this.emc != null) {
+                    emc.this.emc.onError(i10, str);
+                }
+            }
+        });
+    }
+
+    @Override // com.bytedance.sdk.openadsdk.api.PAGLoadListener
+    /* renamed from: emc, reason: merged with bridge method [inline-methods] */
+    public void onAdLoaded(final PAGAppOpenAd pAGAppOpenAd) {
+        if (this.emc == null) {
+            return;
+        }
+        iyl.emc(new Runnable() { // from class: com.bytedance.sdk.openadsdk.emc.dg.emc.2
+            @Override // java.lang.Runnable
+            public void run() {
+                if (emc.this.emc != null) {
+                    emc.this.emc.onAdLoaded(pAGAppOpenAd);
+                }
+            }
+        });
+    }
+}

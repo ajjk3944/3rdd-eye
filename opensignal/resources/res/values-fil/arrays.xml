@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Icon lang ng Statusbar</item>
+        <item>Vibrate</item>
+        <item>Tunog</item>
+        <item>Lahat!</item>
+    </array>
+    <array name="stat_type">
+        <item>Availability ng Network</item>
+        <item>Paggamit ng data</item>
+    </array>
+    <array name="time_period">
+        <item>Huling oras</item>
+        <item>Ngayon</item>
+        <item>Ngayong buwan</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Ngayon</item>
+        <item>Ngayong buwan</item>
+    </array>
+    <array name="time_period_new">
+        <item>Ngayon</item>
+        <item>Kahapon</item>
+        <item>Nakaraang Linggo</item>
+        <item>Ngayong Buwan</item>
+        <item>Magpakailanman</item>
+    </array>
+</resources>

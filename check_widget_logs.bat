@@ -1,0 +1,3 @@
+@echo off
+echo Checking widget logs...
+adb logcat -d | findstr /i "widget thirdeye appwidget"

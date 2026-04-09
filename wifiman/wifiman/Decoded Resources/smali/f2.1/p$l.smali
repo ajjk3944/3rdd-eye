@@ -1,0 +1,73 @@
+.class final Lf2/p$l;
+.super Lkotlin/jvm/internal/u;
+.source "SourceFile"
+
+# interfaces
+.implements Lmh/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lf2/p;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lf2/p;
+
+
+# direct methods
+.method constructor <init>(Lf2/p;)V
+    .locals 0
+
+    iput-object p1, p0, Lf2/p$l;->a:Lf2/p;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/u;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/util/regex/Pattern;
+    .locals 2
+
+    iget-object v0, p0, Lf2/p$l;->a:Lf2/p;
+
+    invoke-static {v0}, Lf2/p;->d(Lf2/p;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lf2/p$l;->a()Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    return-object v0
+.end method

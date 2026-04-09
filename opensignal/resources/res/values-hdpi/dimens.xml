@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coverage_dialog_background_offset_y">20dp</dimen>
+    <dimen name="coverage_tab_details_margin_between_data">20dp</dimen>
+    <dimen name="coverage_tab_details_value_font_size">18dp</dimen>
+    <dimen name="large_margin">0dp</dimen>
+    <dimen name="onboarding_accept_gdpr_agreement_padding">@dimen/keyline_2</dimen>
+    <dimen name="onboarding_gdpr_text_gradient_height">@dimen/keyline_5</dimen>
+    <dimen name="onboarding_gdpr_text_top_margin">@dimen/keyline_5</dimen>
+    <dimen name="onboarding_title_top_margin">@dimen/keyline_2</dimen>
+    <dimen name="overview_compass_bg_diameter">255dp</dimen>
+    <dimen name="padding_large">8dp</dimen>
+    <dimen name="select_test_intro">22sp</dimen>
+    <dimen name="speedtest_dial_width">210dp</dimen>
+    <dimen name="standard_margin">4dp</dimen>
+    <dimen name="start_test_button_icon_width">46dp</dimen>
+    <dimen name="test_button_label_text_size">18sp</dimen>
+    <dimen name="test_button_top_margin">24dp</dimen>
+    <dimen name="try_different_test">16sp</dimen>
+    <dimen name="video_result_text">10sp</dimen>
+</resources>

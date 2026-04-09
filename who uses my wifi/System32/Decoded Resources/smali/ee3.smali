@@ -1,0 +1,31 @@
+.class public final Lee3;
+.super Ljava/lang/Exception;
+.source "r8-map-id-6c2465e8d13ff8e5d50a476d17d9ba5832a97d3f7cd313d64bb1ddbb52494e1b"
+
+
+# instance fields
+.field public final f:I
+
+
+# direct methods
+.method public constructor <init>(ILjava/lang/Exception;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    iput p1, p0, Lee3;->f:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iput p2, p0, Lee3;->f:I
+
+    return-void
+.end method

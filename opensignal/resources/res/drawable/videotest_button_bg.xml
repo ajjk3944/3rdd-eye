@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/complementary_1_pressed">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/complementary_1"/>
+            <size
+                android:height="@dimen/start_test_button_inner_size"
+                android:width="@dimen/start_test_button_inner_size"/>
+            <stroke
+                android:width="@dimen/start_test_button_halo_width"
+                android:color="@color/complementary_1_light"/>
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/mask"
+        android:left="@dimen/start_test_button_ripple_padding"
+        android:top="@dimen/start_test_button_ripple_padding"
+        android:right="@dimen/start_test_button_ripple_padding"
+        android:bottom="@dimen/start_test_button_ripple_padding"
+        android:start="@dimen/start_test_button_ripple_padding"
+        android:end="@dimen/start_test_button_ripple_padding">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/accent_dark_blue"
+    android:padding="@dimen/keyline_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/keyline_1">
+    <TextView
+        android:textColor="@color/neutral_1"
+        android:layout_gravity="center"
+        android:id="@+id/exit_dialog_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit_dialog_title"
+        style="@style/Onboarding.Title"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/negative_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:text="@string/exit_dialog_negative"
+        style="@style/Onboarding.Button"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/positive_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:text="@string/exit_dialog_positive"
+        style="@style/Onboarding.Button"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

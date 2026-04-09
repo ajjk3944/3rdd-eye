@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>رمز شريط الحاله فقط</item>
+        <item>اهتزاز</item>
+        <item>صوت</item>
+        <item>كل شئ</item>
+    </array>
+    <array name="stat_type">
+        <item>الوقت حسب نوع الشبكة</item>
+        <item>استخدام البيانات</item>
+    </array>
+    <array name="time_period">
+        <item>اخر ساعه</item>
+        <item>اليوم</item>
+        <item>هذا الشهر</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>اليوم</item>
+        <item>هذا الشهر</item>
+    </array>
+    <array name="time_period_new">
+        <item>اليوم</item>
+        <item>أمس</item>
+        <item>الأسبوع الماضي</item>
+        <item>هذا الشهر</item>
+        <item>في جميع الأوقات</item>
+    </array>
+</resources>

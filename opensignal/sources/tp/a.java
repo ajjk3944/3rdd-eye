@@ -1,0 +1,42 @@
+package tp;
+
+import android.content.Context;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import br.l;
+import com.survicate.surveys.entities.survey.theme.MicroColorScheme;
+import h7.n1;
+import on.r;
+import vc.e;
+
+/* loaded from: classes.dex */
+public final class a extends n1 {
+
+    /* renamed from: u, reason: collision with root package name */
+    public final ImageView f22938u;
+
+    /* renamed from: v, reason: collision with root package name */
+    public final TextView f22939v;
+
+    /* renamed from: w, reason: collision with root package name */
+    public final /* synthetic */ b f22940w;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public a(b bVar, View view, MicroColorScheme microColorScheme) {
+        super(view);
+        l.e(microColorScheme, "colorScheme");
+        this.f22940w = bVar;
+        View viewFindViewById = view.findViewById(r.item_micro_shape_horizontal_image);
+        l.d(viewFindViewById, "findViewById(...)");
+        this.f22938u = (ImageView) viewFindViewById;
+        View viewFindViewById2 = view.findViewById(r.item_micro_shape_horizontal_label);
+        l.d(viewFindViewById2, "findViewById(...)");
+        TextView textView = (TextView) viewFindViewById2;
+        this.f22939v = textView;
+        Context context = view.getContext();
+        l.d(context, "getContext(...)");
+        view.setBackground(e.o(context, 0.0f));
+        textView.setTextColor(microColorScheme.getAnswer());
+    }
+}

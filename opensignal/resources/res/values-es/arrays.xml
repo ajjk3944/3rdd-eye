@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Sólo ícono de Statusbar</item>
+        <item>Vibrar</item>
+        <item>Sonido</item>
+        <item>¡Todo!</item>
+    </array>
+    <array name="stat_type">
+        <item>Tiempo por tipo de red</item>
+        <item>Consumo de datos</item>
+    </array>
+    <array name="time_period">
+        <item>Última hora</item>
+        <item>Hoy</item>
+        <item>Este mes</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Hoy</item>
+        <item>Este mes</item>
+    </array>
+    <array name="time_period_new">
+        <item>Hoy</item>
+        <item>Ayer</item>
+        <item>La semana pasada</item>
+        <item>Este mes</item>
+        <item>Siempre</item>
+    </array>
+</resources>

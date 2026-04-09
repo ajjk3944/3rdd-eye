@@ -1,0 +1,11 @@
+package com.google.android.gms.internal.ads;
+
+import androidx.annotation.Nullable;
+
+/* loaded from: classes2.dex */
+final class zzbhm extends zzbhp {
+    @Override // com.google.android.gms.internal.ads.zzbhp
+    public final String zza(@Nullable String str, String str2) {
+        return str2;
+    }
+}

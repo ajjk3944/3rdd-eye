@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_common_card"
+    android:paddingLeft="4dp"
+    android:paddingTop="5dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/common_card_elevation"
+    android:paddingHorizontal="4dp">
+    <TextView
+        android:textSize="12sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:gravity="center"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:fontFamily="sans-serif-medium"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-medium"
+        app:autoSizeMaxTextSize="14sp"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeStepGranularity="0.5sp"
+        app:autoSizeTextType="uniform"/>
+</LinearLayout>

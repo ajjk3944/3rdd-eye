@@ -1,0 +1,71 @@
+.class final LE8/f$d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkg/n;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = LE8/f;->q0(Lgf/a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lgf/a;
+
+
+# direct methods
+.method constructor <init>(Lgf/a;)V
+    .locals 0
+
+    iput-object p1, p0, LE8/f$d;->a:Lgf/a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)Lgg/r;
+    .locals 2
+
+    const-string/jumbo v0, "endpoints"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, LE8/f$d;->a:Lgf/a;
+
+    new-instance v1, LE8/f$d$a;
+
+    invoke-direct {v1, p1, v0}, LE8/f$d$a;-><init>(Ljava/util/List;Lgf/a;)V
+
+    invoke-static {v1}, Lgg/n;->c(Lgg/q;)Lgg/n;
+
+    move-result-object p1
+
+    const-string/jumbo v0, "crossinline action: () -\u2026or(error)\n        }\n    }"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/s;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-virtual {p0, p1}, LE8/f$d;->a(Ljava/util/List;)Lgg/r;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStyle.Perspective"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.liuzh.deviceinfo.view.SettingsItemView
+                android:id="@+id/feedback_info"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siv_summary="数据错误时请点击此处，将弹窗信息截图发送给开发者"
+                app:siv_title="设备名称/芯片数据"/>
+            <com.liuzh.deviceinfo.view.SettingsItemView
+                android:id="@+id/build_time"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siv_summary="Build.Time和HwBuildEx.Time"
+                app:siv_title="系统构建时间"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="appa_rtl_rotation_compat">180</integer>
+    <integer name="appi_rtl_rotation_compat">180</integer>
+    <integer name="fa_rtl_rotation_compat">180</integer>
+    <integer name="rtl_rotation_compat">180</integer>
+</resources>

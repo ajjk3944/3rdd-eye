@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="overview_compass_bg_diameter">500dp</dimen>
+    <dimen name="overview_compass_fg_diameter">200dp</dimen>
+    <dimen name="speedtest_dial_width">440dp</dimen>
+    <dimen name="start_test_button_icon_width">120dp</dimen>
+</resources>

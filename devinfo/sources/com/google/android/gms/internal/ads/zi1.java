@@ -1,0 +1,115 @@
+package com.google.android.gms.internal.ads;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes3.dex */
+public final class zi1 extends qn1 {
+    private static final zi1 zzf;
+    private static volatile po1 zzg;
+    private int zza;
+    private int zzb;
+    private vi1 zzc;
+    private bn1 zzd;
+    private bn1 zze;
+
+    static {
+        zi1 zi1Var = new zi1();
+        zzf = zi1Var;
+        qn1.u(zi1.class, zi1Var);
+    }
+
+    public zi1() {
+        zm1 zm1Var = bn1.f9729b;
+        this.zzd = zm1Var;
+        this.zze = zm1Var;
+    }
+
+    public static zi1 E(bn1 bn1Var, jn1 jn1Var) {
+        return (zi1) qn1.m(zzf, bn1Var, jn1Var);
+    }
+
+    public static yi1 F() {
+        return (yi1) zzf.r();
+    }
+
+    public static zi1 G() {
+        return zzf;
+    }
+
+    public static po1 H() {
+        return zzf.o();
+    }
+
+    public final int A() {
+        return this.zzb;
+    }
+
+    public final vi1 B() {
+        vi1 vi1Var = this.zzc;
+        return vi1Var == null ? vi1.E() : vi1Var;
+    }
+
+    public final bn1 C() {
+        return this.zzd;
+    }
+
+    public final bn1 D() {
+        return this.zze;
+    }
+
+    public final /* synthetic */ void I(int i4) {
+        this.zzb = 0;
+    }
+
+    public final /* synthetic */ void J(vi1 vi1Var) {
+        this.zzc = vi1Var;
+        this.zza |= 1;
+    }
+
+    public final /* synthetic */ void K(zm1 zm1Var) {
+        this.zzd = zm1Var;
+    }
+
+    public final /* synthetic */ void L(zm1 zm1Var) {
+        this.zze = zm1Var;
+    }
+
+    @Override // com.google.android.gms.internal.ads.qn1
+    public final Object w(int i4, qn1 qn1Var) {
+        po1 pn1Var;
+        int iC = i3.e.c(i4);
+        if (iC == 0) {
+            return (byte) 1;
+        }
+        if (iC == 2) {
+            return new to1(zzf, "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u000b\u0002ဉ\u0000\u0003\n\u0004\n", new Object[]{"zza", "zzb", "zzc", "zzd", "zze"});
+        }
+        if (iC == 3) {
+            return new zi1();
+        }
+        if (iC == 4) {
+            return new yi1(zzf);
+        }
+        if (iC == 5) {
+            return zzf;
+        }
+        if (iC != 6) {
+            throw null;
+        }
+        po1 po1Var = zzg;
+        if (po1Var != null) {
+            return po1Var;
+        }
+        synchronized (zi1.class) {
+            try {
+                pn1Var = zzg;
+                if (pn1Var == null) {
+                    pn1Var = new pn1(zzf);
+                    zzg = pn1Var;
+                }
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
+        return pn1Var;
+    }
+}

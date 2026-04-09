@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="survicate_micro_input_height_comment_nested">108dp</dimen>
+    <dimen name="survicate_micro_question_legend_label_top_space">42dp</dimen>
+    <dimen name="survicate_micro_question_numerical_horizontal_item_size">60dp</dimen>
+    <dimen name="survicate_micro_question_smiley_scale_icon_size">56dp</dimen>
+    <dimen name="survicate_micro_question_smiley_scale_spacing_between_icons">13dp</dimen>
+    <dimen name="survicate_micro_question_smiley_scale_spacing_between_question_and_icons">38dp</dimen>
+</resources>

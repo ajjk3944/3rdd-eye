@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/stats_connection_noSignal"/>
+        </shape>
+    </item>
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/stats_connection_2G"/>
+            </shape>
+        </clip>
+    </item>
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/stats_connection_3G"/>
+            </shape>
+        </clip>
+    </item>
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/stats_connection_4G"/>
+            </shape>
+        </clip>
+    </item>
+    <item>
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/stats_connection_5G"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

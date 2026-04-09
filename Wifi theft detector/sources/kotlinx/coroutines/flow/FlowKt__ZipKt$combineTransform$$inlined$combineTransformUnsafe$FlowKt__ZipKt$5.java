@@ -1,0 +1,117 @@
+package kotlinx.coroutines.flow;
+
+import com.google.android.gms.ads.RequestConfiguration;
+import kotlin.Metadata;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.internal.SourceDebugExtension;
+import kotlinx.coroutines.flow.internal.CombineKt;
+
+@Metadata(d1 = {"\u0000\u0010\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0004\u001a\u00020\u0003\"\u0006\b\u0000\u0010\u0000\u0018\u0001\"\u0004\b\u0001\u0010\u0001*\b\u0012\u0004\u0012\u00028\u00010\u0002H\u008a@¢\u0006\u0004\b\u0004\u0010\u0005¨\u0006\u0006"}, d2 = {RequestConfiguration.MAX_AD_CONTENT_RATING_T, "R", "Lkotlinx/coroutines/flow/c;", "Ly8/s;", "<anonymous>", "(Lkotlinx/coroutines/flow/c;)V", "kotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1"}, k = 3, mv = {1, 9, 0})
+@DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5", f = "Zip.kt", i = {}, l = {269}, m = "invokeSuspend", n = {}, s = {})
+@SourceDebugExtension({"SMAP\nZip.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Zip.kt\nkotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1\n*L\n1#1,328:1\n*E\n"})
+/* loaded from: classes4.dex */
+public final class FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 extends SuspendLambda implements l9.p {
+    final /* synthetic */ b[] $flows;
+    final /* synthetic */ l9.u $transform$inlined;
+    private /* synthetic */ Object L$0;
+    int label;
+
+    @Metadata(d1 = {"\u0000\u0016\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0006\u001a\u00020\u0005\"\u0006\b\u0000\u0010\u0000\u0018\u0001\"\u0004\b\u0001\u0010\u0001*\b\u0012\u0004\u0012\u00028\u00010\u00022\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003H\u008a@¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {RequestConfiguration.MAX_AD_CONTENT_RATING_T, "R", "Lkotlinx/coroutines/flow/c;", "", "it", "Ly8/s;", "<anonymous>", "(Lkotlinx/coroutines/flow/c;Lkotlin/Array;)V", "kotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1$1"}, k = 3, mv = {1, 9, 0})
+    @DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5$1", f = "Zip.kt", i = {}, l = {329}, m = "invokeSuspend", n = {}, s = {})
+    @SourceDebugExtension({"SMAP\nZip.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Zip.kt\nkotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1$1\n+ 2 Zip.kt\nkotlinx/coroutines/flow/FlowKt__ZipKt\n*L\n1#1,328:1\n217#2,8:329\n*E\n"})
+    /* renamed from: kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5$1, reason: invalid class name */
+    public static final class AnonymousClass1 extends SuspendLambda implements l9.q {
+        final /* synthetic */ l9.u $transform$inlined;
+        private /* synthetic */ Object L$0;
+        /* synthetic */ Object L$1;
+        int label;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public AnonymousClass1(c9.c cVar, l9.u uVar) {
+            super(3, cVar);
+            this.$transform$inlined = uVar;
+        }
+
+        @Override // l9.q
+        /* renamed from: b, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(c cVar, Object[] objArr, c9.c cVar2) {
+            AnonymousClass1 anonymousClass1 = new AnonymousClass1(cVar2, this.$transform$inlined);
+            anonymousClass1.L$0 = cVar;
+            anonymousClass1.L$1 = objArr;
+            return anonymousClass1.invokeSuspend(y8.s.f25199a);
+        }
+
+        @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+        public final Object invokeSuspend(Object obj) {
+            Object objF = kotlin.coroutines.intrinsics.a.f();
+            int i10 = this.label;
+            if (i10 == 0) {
+                kotlin.c.b(obj);
+                c cVar = (c) this.L$0;
+                Object[] objArr = (Object[]) this.L$1;
+                l9.u uVar = this.$transform$inlined;
+                Object obj2 = objArr[0];
+                Object obj3 = objArr[1];
+                Object obj4 = objArr[2];
+                Object obj5 = objArr[3];
+                Object obj6 = objArr[4];
+                this.label = 1;
+                kotlin.jvm.internal.n.c(6);
+                Object objF2 = uVar.f(cVar, obj2, obj3, obj4, obj5, obj6, this);
+                kotlin.jvm.internal.n.c(7);
+                if (objF2 == objF) {
+                    return objF;
+                }
+            } else {
+                if (i10 != 1) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                kotlin.c.b(obj);
+            }
+            return y8.s.f25199a;
+        }
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5(b[] bVarArr, c9.c cVar, l9.u uVar) {
+        super(2, cVar);
+        this.$flows = bVarArr;
+        this.$transform$inlined = uVar;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final c9.c create(Object obj, c9.c cVar) {
+        FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 = new FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5(this.$flows, cVar, this.$transform$inlined);
+        flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5.L$0 = obj;
+        return flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        Object objF = kotlin.coroutines.intrinsics.a.f();
+        int i10 = this.label;
+        if (i10 == 0) {
+            kotlin.c.b(obj);
+            c cVar = (c) this.L$0;
+            b[] bVarArr = this.$flows;
+            l9.a aVarC = FlowKt__ZipKt.c();
+            AnonymousClass1 anonymousClass1 = new AnonymousClass1(null, this.$transform$inlined);
+            this.label = 1;
+            if (CombineKt.a(cVar, bVarArr, aVarC, anonymousClass1, this) == objF) {
+                return objF;
+            }
+        } else {
+            if (i10 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            kotlin.c.b(obj);
+        }
+        return y8.s.f25199a;
+    }
+
+    @Override // l9.p
+    public final Object invoke(c cVar, c9.c cVar2) {
+        return ((FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5) create(cVar, cVar2)).invokeSuspend(y8.s.f25199a);
+    }
+}

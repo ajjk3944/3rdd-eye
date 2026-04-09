@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey_blue_800">#d5dadd</color>
+    <color name="ph_app_background_color">#141416</color>
+    <color name="ph_black">#ffffff</color>
+    <color name="ph_cta_color">#3579f6</color>
+    <color name="ph_dark_gray">#d5dadd</color>
+    <color name="ph_gray_background">#111111</color>
+    <color name="ph_light_grey">#aaaaaa</color>
+    <color name="ph_rate_dialog_background">#333333</color>
+    <color name="ph_splash_background">#333333</color>
+    <color name="ph_splash_progress_color">#ffffff</color>
+    <color name="ph_splash_title_color">#ffffff</color>
+    <color name="ph_text_color">#ffffff</color>
+    <color name="ph_text_dark">#eeeeee</color>
+    <color name="ph_white">#000000</color>
+    <color name="ph_white_background">#333333</color>
+    <color name="ph_x_color">#ffffff</color>
+    <color name="rate_us_cta_btn_disabled">#525252</color>
+    <color name="rate_us_description_text_color">#b0f4f4f4</color>
+    <color name="rate_us_title_text_color">#ffffff</color>
+</resources>

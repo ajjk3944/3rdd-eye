@@ -1,0 +1,8 @@
+package A1;
+
+/* loaded from: classes.dex */
+public interface p {
+    boolean a();
+
+    void b();
+}

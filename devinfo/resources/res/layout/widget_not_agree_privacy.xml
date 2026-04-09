@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@android:id/background"
+    android:background="@drawable/bg_widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:id="@+id/open_app"
+        android:padding="@dimen/content_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/need_agree_privacy_to_use"/>
+</FrameLayout>

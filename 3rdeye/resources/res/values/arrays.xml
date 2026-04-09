@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cta_titles">
+        <item>@string/ph_start_premium_cta</item>
+        <item>@string/ph_start_3_day_trial_cta</item>
+        <item>@string/ph_start_7_day_trial_cta</item>
+        <item>@string/ph_start_30_day_trial_cta</item>
+    </array>
+    <array name="delegate_spinner_titles">
+        <item>@string/delegate_spinner_titles_1</item>
+        <item>@string/delegate_spinner_titles_2</item>
+        <item>@string/delegate_spinner_titles_3</item>
+    </array>
+    <array name="models_spinner_titles">
+        <item>@string/models_spinner_titles_1</item>
+        <item>@string/models_spinner_titles_2</item>
+        <item>@string/models_spinner_titles_3</item>
+        <item>@string/models_spinner_titles_4</item>
+    </array>
+    <array name="ph_applovin_test_advertising_ids">
+        <item>dba6e3a2-c91b-4fc6-b2f6-1ce73b953072</item>
+    </array>
+    <array name="sku_monthly_prices">
+        <item>@string/sku_price_monthly_no_trial</item>
+        <item>@string/sku_price_monthly_3d_trial</item>
+        <item>@string/sku_price_monthly_7d_trial</item>
+        <item>@string/sku_price_monthly_30d_trial</item>
+    </array>
+    <array name="sku_weekly_prices">
+        <item>@string/sku_price_weekly_no_trial</item>
+        <item>@string/sku_price_weekly_3d_trial</item>
+        <item>@string/sku_price_weekly_7d_trial</item>
+        <item>@string/sku_price_weekly_30d_trial</item>
+    </array>
+    <array name="sku_yearly_prices">
+        <item>@string/sku_price_yearly_no_trial</item>
+        <item>@string/sku_price_yearly_3d_trial</item>
+        <item>@string/sku_price_yearly_7d_trial</item>
+        <item>@string/sku_price_yearly_30d_trial</item>
+    </array>
+</resources>

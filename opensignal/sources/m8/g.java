@@ -1,0 +1,36 @@
+package m8;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* loaded from: classes.dex */
+public final class g {
+    private static final /* synthetic */ sq.a $ENTRIES;
+    private static final /* synthetic */ g[] $VALUES;
+    public static final g FILL = new g("FILL", 0);
+    public static final g FIT = new g("FIT", 1);
+
+    private static final /* synthetic */ g[] $values() {
+        return new g[]{FILL, FIT};
+    }
+
+    static {
+        g[] gVarArr$values = $values();
+        $VALUES = gVarArr$values;
+        $ENTRIES = a.a.j(gVarArr$values);
+    }
+
+    private g(String str, int i10) {
+    }
+
+    public static sq.a getEntries() {
+        return $ENTRIES;
+    }
+
+    public static g valueOf(String str) {
+        return (g) Enum.valueOf(g.class, str);
+    }
+
+    public static g[] values() {
+        return (g[]) $VALUES.clone();
+    }
+}

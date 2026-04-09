@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/survicate_micro_error_arrow_height"
+    android:width="@dimen/survicate_micro_error_arrow_width"
+    android:viewportWidth="10"
+    android:viewportHeight="8">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M10,0 L5,8 L0,0 z"
+        android:strokeColor="#000000"
+        android:strokeWidth="1"/>
+</vector>

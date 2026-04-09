@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sutel_and_opensignal_message">&lt;b&gt;SUTEL y Opensignal&lt;/b&gt; están &lt;b&gt;trabajando juntos para medir el desempeño&lt;/b&gt; de las redes en Costa Rica y &lt;b&gt;buscar nuevas oportunidades de mejora.&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Esta aplicación &lt;b&gt;mide la experiencia de calidad en el servicio de cada usuario&lt;/b&gt; y comparte la información con SUTEL, &lt;b&gt;para identificar acciones de mejora en la intensidad de la señal y la velocidad de los datos.&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;La configuración predeterminada en la App, &lt;b&gt;te permite compartir tus datos, para crear nuestros mapas de cobertura independientes.&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Haz clic &lt;b&gt;en Ok para confirmar que aceptas&lt;/b&gt; los términos de www.opensignal.com/terms y conocer los resultados de este trabajo conjunto.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Gracias por ser parte de la solución y ayudarnos a mejorar nuestras redes.&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;</string>
+    <string name="sutel_header">Evaluemos juntos las redes de Costa Rica</string>
+</resources>

@@ -1,0 +1,22 @@
+package com.google.android.gms.ads.internal.overlay;
+
+import java.util.concurrent.Callable;
+
+/* compiled from: com.google.android.gms:play-services-ads@@24.4.0 */
+/* loaded from: classes.dex */
+final class zzq implements Callable {
+    private final long zza;
+
+    public zzq(long j4) {
+        this.zza = j4;
+    }
+
+    @Override // java.util.concurrent.Callable
+    public final Object call() {
+        if (AdOverlayInfoParcel.zzz.remove(Long.valueOf(this.zza)) == null) {
+            return null;
+        }
+        com.google.android.gms.ads.internal.zzv.zzp().zzw(new Exception("Key was non-null in AdOverlayObjectsCleanupTask"), "AdOverlayObjectsCleanupTask");
+        return null;
+    }
+}

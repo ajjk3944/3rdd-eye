@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/latitude"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_latitude"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/longitude"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_longitude"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/altitude"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_altitude"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/sea_level_height"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_sea_level_height"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/speed"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_speed"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/speed_accurate"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_speed_accurate"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/pdop"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_pdop"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/ttff"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_ttff"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/h_v_acc_factor"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_h_v_dop"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/h_v_accurate"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_h_v_accurate"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/satellite_count"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_satellite_count"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/bearing"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_bearing"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/bearing_accurate"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/val_bearing_accurate"
+            android:textIsSelectable="false"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</LinearLayout>

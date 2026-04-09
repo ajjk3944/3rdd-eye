@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>Somente ícone na barra de status</item>
+        <item>Vibrar</item>
+        <item>Som</item>
+        <item>Tudo!</item>
+    </array>
+    <array name="stat_type">
+        <item>Tempo por tipo de rede</item>
+        <item>Uso de Dados</item>
+    </array>
+    <array name="time_period">
+        <item>Última hora</item>
+        <item>Hoje</item>
+        <item>Este mês</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>Hoje</item>
+        <item>Este mês</item>
+    </array>
+    <array name="time_period_new">
+        <item>Hoje</item>
+        <item>Ontem</item>
+        <item>Semana passada</item>
+        <item>Este mês</item>
+        <item>O tempo todo</item>
+    </array>
+</resources>

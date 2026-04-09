@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M512 320m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M512 704m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M320 512m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M704 512m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M376.224 647.744m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M376.224 376.224m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M647.744 647.744m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M832 448c-2.24 0-4.128 1.056-6.304 1.28-11.136-55.84-37.44-105.792-73.504-147.008L706.24 52.288A63.936 63.936 0 0 0 643.328 0h-256c-30.848 0-57.28 22.016-62.944 52.32l-44.8 241.568C225.824 351.072 192 427.264 192 512c0 82.656 32.448 156.96 83.872 213.696l45.184 246.016A64.032 64.032 0 0 0 384 1024h256c30.816 0 57.248-22.016 62.944-52.32l45.568-245.824c38.048-41.952 65.696-93.44 77.184-151.2 2.176 0.288 4.064 1.344 6.304 1.344a64 64 0 0 0 0-128zM387.328 64h256l32 172.384C628.064 208.896 573.952 192 515.328 192c-58.592 0-112.736 16.896-160 44.384l32-172.384zM640 960h-256l-32-172.384c47.232 27.456 101.376 44.384 160 44.384 58.592 0 112.768-16.928 160-44.384L640 960z m-128-192c-141.152 0-256-114.88-256-256 0-141.152 114.848-256 256-256s256 114.848 256 256c0 141.12-114.88 256-256 256z"/>
+    <path
+        android:fillColor="@color/icon_color"
+        android:pathData="M670.112 352.832a10.88 10.88 0 0 0-14.496-0.672l-166.144 137.12a32.32 32.32 0 0 0-9.472 22.976c0 8.416 3.264 16.384 9.248 22.336s14.016 9.28 22.624 9.344c8-0.064 16.32-3.04 22.368-8.864l59.136-71.2 77.632-96.672a10.88 10.88 0 0 0-0.896-14.368z"/>
+</vector>

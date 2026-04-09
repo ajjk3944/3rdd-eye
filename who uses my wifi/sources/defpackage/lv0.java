@@ -1,0 +1,26 @@
+package defpackage;
+
+/* compiled from: r8-map-id-6c2465e8d13ff8e5d50a476d17d9ba5832a97d3f7cd313d64bb1ddbb52494e1b */
+/* loaded from: classes.dex */
+public final class lv0 implements ej {
+    public final String a;
+    public final int b;
+    public final b4 c;
+    public final boolean d;
+
+    public lv0(String str, int i, b4 b4Var, boolean z) {
+        this.a = str;
+        this.b = i;
+        this.c = b4Var;
+        this.d = z;
+    }
+
+    @Override // defpackage.ej
+    public final vi a(i90 i90Var, u80 u80Var, da daVar) {
+        return new vu0(i90Var, daVar, this);
+    }
+
+    public final String toString() {
+        return "ShapePath{name=" + this.a + ", index=" + this.b + '}';
+    }
+}

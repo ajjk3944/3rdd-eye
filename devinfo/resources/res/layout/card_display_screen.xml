@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/name"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/name"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/panel_id_container"
+        style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/panel_id"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/panel_id"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_total_height"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/screen_height"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_total_width"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/screen_width"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_size"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/screen_size"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_physical_size"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/physical_size"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/default_screen_orientation"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/orientation"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/refresh_rate"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/refresh_rate"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/hdr"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/hdr"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/brightness_mode"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/brightness_mode"
+            style="@style/CardValue"/>
+    </LinearLayout>
+    <LinearLayout style="@style/CardItemContainer">
+        <TextView
+            android:text="@string/screen_timeout"
+            style="@style/CardLabel"/>
+        <TextView
+            android:id="@+id/screen_timeout"
+            style="@style/CardValue"/>
+    </LinearLayout>
+</merge>

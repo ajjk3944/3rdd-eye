@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:id="@+id/title"
+        android:background="@color/colorAccent"
+        android:padding="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/primary_color"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.liuzh.deviceinfo.view.LineColorPicker
+                android:id="@+id/color_picker"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:lcp_orientation="horizontal"
+                app:lcp_selectedColorIndex="0"/>
+            <com.liuzh.deviceinfo.view.LineColorPicker
+                android:id="@+id/shade_picker"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                app:lcp_orientation="horizontal"
+                app:lcp_selectedColorIndex="0"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

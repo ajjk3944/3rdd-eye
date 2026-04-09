@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/ui_account_type_name"
+    android:icon="@mipmap/ic_account"
+    android:accountType="@string/ui_sso_account_type"
+    android:smallIcon="@mipmap/ic_account"/>

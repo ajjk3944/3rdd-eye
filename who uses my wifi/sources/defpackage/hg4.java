@@ -1,0 +1,104 @@
+package defpackage;
+
+import android.os.Build;
+
+/* compiled from: r8-map-id-6c2465e8d13ff8e5d50a476d17d9ba5832a97d3f7cd313d64bb1ddbb52494e1b */
+/* loaded from: classes.dex */
+public final class hg4 {
+    public static final hg4 C = new hg4();
+    public final xe2 A;
+    public final qd2 B;
+    public final us0 a;
+    public final y24 b;
+    public final lf4 c;
+    public final sd2 d;
+    public final jd2 e;
+    public final nh4 f;
+    public final wy0 g;
+    public final gd2 h;
+    public final jd1 i;
+    public final bu1 j;
+    public final ym k;
+    public final ue l;
+    public final ts0 m;
+    public final xz1 n;
+    public final us1 o;
+    public final ug0 p;
+    public final qd2 q;
+    public final p21 r;
+    public final zb1 s;
+    public final r2 t;
+    public final ts0 u;
+    public final us0 v;
+    public final ug0 w;
+    public final su2 x;
+    public final oc2 y;
+    public final m30 z;
+
+    public hg4() {
+        us0 us0Var = new us0();
+        y24 y24Var = new y24(23);
+        lf4 lf4Var = new lf4();
+        sd2 sd2Var = new sd2(3);
+        jd2 jd2Var = new jd2();
+        int i = Build.VERSION.SDK_INT;
+        nh4 ij4Var = i >= 30 ? new ij4() : i >= 28 ? new ti4() : new nh4();
+        wy0 wy0Var = new wy0(2);
+        gd2 gd2Var = new gd2();
+        jd1 jd1Var = new jd1();
+        jd1Var.a = false;
+        jd1Var.b = 1.0f;
+        bu1 bu1Var = new bu1(4);
+        ue ueVar = new ue(7);
+        ueVar.g = 0L;
+        ts0 ts0Var = new ts0();
+        xz1 xz1Var = new xz1();
+        us1 us1Var = new us1();
+        ug0 ug0Var = new ug0(17);
+        qd2 qd2Var = new qd2(0);
+        p21 p21Var = new p21(11);
+        zb1 zb1Var = new zb1();
+        zb1Var.i = null;
+        zb1Var.f = false;
+        zb1Var.g = null;
+        zb1Var.j = null;
+        zb1Var.h = null;
+        r2 r2Var = new r2(3);
+        ts0 ts0Var2 = new ts0();
+        us0 us0Var2 = new us0();
+        ug0 ug0Var2 = new ug0(16);
+        su2 su2Var = new su2(4);
+        oc2 oc2Var = new oc2();
+        m30 m30Var = new m30();
+        xe2 xe2Var = new xe2();
+        qd2 qd2Var2 = new qd2(1);
+        this.a = us0Var;
+        this.b = y24Var;
+        this.c = lf4Var;
+        this.d = sd2Var;
+        this.e = jd2Var;
+        this.f = ij4Var;
+        this.g = wy0Var;
+        this.h = gd2Var;
+        this.i = jd1Var;
+        this.j = bu1Var;
+        this.k = ym.a;
+        this.l = ueVar;
+        this.m = ts0Var;
+        this.n = xz1Var;
+        this.o = us1Var;
+        this.p = ug0Var;
+        this.q = qd2Var;
+        this.r = p21Var;
+        this.t = r2Var;
+        this.s = zb1Var;
+        this.u = ts0Var2;
+        this.v = us0Var2;
+        this.w = ug0Var2;
+        this.x = su2Var;
+        this.y = oc2Var;
+        this.z = m30Var;
+        this.A = xe2Var;
+        this.B = qd2Var2;
+    }
+}

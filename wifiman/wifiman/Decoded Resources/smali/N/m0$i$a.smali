@@ -1,0 +1,59 @@
+.class final LN/m0$i$a;
+.super Lkotlin/jvm/internal/u;
+.source "SourceFile"
+
+# interfaces
+.implements Lmh/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = LN/m0$i;->a(LJ0/w;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lmh/a;
+
+
+# direct methods
+.method constructor <init>(Lmh/a;)V
+    .locals 0
+
+    iput-object p1, p0, LN/m0$i$a;->a:Lmh/a;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/u;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-object v0, p0, LN/m0$i$a;->a:Lmh/a;
+
+    invoke-interface {v0}, Lmh/a;->invoke()Ljava/lang/Object;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, LN/m0$i$a;->a()Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method

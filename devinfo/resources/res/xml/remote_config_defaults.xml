@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>enabled_boost_function
+        </key>
+        <value>false
+        </value>
+    </entry>
+    <entry>
+        <key>ad_click_limited
+        </key>
+        <value>99
+        </value>
+    </entry>
+    <entry>
+        <key>risk_user_ad_click_limited
+        </key>
+        <value>99
+        </value>
+    </entry>
+    <entry>
+        <key>enable_collapsible_banner_appinfo
+        </key>
+        <value>false
+        </value>
+    </entry>
+    <entry>
+        <key>is_dashboard_banner
+        </key>
+        <value>false
+        </value>
+    </entry>
+</defaultsMap>

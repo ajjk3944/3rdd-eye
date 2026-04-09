@@ -1,0 +1,63 @@
+package com.applovin.impl;
+
+import android.app.Activity;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
+
+/* loaded from: classes.dex */
+public class w1 extends q1 {
+    public w1(com.applovin.impl.sdk.ad.b bVar, Activity activity, com.applovin.impl.sdk.k kVar) {
+        super(bVar, activity, kVar);
+    }
+
+    @Override // com.applovin.impl.q1
+    public /* bridge */ /* synthetic */ void a(com.applovin.impl.adview.g gVar) {
+        super.a(gVar);
+    }
+
+    @Override // com.applovin.impl.q1
+    public /* bridge */ /* synthetic */ void a(View view) {
+        super.a(view);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:18:0x0083  */
+    /* JADX WARN: Removed duplicated region for block: B:25:0x0129  */
+    /* JADX WARN: Removed duplicated region for block: B:32:0x0144  */
+    /* JADX WARN: Removed duplicated region for block: B:34:0x0189  */
+    /* JADX WARN: Removed duplicated region for block: B:36:0x0192  */
+    /* JADX WARN: Removed duplicated region for block: B:38:0x01d7  */
+    /* JADX WARN: Removed duplicated region for block: B:40:0x01f9  */
+    /* JADX WARN: Removed duplicated region for block: B:44:0x0244  */
+    /* JADX WARN: Removed duplicated region for block: B:46:0x024f  */
+    /* JADX WARN: Removed duplicated region for block: B:48:0x0257  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public void a(android.widget.ImageView r18, com.applovin.impl.adview.g r19, final com.applovin.impl.adview.l r20, com.applovin.impl.C2105a r21, android.widget.ProgressBar r22, com.applovin.impl.C2116e0 r23, android.view.View r24, android.view.View r25, com.applovin.adview.AppLovinAdView r26, com.applovin.impl.adview.k r27, android.widget.ImageView r28, android.view.ViewGroup r29) {
+        /*
+            Method dump skipped, instructions count: 607
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.applovin.impl.w1.a(android.widget.ImageView, com.applovin.impl.adview.g, com.applovin.impl.adview.l, com.applovin.impl.a, android.widget.ProgressBar, com.applovin.impl.e0, android.view.View, android.view.View, com.applovin.adview.AppLovinAdView, com.applovin.impl.adview.k, android.widget.ImageView, android.view.ViewGroup):void");
+    }
+
+    public void a(com.applovin.impl.adview.g gVar, com.applovin.impl.adview.k kVar, View view, ProgressBar progressBar) {
+        if (view != null) {
+            view.setVisibility(0);
+        }
+        r.a(this.f20751d, view);
+        if (gVar != null) {
+            a(this.f20750c.o(), (this.f20750c.G0() ? 3 : 5) | 48, gVar);
+        }
+        if (progressBar != null) {
+            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, 20, ((Boolean) this.f20748a.a(l4.f20037u2)).booleanValue() ? 80 : 48);
+            layoutParams.setMargins(0, 0, 0, ((Integer) this.f20748a.a(l4.f20045v2)).intValue());
+            this.f20751d.addView(progressBar, layoutParams);
+        }
+        if (kVar != null) {
+            this.f20751d.addView(kVar, this.f20752e);
+        }
+    }
+}

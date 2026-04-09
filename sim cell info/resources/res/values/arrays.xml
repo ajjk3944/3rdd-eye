@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_5g_gnb_len_titles">
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </array>
+    <array name="pref_5g_gnb_len_values">
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </array>
+    <array name="pref_language_list_titles">
+        <item>@string/language_default</item>
+        <item>English</item>
+        <item>Русский</item>
+        <item>Deutsch</item>
+        <item>Italiano</item>
+    </array>
+    <array name="pref_language_list_values">
+        <item>0</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>de</item>
+        <item>it</item>
+    </array>
+    <array name="pref_theme_titles">
+        <item>BASIC</item>
+        <item>DARK</item>
+        <item>AUTO (DARK)</item>
+    </array>
+    <array name="pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+    </array>
+</resources>

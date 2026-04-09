@@ -1,0 +1,12 @@
+package e4;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public class p1 extends o1 {
+    public p1() {
+    }
+
+    public p1(c2 c2Var) {
+        super(c2Var);
+    }
+}

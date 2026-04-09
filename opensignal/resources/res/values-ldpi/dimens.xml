@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="onboarding_accept_gdpr_agreement_padding">@dimen/keyline_1</dimen>
+    <dimen name="onboarding_gdpr_text_gradient_height">@dimen/keyline_1</dimen>
+    <dimen name="onboarding_gdpr_text_top_margin">@dimen/keyline_1</dimen>
+    <dimen name="onboarding_title_top_margin">@dimen/keyline_half</dimen>
+</resources>

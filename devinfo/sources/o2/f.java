@@ -1,0 +1,30 @@
+package o2;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public final class f extends ek.c {
+
+    /* renamed from: a, reason: collision with root package name */
+    public /* synthetic */ Object f30396a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public final /* synthetic */ g f30397b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public int f30398c;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public f(g gVar, ek.c cVar) {
+        super(cVar);
+        this.f30397b = gVar;
+    }
+
+    @Override // ek.a
+    public final Object invokeSuspend(Object obj) {
+        this.f30396a = obj;
+        this.f30398c |= LinearLayoutManager.INVALID_OFFSET;
+        return this.f30397b.a(0.0f, this);
+    }
+}

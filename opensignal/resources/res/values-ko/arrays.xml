@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_scale">
+        <item>상태바 아이콘만</item>
+        <item>진동</item>
+        <item>사운드</item>
+        <item>모두!</item>
+    </array>
+    <array name="stat_type">
+        <item>네트워크 가용성</item>
+        <item>데이터 사용</item>
+    </array>
+    <array name="time_period">
+        <item>이전 시간</item>
+        <item>오늘</item>
+        <item>이번 달</item>
+    </array>
+    <array name="time_period_data_usage">
+        <item>오늘</item>
+        <item>이번 달</item>
+    </array>
+    <array name="time_period_new">
+        <item>오늘</item>
+        <item>어제</item>
+        <item>지난 주</item>
+        <item>이번 달</item>
+        <item>항상</item>
+    </array>
+</resources>

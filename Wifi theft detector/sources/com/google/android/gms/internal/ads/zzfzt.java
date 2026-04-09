@@ -1,0 +1,29 @@
+package com.google.android.gms.internal.ads;
+
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* loaded from: classes2.dex */
+final class zzfzt extends ContinuationImpl {
+    Object zza;
+    long zzb;
+    /* synthetic */ Object zzc;
+    final /* synthetic */ zzgaf zzd;
+    int zze;
+    String zzf;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public zzfzt(zzgaf zzgafVar, c9.c cVar) {
+        super(cVar);
+        this.zzd = zzgafVar;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    @Nullable
+    public final Object invokeSuspend(@NotNull Object obj) {
+        this.zzc = obj;
+        this.zze |= Integer.MIN_VALUE;
+        return this.zzd.zzi(null, this);
+    }
+}

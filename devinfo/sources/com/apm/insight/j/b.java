@@ -1,0 +1,64 @@
+package com.apm.insight.j;
+
+import android.content.Context;
+import android.os.Handler;
+import com.apm.insight.e;
+import com.apm.insight.runtime.m;
+
+/* compiled from: r8-map-id-c2d6645a5534910d782496a2f1fbb8d7e389c4692d5500a02d24b9efa19c0cfc */
+/* loaded from: classes.dex */
+public final class b extends a {
+
+    /* renamed from: b, reason: collision with root package name */
+    private static Runnable f3243b = new Runnable() { // from class: com.apm.insight.j.b.1
+        @Override // java.lang.Runnable
+        public final void run() {
+            m.a().a().removeCallbacks(this);
+            m.a().a(new b(m.a().a(), e.g()));
+        }
+    };
+
+    /* renamed from: a, reason: collision with root package name */
+    private Context f3244a;
+
+    public b(Handler handler, Context context) {
+        super(handler, 30000L);
+        this.f3244a = context;
+    }
+
+    public static void c() {
+        m.a().a(f3243b, 100L);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:9:0x001e A[Catch: all -> 0x0029, TRY_LEAVE, TryCatch #0 {all -> 0x0029, blocks: (B:6:0x0010, B:8:0x0016, B:9:0x001e), top: B:13:0x0010 }] */
+    @Override // java.lang.Runnable
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final void run() {
+        /*
+            r3 = this;
+            com.apm.insight.nativecrash.b r0 = com.apm.insight.e.a()     // Catch: java.lang.Throwable -> Ld
+            com.apm.insight.ICommonParams r0 = r0.c()     // Catch: java.lang.Throwable -> Ld
+            java.util.Map r0 = r0.getCommonParams()     // Catch: java.lang.Throwable -> Ld
+            goto Le
+        Ld:
+            r0 = 0
+        Le:
+            if (r0 == 0) goto L1e
+            boolean r1 = com.apm.insight.nativecrash.b.a(r0)     // Catch: java.lang.Throwable -> L29
+            if (r1 == 0) goto L1e
+            long r0 = r3.b()     // Catch: java.lang.Throwable -> L29
+            r3.a(r0)     // Catch: java.lang.Throwable -> L29
+            goto L29
+        L1e:
+            com.apm.insight.runtime.o r1 = com.apm.insight.runtime.o.a()     // Catch: java.lang.Throwable -> L29
+            org.json.JSONArray r2 = com.apm.insight.entity.b.b()     // Catch: java.lang.Throwable -> L29
+            r1.a(r0, r2)     // Catch: java.lang.Throwable -> L29
+        L29:
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.apm.insight.j.b.run():void");
+    }
+}

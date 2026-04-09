@@ -1,0 +1,64 @@
+package com.google.android.gms.ads.internal.client;
+
+import android.os.IBinder;
+import android.os.Parcel;
+import android.os.RemoteException;
+import com.google.android.gms.internal.ads.zzayr;
+import com.google.android.gms.internal.ads.zzayt;
+
+/* compiled from: com.google.android.gms:play-services-ads-api@@24.4.0 */
+/* loaded from: classes.dex */
+public final class zzbi extends zzayr implements zzbk {
+    public zzbi(IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.ads.internal.client.IAdListener");
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzc() throws RemoteException {
+        zzdb(6, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzd() throws RemoteException {
+        zzdb(1, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zze(int i) throws RemoteException {
+        Parcel parcelZza = zza();
+        parcelZza.writeInt(i);
+        zzdb(2, parcelZza);
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzf(zze zzeVar) throws RemoteException {
+        Parcel parcelZza = zza();
+        zzayt.zzd(parcelZza, zzeVar);
+        zzdb(8, parcelZza);
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzg() throws RemoteException {
+        zzdb(7, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzh() throws RemoteException {
+        zzdb(3, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzi() throws RemoteException {
+        zzdb(4, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzj() throws RemoteException {
+        zzdb(5, zza());
+    }
+
+    @Override // com.google.android.gms.ads.internal.client.zzbk
+    public final void zzk() throws RemoteException {
+        zzdb(9, zza());
+    }
+}

@@ -1,0 +1,17 @@
+package com.monetization.ads.mediation.rewarded;
+
+import android.app.Activity;
+import android.content.Context;
+import com.monetization.ads.mediation.base.a;
+import java.util.Map;
+
+/* loaded from: classes2.dex */
+public abstract class MediatedRewardedAdapter extends a {
+    public abstract boolean isLoaded();
+
+    public abstract void loadRewardedAd(Context context, MediatedRewardedAdapterListener mediatedRewardedAdapterListener, Map<String, ? extends Object> map, Map<String, String> map2);
+
+    public abstract void onInvalidate();
+
+    public abstract void showRewardedAd(Activity activity);
+}

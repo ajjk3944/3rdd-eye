@@ -1,0 +1,153 @@
+.class final LM4/a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements LZ4/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = LM4/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "a"
+.end annotation
+
+
+# static fields
+.field static final a:LM4/a$a;
+
+.field private static final b:LZ4/b;
+
+.field private static final c:LZ4/b;
+
+.field private static final d:LZ4/b;
+
+.field private static final e:LZ4/b;
+
+.field private static final f:LZ4/b;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, LM4/a$a;
+
+    invoke-direct {v0}, LM4/a$a;-><init>()V
+
+    sput-object v0, LM4/a$a;->a:LM4/a$a;
+
+    const-string/jumbo v0, "rolloutId"
+
+    invoke-static {v0}, LZ4/b;->d(Ljava/lang/String;)LZ4/b;
+
+    move-result-object v0
+
+    sput-object v0, LM4/a$a;->b:LZ4/b;
+
+    const-string/jumbo v0, "parameterKey"
+
+    invoke-static {v0}, LZ4/b;->d(Ljava/lang/String;)LZ4/b;
+
+    move-result-object v0
+
+    sput-object v0, LM4/a$a;->c:LZ4/b;
+
+    const-string/jumbo v0, "parameterValue"
+
+    invoke-static {v0}, LZ4/b;->d(Ljava/lang/String;)LZ4/b;
+
+    move-result-object v0
+
+    sput-object v0, LM4/a$a;->d:LZ4/b;
+
+    const-string/jumbo v0, "variantId"
+
+    invoke-static {v0}, LZ4/b;->d(Ljava/lang/String;)LZ4/b;
+
+    move-result-object v0
+
+    sput-object v0, LM4/a$a;->e:LZ4/b;
+
+    const-string/jumbo v0, "templateVersion"
+
+    invoke-static {v0}, LZ4/b;->d(Ljava/lang/String;)LZ4/b;
+
+    move-result-object v0
+
+    sput-object v0, LM4/a$a;->f:LZ4/b;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, LM4/j;
+
+    check-cast p2, LZ4/d;
+
+    invoke-virtual {p0, p1, p2}, LM4/a$a;->b(LM4/j;LZ4/d;)V
+
+    return-void
+.end method
+
+.method public b(LM4/j;LZ4/d;)V
+    .locals 3
+
+    sget-object v0, LM4/a$a;->b:LZ4/b;
+
+    invoke-virtual {p1}, LM4/j;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p2, v0, v1}, LZ4/d;->b(LZ4/b;Ljava/lang/Object;)LZ4/d;
+
+    sget-object v0, LM4/a$a;->c:LZ4/b;
+
+    invoke-virtual {p1}, LM4/j;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p2, v0, v1}, LZ4/d;->b(LZ4/b;Ljava/lang/Object;)LZ4/d;
+
+    sget-object v0, LM4/a$a;->d:LZ4/b;
+
+    invoke-virtual {p1}, LM4/j;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p2, v0, v1}, LZ4/d;->b(LZ4/b;Ljava/lang/Object;)LZ4/d;
+
+    sget-object v0, LM4/a$a;->e:LZ4/b;
+
+    invoke-virtual {p1}, LM4/j;->g()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p2, v0, v1}, LZ4/d;->b(LZ4/b;Ljava/lang/Object;)LZ4/d;
+
+    sget-object v0, LM4/a$a;->f:LZ4/b;
+
+    invoke-virtual {p1}, LM4/j;->f()J
+
+    move-result-wide v1
+
+    invoke-interface {p2, v0, v1, v2}, LZ4/d;->c(LZ4/b;J)LZ4/d;
+
+    return-void
+.end method

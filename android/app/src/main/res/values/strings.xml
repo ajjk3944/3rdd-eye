@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ThirdEye</string>
+    <string name="title_activity_main">ThirdEye</string>
+    <string name="package_name">app.thirdeye.scanner</string>
+    <string name="custom_url_scheme">app.thirdeye.scanner</string>
+    
+    <!-- Widget strings -->
+    <string name="widget_quick_status_desc">Shows current WiFi name and signal strength</string>
+    <string name="widget_network_info_desc">Shows WiFi, IP address, speed, and connected devices</string>
+    <string name="widget_quick_actions_desc">Quick launch buttons for WiFi Scan, Speed Test, and more</string>
+    <string name="widget_test_desc">Test Widget</string>
+    <string name="widget_not_connected">Not Connected</string>
+    <string name="widget_no_wifi">No WiFi</string>
+    <string name="widget_refresh">Refresh</string>
+    <string name="widget_ip_address">IP Address</string>
+    <string name="widget_speed">Speed</string>
+    <string name="widget_devices">Devices</string>
+    <string name="widget_wifi_scan">WiFi Scan</string>
+    <string name="widget_speed_test">Speed Test</string>
+    <string name="widget_net_scan">Net Scan</string>
+    <string name="widget_camera">Camera</string>
+    <string name="widget_na">N/A</string>
+</resources>

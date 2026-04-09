@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="coverage_tab_details_margin_between_data">20dp</dimen>
+    <dimen name="coverage_tab_details_value_font_size">18dp</dimen>
+    <dimen name="overview_compass_bg_diameter">255dp</dimen>
+    <dimen name="speedtest_dial_width">265dp</dimen>
+</resources>

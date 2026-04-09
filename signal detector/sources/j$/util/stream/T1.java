@@ -1,0 +1,36 @@
+package j$.util.stream;
+
+import java.util.function.DoubleConsumer;
+
+/* loaded from: classes2.dex */
+public final class T1 extends X1 implements InterfaceC2457l2 {
+    @Override // java.util.function.Consumer
+    /* renamed from: accept */
+    public final /* bridge */ /* synthetic */ void o(Object obj) {
+        o((Double) obj);
+    }
+
+    public final /* synthetic */ DoubleConsumer andThen(DoubleConsumer doubleConsumer) {
+        return j$.com.android.tools.r8.a.c(this, doubleConsumer);
+    }
+
+    @Override // j$.util.stream.InterfaceC2457l2
+    public final /* synthetic */ void o(Double d6) {
+        AbstractC2510w1.E(this, d6);
+    }
+
+    @Override // j$.util.stream.S1, java.util.function.Supplier
+    public final Object get() {
+        return Long.valueOf(this.f20979b);
+    }
+
+    @Override // j$.util.stream.R1
+    public final void i(R1 r12) {
+        this.f20979b += ((X1) r12).f20979b;
+    }
+
+    @Override // j$.util.stream.X1, j$.util.stream.InterfaceC2472o2, j$.util.stream.InterfaceC2457l2, java.util.function.DoubleConsumer
+    public final void accept(double d6) {
+        this.f20979b++;
+    }
+}
